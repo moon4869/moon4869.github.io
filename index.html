@@ -296,7 +296,22 @@
 				<p class="post-meta">
 					
 
+	
+    <span class="leancloud_visitors" id="/2019/06/07/hello-world/_visitors" data-url="/2019/06/07/hello-world/" data-title="Hello World">
+       	<i class="fa fa-eye"></i>
+       	热度
+        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+    </span>
+    
 
+
+
+	
+    <span class="leancloud_likes" id="/2019/06/07/hello-world/_likes" data-url="/2019/06/07/hello-world/" data-title="Hello World" rel="unlike">
+        <i class="fa fa-heart"></i>
+        喜欢
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
 
 					
 
@@ -319,6 +334,14 @@
 				参考了01 & 02进行简单的设计与实现
 -->
 
+
+
+	<script>
+		var appid = 'nxLYuKSOnAXwSrRxDF0ukNog-9Nh9j0Va',
+            appkey = 'x8rrvgUtSsVTusURAl9KSKG7';	  
+        AnnieLeancloud(appid, appkey);         
+	</script>
+    
 
 	
 
@@ -456,6 +479,23 @@
 		<div class="local-search-footer">
 			<div class="topN-post">				
 				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title="热门文章"></div> 
+	</div>
+	
+    <script>
+        var appid = 'nxLYuKSOnAXwSrRxDF0ukNog-9Nh9j0Va',
+            appkey = 'x8rrvgUtSsVTusURAl9KSKG7',
+            limitCount = 10;
+        if( $('#topN').length ){
+            AV.initialize(appid, appkey);
+            var Counter = AV.Object.extend("Counter");  
+            topNPost(Counter, limitCount);
+        }
+    </script>
+   
 								
 			</div>
 		</div>

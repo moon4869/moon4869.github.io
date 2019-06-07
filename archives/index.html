@@ -295,8 +295,12 @@
                             Hello World
                         </span>
         			    
-                			<a href="/tags/hexo/" class="tag">
-                				hexo
+                			<a href="/tags/HEXO/" class="tag">
+                				HEXO
+                			</a>
+                        
+                			<a href="/tags/Hello-World/" class="tag">
+                				Hello World
                 			</a>
                         
                     </a>
@@ -335,8 +339,12 @@
                             Hello World
                         </span>
                         
-                            <a href="/tags/hexo/" class="tag">
-                                hexo
+                            <a href="/tags/HEXO/" class="tag">
+                                HEXO
+                            </a>
+                        
+                            <a href="/tags/Hello-World/" class="tag">
+                                Hello World
                             </a>
                                
                     </a>
@@ -465,6 +473,23 @@
 		<div class="local-search-footer">
 			<div class="topN-post">				
 				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title="热门文章"></div> 
+	</div>
+	
+    <script>
+        var appid = 'nxLYuKSOnAXwSrRxDF0ukNog-9Nh9j0Va',
+            appkey = 'x8rrvgUtSsVTusURAl9KSKG7',
+            limitCount = 10;
+        if( $('#topN').length ){
+            AV.initialize(appid, appkey);
+            var Counter = AV.Object.extend("Counter");  
+            topNPost(Counter, limitCount);
+        }
+    </script>
+   
 								
 			</div>
 		</div>
