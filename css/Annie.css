@@ -1730,7 +1730,7 @@ main {
   background-color: #fff;
 }
 #layout-post {
-/*font-family: Ovo,Georgia,STZhongsong,"Microsoft YaHei",serif;*/
+  font-family: "Microsoft YaHei",serif;
   font-size: 1rem;
   line-height: 2;
 }
