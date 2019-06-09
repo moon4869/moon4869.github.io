@@ -386,7 +386,7 @@
 
 	<div class="article-content" id="article-content">
 		<h1 id="安装CTeX后环境变量（Path）被覆盖"><a href="#安装CTeX后环境变量（Path）被覆盖" class="headerlink" title="安装CTeX后环境变量（Path）被覆盖"></a>安装CTeX后环境变量（Path）被覆盖</h1><p>最近因为一些原因需要在电脑上安装CTex（一个常用的论文排版工具），主要根据<a href="https://blog.csdn.net/muzhicihe/article/details/80326090" target="_blank" rel="noopener">教程一</a>和<a href="http://www.mamicode.com/info-detail-2143279.html" target="_blank" rel="noopener">教程二</a>来安装。前期一切都好，也没遇到什么问题，但是就在安装完成后，突然发现自己电脑上环境变量中Path的值被覆盖了，也就是只剩下了跟CTex相关的环境变量数据，原本的值全部不见了。如下图框选部分：</p>
-<p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96%5C1560076141824.png" alt="1560076141824"></p>
+<p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/1560076141824.png" alt="1560076141824"></p>
 <p>在网上查了很久，把找到的方法挨个尝试了一遍，没有一个起作用（真的是欲哭无泪）。只好接受这个事实，希望在以后遇到由此引发的问题时能合理解决。在此记下找到的一些方法，说不定对大家有用。</p>
 <h2 id="提前备份"><a href="#提前备份" class="headerlink" title="提前备份"></a>提前备份</h2><p>当然，最好的方式便是提前将自己的环境变量值给备份下来，以防万一。大概步骤如下：</p>
 <ol>
@@ -402,7 +402,7 @@
 <li>找到如下项：“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Control\Session Manager\Environment”，如果没有，可以找“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment”，把里面的path复制过来，然后添加在系统变量的path之前。</li>
 <li>添加时记得每一个值之间用英文的分号分隔。</li>
 </ol>
-<p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96%5C1560086286565.png" alt="1560086286565"></p>
+<p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/1560086286565.png" alt="1560086286565"></p>
 <h2 id="手动重建"><a href="#手动重建" class="headerlink" title="手动重建"></a>手动重建</h2><p>当然你可能也像我一样，上面的方法都不行，这个时候，只能手动重建你的path变量值了。在此给Windows10默认的path变量值，以及常用的环境变量值，如下：</p>
 <p><strong>默认的：</strong></p>
 <ul>
@@ -422,7 +422,7 @@
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/安装CTeX后环境变量（Path）被覆盖/cover.png"></div>
+	<div id="current-post-cover" data-scr="/img/安装CTeX后环境变量（Path）被覆盖/cover.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
