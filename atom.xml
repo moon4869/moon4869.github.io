@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-09T07:13:23.949Z</updated>
+  <updated>2019-06-09T13:35:12.246Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装CTeX后环境变量（Path）被覆盖</title>
+    <link href="http://yoursite.com/2019/06/09/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/"/>
+    <id>http://yoursite.com/2019/06/09/安装CTeX后环境变量（Path）被覆盖/</id>
+    <published>2019-06-09T13:21:00.000Z</published>
+    <updated>2019-06-09T13:35:12.246Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装CTeX后环境变量（Path）被覆盖"><a href="#安装CTeX后环境变量（Path）被覆盖" class="headerlink" title="安装CTeX后环境变量（Path）被覆盖"></a>安装CTeX后环境变量（Path）被覆盖</h1><p>最近因为一些原因需要在电脑上安装CTex（一个常用的论文排版工具），主要根据<a href="https://blog.csdn.net/muzhicihe/article/details/80326090" target="_blank" rel="noopener">教程一</a>和<a href="http://www.mamicode.com/info-detail-2143279.html" target="_blank" rel="noopener">教程二</a>来安装。前期一切都好，也没遇到什么问题，但是就在安装完成后，突然发现自己电脑上环境变量中Path的值被覆盖了，也就是只剩下了跟CTex相关的环境变量数据，原本的值全部不见了。如下图框选部分：</p><p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96%5C1560076141824.png" alt="1560076141824"></p><p>在网上查了很久，把找到的方法挨个尝试了一遍，没有一个起作用（真的是欲哭无泪）。只好接受这个事实，希望在以后遇到由此引发的问题时能合理解决。在此记下找到的一些方法，说不定对大家有用。</p><h2 id="提前备份"><a href="#提前备份" class="headerlink" title="提前备份"></a>提前备份</h2><p>当然，最好的方式便是提前将自己的环境变量值给备份下来，以防万一。大概步骤如下：</p><ol><li>在”计算机“上右键，找到”属性“，然后点击高级系统设置。</li><li>点击“环境变量”，找到“系统变量”中的path，将里面的值拷贝出来，放到任意一个文本文件中保存。</li><li>关闭刚刚打开的窗口。双击Ctex安装包，然后按照提示，一直安装完。</li><li>完成后，按照1、2步骤找到环境变量，会发现里面的path值被Ctex覆盖了。把刚刚保存的文本放到path的最前面，然后在添加的文本后添加一个（英文的）分号，然后点击保存，确定，再关闭。</li></ol><p><strong>在此也给自己提个醒，不定时备份一下自己的重要数据，很有必要。</strong></p><h2 id="未重启通过注册表恢复"><a href="#未重启通过注册表恢复" class="headerlink" title="未重启通过注册表恢复"></a>未重启通过注册表恢复</h2><p>有些电脑本地机器的数据不会即时更新，所以你原本的环境变量<strong>可能</strong>还在你的电脑里，可以通过注册表查看，当然前提是你没有将你的电脑重启过，<strong>关机无效</strong>。（这只是可能，就像我的电脑，没有关机同样不行）操作步骤如下：</p><ol><li>按 win +R，输入 regedit以打开注册表。</li><li>找到如下项：“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Control\Session Manager\Environment”，如果没有，可以找“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment”，把里面的path复制过来，然后添加在系统变量的path之前。</li><li>添加时记得每一个值之间用英文的分号分隔。</li></ol><p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96%5C1560086286565.png" alt="1560086286565"></p><h2 id="手动重建"><a href="#手动重建" class="headerlink" title="手动重建"></a>手动重建</h2><p>当然你可能也像我一样，上面的方法都不行，这个时候，只能手动重建你的path变量值了。在此给Windows10默认的path变量值，以及常用的环境变量值，如下：</p><p><strong>默认的：</strong></p><ul><li>%SystemRoot%\system32</li><li>%SystemRoot%</li><li>%SystemRoot%\System32\Wbem</li><li>%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\</li></ul><p><strong>常用的：</strong></p><ul><li>%SYSTEMROOT%\System32\OpenSSH\</li><li>%JAVA_HOME%\bin</li><li>%JAVA_HOME%\jre\bin</li></ul><hr><p>以上就是我在这个过程中找到的一些解决办法，希望能对大家有帮助。我的电脑环境变量现在也只有重新慢慢在建立了，可能以后会遇到一些问题，但既来之，则安之，问题总是能解决的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;安装CTeX后环境变量（Path）被覆盖&quot;&gt;&lt;a href=&quot;#安装CTeX后环境变量（Path）被覆盖&quot; class=&quot;headerlink&quot; title=&quot;安装CTeX后环境变量（Path）被覆盖&quot;&gt;&lt;/a&gt;安装CTeX后环境变量（Path）被覆盖&lt;/h1&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="本地电脑" scheme="http://yoursite.com/categories/%E6%9C%AC%E5%9C%B0%E7%94%B5%E8%84%91/"/>
+    
+    
+      <category term="path" scheme="http://yoursite.com/tags/path/"/>
+    
+      <category term="环境变量" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>博客搭建注意事项</title>
