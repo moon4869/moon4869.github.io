@@ -775,6 +775,7 @@ footer .social li a {
   padding: 10px;
 }
 footer .copyright p {
+  font-family: "Microsoft YaHei", serif;
   text-align: center;
   letter-spacing: 1px;
   word-spacing: 1px;
@@ -1730,7 +1731,7 @@ main {
   background-color: #fff;
 }
 #layout-post {
-  font-family: "Microsoft YaHei",serif;
+  font-family: "Microsoft YaHei", serif;
   font-size: 1rem;
   line-height: 2;
 }
