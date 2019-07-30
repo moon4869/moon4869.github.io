@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-09T13:42:27.802Z</updated>
+  <updated>2019-07-30T05:51:23.824Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装selenium问题以及pip换源</title>
+    <link href="http://yoursite.com/2019/07/30/%E5%AE%89%E8%A3%85selenium%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8Apip%E6%8D%A2%E6%BA%90/"/>
+    <id>http://yoursite.com/2019/07/30/安装selenium问题以及pip换源/</id>
+    <published>2019-07-30T05:30:00.000Z</published>
+    <updated>2019-07-30T05:51:23.824Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装selenium问题以及pip换源"><a href="#安装selenium问题以及pip换源" class="headerlink" title="安装selenium问题以及pip换源"></a>安装selenium问题以及pip换源</h1><p>最近决定开始学习一些python爬虫的知识，结果在用pip安装一些常用第三方库的时候遇到了一些问题，在查找解决方法的过程中又看到了pip换源的内容，在此记下来供大家参考。</p><h2 id="安装selenium"><a href="#安装selenium" class="headerlink" title="安装selenium"></a>安装selenium</h2><p>使用pip安装，在命令行输入以下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure><p>结果出错了，报错如下（前面红色部分）：</p><p><img src="/img/%E5%AE%89%E8%A3%85selenium%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8Apip%E6%8D%A2%E6%BA%90/Snipaste_2019-07-29_23-03-31.png" alt="报错信息"></p><p>查了一下发现没什么问题，结果过一会儿再试了一下，就可以装上了，如上图下半部分，就很奇怪。经过一番查找，发现可能是网不太好的原因，特别是你在学校或者公司的内网中，就有可能出现上述问题，解决方法很简单，推出内网，重新再试几次，应该就可以成功了。</p><h2 id="pip换源"><a href="#pip换源" class="headerlink" title="pip换源"></a>pip换源</h2><p>出现前面问题的根本原因是我们使用pip安装第三方库的时候，默认的源是国外的，而我们访问国外的网站比较慢，有时还会出现访问失败的情况，所以才会导致上述问题的出现。所以我们可以将pip的源换为我们国内的源，这样我们在使用pip下载第三方库的时候，就会稳定而且快很多。以下分别给出国内常用源和暂时换源以及永久换源的方法：</p><h3 id="国内常用源"><a href="#国内常用源" class="headerlink" title="国内常用源"></a>国内常用源</h3><p>1.阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="noopener">http://mirrors.aliyun.com/pypi/simple/</a></p><p>2.中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.mirrors.ustc.edu.cn/simple/</a> </p><p>3.豆瓣(douban) <a href="http://pypi.douban.com/simple/" target="_blank" rel="noopener">http://pypi.douban.com/simple/</a> </p><p>4.清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple/</a></p><p>5.中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">http://pypi.mirrors.ustc.edu.cn/simple/</a>  </p><h3 id="暂时换源"><a href="#暂时换源" class="headerlink" title="暂时换源"></a>暂时换源</h3><p>顾名思义，你只是在下载这个库的时候用默认源不行，想换成国内源下载，那么只需要在pip安装命令后面加上 -i参数，同时在后面指定源地址即可，例子如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium -i https://pypi.tuna.tsinghua.edu.cn/simple/</span><br></pre></td></tr></table></figure><h3 id="永久换源"><a href="#永久换源" class="headerlink" title="永久换源"></a>永久换源</h3><p>有的人（比如像我一样）觉得默认源下载起来太慢了，想以后所有的库都换成国内源去下载，那么只需要修改一下pip的配置即可，具体步骤如下：（Windows环境）</p><p>第一步: win+R 输入%HOMEPATH%打开用户目录（以确保是在本机用户目录下），在此目录下创建 pip 文件夹，在 pip 目录下创建 pip.txt文件, 内容如下：（以清华的源为例，其他的源只需要修改相应的地址即可）</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host = pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure><p>第二步: 保存好后修改后缀名为.ini，即此时文件名为pip.ini，Windows下会将该文件识别为配置文件。</p><p>第三步: 在系统环境变量的path变量里加上一条%HOMEPATH%\pip\pip.ini，确认设置即可。</p><p>  <img src="/img/%E5%AE%89%E8%A3%85selenium%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8Apip%E6%8D%A2%E6%BA%90/Snipaste_2019-07-30_13-21-33.png" alt="环境变量"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;安装selenium问题以及pip换源&quot;&gt;&lt;a href=&quot;#安装selenium问题以及pip换源&quot; class=&quot;headerlink&quot; title=&quot;安装selenium问题以及pip换源&quot;&gt;&lt;/a&gt;安装selenium问题以及pip换源&lt;/h1&gt;&lt;p&gt;最近
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+      <category term="pip" scheme="http://yoursite.com/tags/pip/"/>
+    
+      <category term="selenium" scheme="http://yoursite.com/tags/selenium/"/>
+    
+  </entry>
   
   <entry>
     <title>安装CTeX后环境变量（Path）被覆盖</title>
@@ -64,9 +91,9 @@
       <category term="HEXO博客" scheme="http://yoursite.com/categories/HEXO%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
-    
       <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
     
   </entry>
   

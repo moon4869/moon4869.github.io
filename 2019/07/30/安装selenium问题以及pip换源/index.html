@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      安装CTeX后环境变量（Path）被覆盖 | moon
+      安装selenium问题以及pip换源 | moon
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《安装CTeX后环境变量（Path）被覆盖》
+			当前文章&nbsp;:&nbsp;《安装selenium问题以及pip换源》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" itemprop="url">
-		安装CTeX后环境变量（Path）被覆盖
+	<a href="/2019/07/30/安装selenium问题以及pip换源/" itemprop="url">
+		安装selenium问题以及pip换源
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">775字</span>
+        <span class="post-count">736字</span>
       </span>
     </span>
 
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" itemprop="url">
-		<time datetime="2019-06-09T13:21:00.000Z" itemprop="datePublished">
-	  		2019-06-09
+	<a href="/2019/07/30/安装selenium问题以及pip换源/" itemprop="url">
+		<time datetime="2019-07-30T05:30:00.000Z" itemprop="datePublished">
+	  		2019-07-30
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" itemprop="url">
-		<time datetime="2019-06-09T13:21:00.000Z" itemprop="dateUpdated">
-	  		2019-06-09
+	<a href="/2019/07/30/安装selenium问题以及pip换源/" itemprop="url">
+		<time datetime="2019-07-30T05:30:00.000Z" itemprop="dateUpdated">
+	  		2019-07-30
 	  </time>
 	</a> 
 
@@ -352,12 +352,12 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/path/" class=" ">
-			path
+		<a href="/tags/pip/" class=" ">
+			pip
 		</a>
 	
-		<a href="/tags/环境变量/" class=" ">
-			环境变量
+		<a href="/tags/selenium/" class=" ">
+			selenium
 		</a>
 	
 		
@@ -366,7 +366,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/_visitors" data-url="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" data-title="安装CTeX后环境变量（Path）被覆盖">
+    <span class="leancloud_visitors" id="/2019/07/30/安装selenium问题以及pip换源/_visitors" data-url="/2019/07/30/安装selenium问题以及pip换源/" data-title="安装selenium问题以及pip换源">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -376,7 +376,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/_likes" data-url="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" data-title="安装CTeX后环境变量（Path）被覆盖" rel="unlike">
+    <span class="leancloud_likes" id="/2019/07/30/安装selenium问题以及pip换源/_likes" data-url="/2019/07/30/安装selenium问题以及pip换源/" data-title="安装selenium问题以及pip换源" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -385,44 +385,33 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="安装CTeX后环境变量（Path）被覆盖"><a href="#安装CTeX后环境变量（Path）被覆盖" class="headerlink" title="安装CTeX后环境变量（Path）被覆盖"></a>安装CTeX后环境变量（Path）被覆盖</h1><p>最近因为一些原因需要在电脑上安装CTex（一个常用的论文排版工具），主要根据<a href="https://blog.csdn.net/muzhicihe/article/details/80326090" target="_blank" rel="noopener">教程一</a>和<a href="http://www.mamicode.com/info-detail-2143279.html" target="_blank" rel="noopener">教程二</a>来安装。前期一切都好，也没遇到什么问题，但是就在安装完成后，突然发现自己电脑上环境变量中Path的值被覆盖了，也就是只剩下了跟CTex相关的环境变量数据，原本的值全部不见了。如下图框选部分：</p>
-<p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/1560076141824.png" alt="1560076141824"></p>
-<p>在网上查了很久，把找到的方法挨个尝试了一遍，没有一个起作用（真的是欲哭无泪）。只好接受这个事实，希望在以后遇到由此引发的问题时能合理解决。在此记下找到的一些方法，说不定对大家有用。</p>
-<h2 id="提前备份"><a href="#提前备份" class="headerlink" title="提前备份"></a>提前备份</h2><p>当然，最好的方式便是提前将自己的环境变量值给备份下来，以防万一。大概步骤如下：</p>
-<ol>
-<li>在”计算机“上右键，找到”属性“，然后点击高级系统设置。</li>
-<li>点击“环境变量”，找到“系统变量”中的path，将里面的值拷贝出来，放到任意一个文本文件中保存。</li>
-<li>关闭刚刚打开的窗口。双击Ctex安装包，然后按照提示，一直安装完。</li>
-<li>完成后，按照1、2步骤找到环境变量，会发现里面的path值被Ctex覆盖了。把刚刚保存的文本放到path的最前面，然后在添加的文本后添加一个（英文的）分号，然后点击保存，确定，再关闭。</li>
-</ol>
-<p><strong>在此也给自己提个醒，不定时备份一下自己的重要数据，很有必要。</strong></p>
-<h2 id="未重启通过注册表恢复"><a href="#未重启通过注册表恢复" class="headerlink" title="未重启通过注册表恢复"></a>未重启通过注册表恢复</h2><p>有些电脑本地机器的数据不会即时更新，所以你原本的环境变量<strong>可能</strong>还在你的电脑里，可以通过注册表查看，当然前提是你没有将你的电脑重启过，<strong>关机无效</strong>。（这只是可能，就像我的电脑，没有关机同样不行）操作步骤如下：</p>
-<ol>
-<li>按 win +R，输入 regedit以打开注册表。</li>
-<li>找到如下项：“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Control\Session Manager\Environment”，如果没有，可以找“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment”，把里面的path复制过来，然后添加在系统变量的path之前。</li>
-<li>添加时记得每一个值之间用英文的分号分隔。</li>
-</ol>
-<p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/1560086286565.png" alt="1560086286565"></p>
-<h2 id="手动重建"><a href="#手动重建" class="headerlink" title="手动重建"></a>手动重建</h2><p>当然你可能也像我一样，上面的方法都不行，这个时候，只能手动重建你的path变量值了。在此给Windows10默认的path变量值，以及常用的环境变量值，如下：</p>
-<p><strong>默认的：</strong></p>
-<ul>
-<li>%SystemRoot%\system32</li>
-<li>%SystemRoot%</li>
-<li>%SystemRoot%\System32\Wbem</li>
-<li>%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\</li>
-</ul>
-<p><strong>常用的：</strong></p>
-<ul>
-<li>%SYSTEMROOT%\System32\OpenSSH\</li>
-<li>%JAVA_HOME%\bin</li>
-<li>%JAVA_HOME%\jre\bin</li>
-</ul>
-<hr>
-<p>以上就是我在这个过程中找到的一些解决办法，希望能对大家有帮助。我的电脑环境变量现在也只有重新慢慢在建立了，可能以后会遇到一些问题，但既来之，则安之，问题总是能解决的。</p>
+		<h1 id="安装selenium问题以及pip换源"><a href="#安装selenium问题以及pip换源" class="headerlink" title="安装selenium问题以及pip换源"></a>安装selenium问题以及pip换源</h1><p>最近决定开始学习一些python爬虫的知识，结果在用pip安装一些常用第三方库的时候遇到了一些问题，在查找解决方法的过程中又看到了pip换源的内容，在此记下来供大家参考。</p>
+<h2 id="安装selenium"><a href="#安装selenium" class="headerlink" title="安装selenium"></a>安装selenium</h2><p>使用pip安装，在命令行输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure>
+
+<p>结果出错了，报错如下（前面红色部分）：</p>
+<p><img src="/img/%E5%AE%89%E8%A3%85selenium%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8Apip%E6%8D%A2%E6%BA%90/Snipaste_2019-07-29_23-03-31.png" alt="报错信息"></p>
+<p>查了一下发现没什么问题，结果过一会儿再试了一下，就可以装上了，如上图下半部分，就很奇怪。经过一番查找，发现可能是网不太好的原因，特别是你在学校或者公司的内网中，就有可能出现上述问题，解决方法很简单，推出内网，重新再试几次，应该就可以成功了。</p>
+<h2 id="pip换源"><a href="#pip换源" class="headerlink" title="pip换源"></a>pip换源</h2><p>出现前面问题的根本原因是我们使用pip安装第三方库的时候，默认的源是国外的，而我们访问国外的网站比较慢，有时还会出现访问失败的情况，所以才会导致上述问题的出现。所以我们可以将pip的源换为我们国内的源，这样我们在使用pip下载第三方库的时候，就会稳定而且快很多。以下分别给出国内常用源和暂时换源以及永久换源的方法：</p>
+<h3 id="国内常用源"><a href="#国内常用源" class="headerlink" title="国内常用源"></a>国内常用源</h3><p>1.阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="noopener">http://mirrors.aliyun.com/pypi/simple/</a></p>
+<p>2.中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.mirrors.ustc.edu.cn/simple/</a> </p>
+<p>3.豆瓣(douban) <a href="http://pypi.douban.com/simple/" target="_blank" rel="noopener">http://pypi.douban.com/simple/</a> </p>
+<p>4.清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple/</a></p>
+<p>5.中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">http://pypi.mirrors.ustc.edu.cn/simple/</a>  </p>
+<h3 id="暂时换源"><a href="#暂时换源" class="headerlink" title="暂时换源"></a>暂时换源</h3><p>顾名思义，你只是在下载这个库的时候用默认源不行，想换成国内源下载，那么只需要在pip安装命令后面加上 -i参数，同时在后面指定源地址即可，例子如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium -i https://pypi.tuna.tsinghua.edu.cn/simple/</span><br></pre></td></tr></table></figure>
+
+<h3 id="永久换源"><a href="#永久换源" class="headerlink" title="永久换源"></a>永久换源</h3><p>有的人（比如像我一样）觉得默认源下载起来太慢了，想以后所有的库都换成国内源去下载，那么只需要修改一下pip的配置即可，具体步骤如下：（Windows环境）</p>
+<p>第一步: win+R 输入%HOMEPATH%打开用户目录（以确保是在本机用户目录下），在此目录下创建 pip 文件夹，在 pip 目录下创建 pip.txt文件, 内容如下：（以清华的源为例，其他的源只需要修改相应的地址即可）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host = pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
+
+<p>第二步: 保存好后修改后缀名为.ini，即此时文件名为pip.ini，Windows下会将该文件识别为配置文件。</p>
+<p>第三步: 在系统环境变量的path变量里加上一条%HOMEPATH%\pip\pip.ini，确认设置即可。</p>
+<p>  <img src="/img/%E5%AE%89%E8%A3%85selenium%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8Apip%E6%8D%A2%E6%BA%90/Snipaste_2019-07-30_13-21-33.png" alt="环境变量"></p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/安装CTeX后环境变量（Path）被覆盖/cover.jpg"></div>
+	<div id="current-post-cover" data-scr="/img/安装selenium问题以及pip换源/cover.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -437,12 +426,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/07/30/安装selenium问题以及pip换源/" title="安装selenium问题以及pip换源" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/06/08/博客搭建注意事项/" title="博客搭建注意事项" rel="next">
+			<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" title="安装CTeX后环境变量（Path）被覆盖" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -463,23 +448,22 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/07/30/安装selenium问题以及pip换源/" title="安装selenium问题以及pip换源">
-								安装selenium问题以及pip换源			
+							<a class="relate-post-title" href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" title="安装CTeX后环境变量（Path）被覆盖">
+								安装CTeX后环境变量（Path）被覆盖			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								七月 30日, 2019				
+								六月 9日, 2019				
 							</p>
 							<p class="relate-post-content">
-								安装selenium问题以及pip换源最近决定开始学习一些python爬虫的知识，结果在用pip安装一些常用第三方库的时候遇到了一些问题，在查找解决方法的过程中又看到了pip换源的内容，在此记下来供大家参考。
-安装selenium使用...
+								安装CTeX后环境变量（Path）被覆盖最近因为一些原因需要在电脑上安装CTex（一个常用的论文排版工具），主要根据教程一和教程二来安装。前期一切都好，也没遇到什么问题，但是就在安装完成后，突然发现自己电脑上环境变量中Path的值被覆...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2019/07/30/安装selenium问题以及pip换源/" title="安装selenium问题以及pip换源">				
+							<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" title="安装CTeX后环境变量（Path）被覆盖">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/安装selenium问题以及pip换源/cover.jpg" alt="安装selenium问题以及pip换源">
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/安装CTeX后环境变量（Path）被覆盖/cover.jpg" alt="安装CTeX后环境变量（Path）被覆盖">
 							</a>
 						</div>
 					</li>											
