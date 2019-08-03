@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">736字</span>
+        <span class="post-count">827字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -341,7 +341,7 @@
 
 	<a href="/2019/07/30/安装selenium问题以及pip换源/" itemprop="url">
 		<time datetime="2019-07-30T05:30:00.000Z" itemprop="dateUpdated">
-	  		2019-07-30
+	  		2019-08-03
 	  </time>
 	</a> 
 
@@ -403,11 +403,13 @@
 
 <h3 id="永久换源"><a href="#永久换源" class="headerlink" title="永久换源"></a>永久换源</h3><p>有的人（比如像我一样）觉得默认源下载起来太慢了，想以后所有的库都换成国内源去下载，那么只需要修改一下pip的配置即可，具体步骤如下：（Windows环境）</p>
 <p>第一步: win+R 输入%HOMEPATH%打开用户目录（以确保是在本机用户目录下），在此目录下创建 pip 文件夹，在 pip 目录下创建 pip.txt文件, 内容如下：（以清华的源为例，其他的源只需要修改相应的地址即可）</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host = pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host = pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
 
 <p>第二步: 保存好后修改后缀名为.ini，即此时文件名为pip.ini，Windows下会将该文件识别为配置文件。</p>
 <p>第三步: 在系统环境变量的path变量里加上一条%HOMEPATH%\pip\pip.ini，确认设置即可。</p>
 <p>  <img src="/img/%E5%AE%89%E8%A3%85selenium%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8Apip%E6%8D%A2%E6%BA%90/Snipaste_2019-07-30_13-21-33.png" alt="环境变量"></p>
+<hr>
+<p>换源以后再安装就会发现速度快很多了，基本上是秒下载安装好。至于为什么用清华的源，是因为据说清华的源是官方源的副本，每五分钟刷新一次，保证了稳和快，当然你用其他的源也是可以的，只需要改相应的地址即可。</p>
 	
 	</div>
 	
@@ -887,7 +889,7 @@
 			setInterval("createtime()",250);
 			</script>
 			<i class="fas fa-chart-area"></i>
-			<span class="post-count">文章总字数：2.5k.</span>
+			<span class="post-count">文章总字数：2.6k.</span>
 			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
 			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
 		</p>
