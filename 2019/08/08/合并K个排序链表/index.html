@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      安装CTeX后环境变量（Path）被覆盖 | moon
+      合并K个排序链表 | moon
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《安装CTeX后环境变量（Path）被覆盖》
+			当前文章&nbsp;:&nbsp;《合并K个排序链表》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" itemprop="url">
-		安装CTeX后环境变量（Path）被覆盖
+	<a href="/2019/08/08/合并K个排序链表/" itemprop="url">
+		合并K个排序链表
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">775字</span>
+        <span class="post-count">832字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" itemprop="url">
-		<time datetime="2019-06-09T13:21:00.000Z" itemprop="datePublished">
-	  		2019-06-09
+	<a href="/2019/08/08/合并K个排序链表/" itemprop="url">
+		<time datetime="2019-08-08T04:35:00.000Z" itemprop="datePublished">
+	  		2019-08-08
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" itemprop="url">
-		<time datetime="2019-06-09T13:21:00.000Z" itemprop="dateUpdated">
-	  		2019-06-09
+	<a href="/2019/08/08/合并K个排序链表/" itemprop="url">
+		<time datetime="2019-08-08T04:35:00.000Z" itemprop="dateUpdated">
+	  		2019-08-08
 	  </time>
 	</a> 
 
@@ -352,12 +352,16 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/path/" class=" ">
-			path
+		<a href="/tags/刷题/" class=" ">
+			刷题
 		</a>
 	
-		<a href="/tags/环境变量/" class=" ">
-			环境变量
+		<a href="/tags/leetcode/" class=" ">
+			leetcode
+		</a>
+	
+		<a href="/tags/堆/" class=" ">
+			堆
 		</a>
 	
 		
@@ -366,7 +370,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/_visitors" data-url="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" data-title="安装CTeX后环境变量（Path）被覆盖">
+    <span class="leancloud_visitors" id="/2019/08/08/合并K个排序链表/_visitors" data-url="/2019/08/08/合并K个排序链表/" data-title="合并K个排序链表">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -376,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/_likes" data-url="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" data-title="安装CTeX后环境变量（Path）被覆盖" rel="unlike">
+    <span class="leancloud_likes" id="/2019/08/08/合并K个排序链表/_likes" data-url="/2019/08/08/合并K个排序链表/" data-title="合并K个排序链表" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -385,44 +389,63 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="安装CTeX后环境变量（Path）被覆盖"><a href="#安装CTeX后环境变量（Path）被覆盖" class="headerlink" title="安装CTeX后环境变量（Path）被覆盖"></a>安装CTeX后环境变量（Path）被覆盖</h1><p>最近因为一些原因需要在电脑上安装CTex（一个常用的论文排版工具），主要根据<a href="https://blog.csdn.net/muzhicihe/article/details/80326090" target="_blank" rel="noopener">教程一</a>和<a href="http://www.mamicode.com/info-detail-2143279.html" target="_blank" rel="noopener">教程二</a>来安装。前期一切都好，也没遇到什么问题，但是就在安装完成后，突然发现自己电脑上环境变量中Path的值被覆盖了，也就是只剩下了跟CTex相关的环境变量数据，原本的值全部不见了。如下图框选部分：</p>
-<p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/1560076141824.png" alt="1560076141824"></p>
-<p>在网上查了很久，把找到的方法挨个尝试了一遍，没有一个起作用（真的是欲哭无泪）。只好接受这个事实，希望在以后遇到由此引发的问题时能合理解决。在此记下找到的一些方法，说不定对大家有用。</p>
-<h2 id="提前备份"><a href="#提前备份" class="headerlink" title="提前备份"></a>提前备份</h2><p>当然，最好的方式便是提前将自己的环境变量值给备份下来，以防万一。大概步骤如下：</p>
-<ol>
-<li>在”计算机“上右键，找到”属性“，然后点击高级系统设置。</li>
-<li>点击“环境变量”，找到“系统变量”中的path，将里面的值拷贝出来，放到任意一个文本文件中保存。</li>
-<li>关闭刚刚打开的窗口。双击Ctex安装包，然后按照提示，一直安装完。</li>
-<li>完成后，按照1、2步骤找到环境变量，会发现里面的path值被Ctex覆盖了。把刚刚保存的文本放到path的最前面，然后在添加的文本后添加一个（英文的）分号，然后点击保存，确定，再关闭。</li>
-</ol>
-<p><strong>在此也给自己提个醒，不定时备份一下自己的重要数据，很有必要。</strong></p>
-<h2 id="未重启通过注册表恢复"><a href="#未重启通过注册表恢复" class="headerlink" title="未重启通过注册表恢复"></a>未重启通过注册表恢复</h2><p>有些电脑本地机器的数据不会即时更新，所以你原本的环境变量<strong>可能</strong>还在你的电脑里，可以通过注册表查看，当然前提是你没有将你的电脑重启过，<strong>关机无效</strong>。（这只是可能，就像我的电脑，没有关机同样不行）操作步骤如下：</p>
-<ol>
-<li>按 win +R，输入 regedit以打开注册表。</li>
-<li>找到如下项：“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Control\Session Manager\Environment”，如果没有，可以找“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment”，把里面的path复制过来，然后添加在系统变量的path之前。</li>
-<li>添加时记得每一个值之间用英文的分号分隔。</li>
-</ol>
-<p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/1560086286565.png" alt="1560086286565"></p>
-<h2 id="手动重建"><a href="#手动重建" class="headerlink" title="手动重建"></a>手动重建</h2><p>当然你可能也像我一样，上面的方法都不行，这个时候，只能手动重建你的path变量值了。在此给Windows10默认的path变量值，以及常用的环境变量值，如下：</p>
-<p><strong>默认的：</strong></p>
-<ul>
-<li>%SystemRoot%\system32</li>
-<li>%SystemRoot%</li>
-<li>%SystemRoot%\System32\Wbem</li>
-<li>%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\</li>
+		<h1 id="合并K个排序链表"><a href="#合并K个排序链表" class="headerlink" title="合并K个排序链表"></a>合并K个排序链表</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>堆</strong>的一道题，难度为<strong>困难</strong>，原链接<a href="https://leetcode-cn.com/problems/merge-k-sorted-lists/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-k-sorted-lists/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>合并 <em>k</em> 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。</p>
+<p><strong>示例 :</strong></p>
+<blockquote>
+<p>输入:<br>[<br>  1-&gt;4-&gt;5,<br>  1-&gt;3-&gt;4,<br>  2-&gt;6<br>]
+输出: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6</p>
+</blockquote>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>暴力解决，将所有的元素统一排序，再生成新链表返回。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>依次遍历所有链表，取出所有链表节点值放入一个列表中</li>
+<li>排序该列表，此时排序方法可不同</li>
+<li>遍历排序后的列表，生成一个新链表并返回</li>
 </ul>
-<p><strong>常用的：</strong></p>
-<ul>
-<li>%SYSTEMROOT%\System32\OpenSSH\</li>
-<li>%JAVA_HOME%\bin</li>
-<li>%JAVA_HOME%\jre\bin</li>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeKLists</span><span class="params">(self, lists: List[ListNode])</span> -&gt; ListNode:</span></span><br><span class="line">        self.nodes = []</span><br><span class="line">        <span class="comment"># 新链表的头节点和尾节点</span></span><br><span class="line">        head = point = ListNode(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> node <span class="keyword">in</span> lists:</span><br><span class="line">            <span class="keyword">while</span> node:</span><br><span class="line">                self.nodes.append(node.val)</span><br><span class="line">                node = node.next</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> sorted(self.nodes):</span><br><span class="line">            point.next = ListNode(x)</span><br><span class="line">            point = point.next</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head.next</span><br></pre></td></tr></table></figure>
+
+<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p><img src="https://pic.superbed.cn/item/5d4b8d85451253d178edeb07.png" alt="方法一提交"></p>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
+<li>时间复杂度：O(nlogn)，n为节点总数<ul>
+<li>遍历所有的节点需花费O(n)时间</li>
+<li>一个稳定的排序算法需要O(nlogn)时间（以内置的sorted函数为例）</li>
+<li>遍历新列表同时生成新链表花费O(n)时间</li>
 </ul>
-<hr>
-<p>以上就是我在这个过程中找到的一些解决办法，希望能对大家有帮助。我的电脑环境变量现在也只有重新慢慢在建立了，可能以后会遇到一些问题，但既来之，则安之，问题总是能解决的。</p>
+</li>
+<li>空间复杂度：O(n)<ul>
+<li>排序获得排好序的列表花费O(n)空间</li>
+<li>生成新的有序链表花费O(n)空间</li>
+</ul>
+</li>
+</ul>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>借助上篇文章提到的heapq库，使用堆结构进行排序。</p>
+<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>借助heapq库构建一个空的小顶堆</li>
+<li>遍历所有链表节点，依次加入堆中</li>
+<li>依次弹出堆顶元素，同时添加进新建的有序链表中</li>
+<li>返回新建有序列表</li>
+</ul>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeKLists</span><span class="params">(self, lists: List[ListNode])</span> -&gt; ListNode:</span></span><br><span class="line">        self.nodes = []</span><br><span class="line">        <span class="comment"># 新链表的头节点和尾节点</span></span><br><span class="line">        head = point = ListNode(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> node <span class="keyword">in</span> lists:</span><br><span class="line">            <span class="keyword">while</span> node:</span><br><span class="line">                heapq.heappush(self.nodes, node.val)</span><br><span class="line">                node = node.next</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(len(self.nodes)):</span><br><span class="line">            point.next = ListNode(heapq.heappop(self.nodes))</span><br><span class="line">            point = point.next</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head.next</span><br></pre></td></tr></table></figure>
+
+<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p><img src="https://pic3.superbed.cn/item/5d4b9dda451253d178f041f1.png" alt="方法二提交"></p>
+<h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
+<li>时间复杂度：O(nlogn)，n为节点总数（此处时间复杂度有待详细计算）<ul>
+<li>遍历所有节点花费O(n)时间</li>
+<li>同时生成小顶堆花费O(nlogn)时间（实际上应该要小于该时间，因为logn的n是基于当前堆的大小，而堆大小是从零开始最终为n的）</li>
+<li>生成新链表花费O(n)时间（这个时间也不准确，因为在堆弹出堆顶元素后，剩下堆元素需要调整以符合堆结构，这个过程也需要时间）</li>
+</ul>
+</li>
+<li>空间复杂度：O(n)<ul>
+<li>生成小顶堆花费O(n)空间</li>
+<li>新建有序链表花费O(n)空间</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>上述两种方法在时间复杂度上差别不大，比较理想的方法应该是采用分治算法，目前也在研究怎么使用分治算法去解决这道题。另外分析不同算法的时空间复杂度也是一个问题，需要对相应的数据结构以及算法有比较深的了解，并且数学推理能力也要比较好才行。总之继续学习吧。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/安装CTeX后环境变量（Path）被覆盖/cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://pic.superbed.cn/item/5d4ba635451253d178f1697c.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -437,12 +460,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/07/30/安装selenium问题以及pip换源/" title="安装selenium问题以及pip换源" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/06/08/博客搭建注意事项/" title="博客搭建注意事项" rel="next">
+			<a href="/2019/08/06/数组中的第K个最大元素/" title="数组中的第K个最大元素" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -460,29 +479,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/08/08/合并K个排序链表/" title="合并K个排序链表">
-								合并K个排序链表			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								八月 8日, 2019				
-							</p>
-							<p class="relate-post-content">
-								合并K个排序链表属于leetcode里腾讯精选练习（50）里面关于堆的一道题，难度为困难，原链接https://leetcode-cn.com/problems/merge-k-sorted-lists/ 。（使用python3解决）...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/08/08/合并K个排序链表/" title="合并K个排序链表">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://pic.superbed.cn/item/5d4ba635451253d178f1697c.jpg" alt="合并K个排序链表">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -574,6 +570,29 @@
 							<a href="/2019/07/30/安装selenium问题以及pip换源/" title="安装selenium问题以及pip换源">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/安装selenium问题以及pip换源/cover.jpg" alt="安装selenium问题以及pip换源">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" title="安装CTeX后环境变量（Path）被覆盖">
+								安装CTeX后环境变量（Path）被覆盖			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								六月 9日, 2019				
+							</p>
+							<p class="relate-post-content">
+								安装CTeX后环境变量（Path）被覆盖最近因为一些原因需要在电脑上安装CTex（一个常用的论文排版工具），主要根据教程一和教程二来安装。前期一切都好，也没遇到什么问题，但是就在安装完成后，突然发现自己电脑上环境变量中Path的值被覆...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" title="安装CTeX后环境变量（Path）被覆盖">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/安装CTeX后环境变量（Path）被覆盖/cover.jpg" alt="安装CTeX后环境变量（Path）被覆盖">
 							</a>
 						</div>
 					</li>											
