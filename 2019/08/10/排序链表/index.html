@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      买卖股票的最佳时机 II | moon&#39;blog
+      排序链表 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《买卖股票的最佳时机 II》
+			当前文章&nbsp;:&nbsp;《排序链表》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/08/09/买卖股票的最佳时机-II/" itemprop="url">
-		买卖股票的最佳时机 II
+	<a href="/2019/08/10/排序链表/" itemprop="url">
+		排序链表
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">978字</span>
+        <span class="post-count">683字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/08/09/买卖股票的最佳时机-II/" itemprop="url">
-		<time datetime="2019-08-09T10:25:00.000Z" itemprop="datePublished">
-	  		2019-08-09
+	<a href="/2019/08/10/排序链表/" itemprop="url">
+		<time datetime="2019-08-10T10:25:00.000Z" itemprop="datePublished">
+	  		2019-08-10
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/08/09/买卖股票的最佳时机-II/" itemprop="url">
-		<time datetime="2019-08-09T10:25:00.000Z" itemprop="dateUpdated">
-	  		2019-08-09
+	<a href="/2019/08/10/排序链表/" itemprop="url">
+		<time datetime="2019-08-10T10:25:00.000Z" itemprop="dateUpdated">
+	  		2019-08-10
 	  </time>
 	</a> 
 
@@ -360,8 +360,8 @@
 			leetcode
 		</a>
 	
-		<a href="/tags/贪心算法/" class=" ">
-			贪心算法
+		<a href="/tags/排序/" class=" ">
+			排序
 		</a>
 	
 		
@@ -370,7 +370,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/08/09/买卖股票的最佳时机-II/_visitors" data-url="/2019/08/09/买卖股票的最佳时机-II/" data-title="买卖股票的最佳时机 II">
+    <span class="leancloud_visitors" id="/2019/08/10/排序链表/_visitors" data-url="/2019/08/10/排序链表/" data-title="排序链表">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -380,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/08/09/买卖股票的最佳时机-II/_likes" data-url="/2019/08/09/买卖股票的最佳时机-II/" data-title="买卖股票的最佳时机 II" rel="unlike">
+    <span class="leancloud_likes" id="/2019/08/10/排序链表/_likes" data-url="/2019/08/10/排序链表/" data-title="排序链表" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -389,48 +389,45 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="买卖股票的最佳时机-II"><a href="#买卖股票的最佳时机-II" class="headerlink" title="买卖股票的最佳时机 II"></a>买卖股票的最佳时机 II</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>贪心算法</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/</a> 。（使用<strong>python3</strong>解决）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</p>
-<p>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。</p>
-<p><strong>注意</strong>：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
+		<h1 id="排序链表"><a href="#排序链表" class="headerlink" title="排序链表"></a>排序链表</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>排序</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/sort-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sort-list/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>在 <strong><em>O</em>(<em>n</em> log <em>n</em>) 时间复杂度和常数级空间复杂度</strong>下，对<strong>链表</strong>进行排序。</p>
 <p><strong>示例1 :</strong></p>
 <blockquote>
-<p>输入: [7,1,5,3,6,4]<br>输出: 7<br>解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。<br>     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。</p>
+<p>输入: 4-&gt;2-&gt;1-&gt;3<br>输出: 1-&gt;2-&gt;3-&gt;4</p>
 </blockquote>
 <p><strong>示例2 :</strong></p>
 <blockquote>
-<p>输入: [1,2,3,4,5]<br>输出: 4<br>解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。<br>     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。<br>     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。</p>
+<p>输入: -1-&gt;5-&gt;3-&gt;4-&gt;0<br>输出: -1-&gt;0-&gt;3-&gt;4-&gt;5</p>
 </blockquote>
-<p><strong>示例3 :</strong></p>
-<blockquote>
-<p>输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p>
-</blockquote>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>找到每一段价格相差最大的时间段，将每一段的收益加起来即可。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>从头开始找，只要当前价格比明天价格低就记为买入点，如果价格持续下降到最后则不买入</li>
-<li>在买入点之后如果价格上升，继续往后，直到价格下降的前一天记为卖出点；如果价格持续上升到最后一天，则记最后一天为卖出点</li>
-<li>卖出股票后记录收益，继续寻找下一个买入点和卖出点直到无法满足一次完整的买入和卖出（即买入点时间大于或等于了最后一天）</li>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>两路归并排序，且采用递归分割再归并方式。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><strong>分割环节</strong>：将链表从中间断开，再不断递归断开新产生的短链表。</p>
+<ul>
+<li>使用 fast，slow 快慢双指针法，慢指针每次走一个节点，快指针每次走两个节点，当快指针指向最后一个节点时慢指针指向中间节点的<strong>前一个节点</strong></li>
+<li>将链表从中间断开，slow.next = None</li>
+<li>继续将已经分割的两个链表递归分割，输入条件为每个链表的首节点</li>
+<li><strong>递归终止条件</strong>：当当前链表只有一个节点时，直接返回此节点，head.next=None</li>
 </ul>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span><span class="params">(self, prices: List[int])</span> -&gt; int:</span></span><br><span class="line">        <span class="comment"># 本次交易股票买入点</span></span><br><span class="line">        p = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 本次交易股票卖出点</span></span><br><span class="line">        i = <span class="number">1</span></span><br><span class="line">        <span class="comment"># 总收入</span></span><br><span class="line">        sum = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(p &lt; len(prices)<span class="number">-1</span>):</span><br><span class="line">            <span class="comment"># 只要当前价格大于明天价格，买入和卖出整体后移一天</span></span><br><span class="line">            <span class="keyword">if</span> prices[p] &gt;= prices[i]:</span><br><span class="line">                p += <span class="number">1</span></span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="comment"># 找到价格上升的最后一天</span></span><br><span class="line">            <span class="keyword">elif</span> i &lt; len(prices)<span class="number">-1</span> <span class="keyword">and</span> prices[i] &lt;= prices[i+<span class="number">1</span>]:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                sum += prices[i] - prices[p]</span><br><span class="line">                p = i + <span class="number">1</span></span><br><span class="line">                i = p + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> sum</span><br></pre></td></tr></table></figure>
-
-<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p><img src="https://pic.superbed.cn/item/5d4d417b451253d1780a5e3c.png" alt="方法一提交"></p>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度：O(n)，所有操作均在一次循环中完成。</p>
-<p>空间复杂度：O(1)，只需要常量的空间。</p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>递增买入和卖出，只要相邻两天价格收益为正，即完成交易。关键点在于可以在同一天买入和卖出，并且没有手续费。</p>
-<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>只要当前价格比后一天价格低，即买入并在后一天卖出（价格连续上涨的话会在同一天卖出又买入，但是没有手续费）</li>
-<li>价格如果有下降，则不买入</li>
+<p><strong>合并环节</strong>：将两个链表合并为一个有序链表</p>
+<ul>
+<li><p>初始化一个节点 h 作为有序链表头部</p>
+</li>
+<li><p>用两个指针 left，right 分别指向待合并链表的首节点</p>
+</li>
+<li><p>比较两指针处的节点值大小，由小到大加入有序链表中，两指针交替前进，直到两个链表排序完成</p>
+</li>
+<li><p>返回有序链表的头节点，即 h.next</p>
+</li>
 </ul>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span><span class="params">(self, prices: List[int])</span> -&gt; int:</span></span><br><span class="line">        profit = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(prices)):</span><br><span class="line">            tmp = prices[i] - prices[i - <span class="number">1</span>]</span><br><span class="line">            <span class="keyword">if</span> tmp &gt; <span class="number">0</span>:</span><br><span class="line">                profit += tmp</span><br><span class="line">        <span class="keyword">return</span> profit</span><br></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># 递归终止</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">        slow, fast = head, head.next</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            fast, slow = fast.next.next, slow.next</span><br><span class="line">        <span class="comment"># 从中间断开</span></span><br><span class="line">        mid, slow.next = slow.next, <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 递归分割已断开的两链表</span></span><br><span class="line">        left, right = self.sortList(head), self.sortList(mid)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 合并两链表</span></span><br><span class="line">        h = res = ListNode(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">while</span> left <span class="keyword">and</span> right:</span><br><span class="line">            <span class="keyword">if</span> left.val &lt; right.val:</span><br><span class="line">                h.next, left = left, left.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                h.next, right = right, right.next</span><br><span class="line">            h = h.next</span><br><span class="line">        <span class="comment"># 剩余元素全部加入</span></span><br><span class="line">        h.next = left <span class="keyword">if</span> left <span class="keyword">else</span> right</span><br><span class="line">        <span class="keyword">return</span> res.next</span><br></pre></td></tr></table></figure>
 
-<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p><img src="https://pic.superbed.cn/item/5d4d46fb451253d1780a9ea3.png" alt="方法二提交"></p>
-<h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度：O(n)，一次循环计算出结果</p>
-<p>空间复杂度：O(1)，只需要常量的空间</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>虽然是关于贪心算法的一道题，但是解题方法中只有方法一用到了贪心算法的思路，或许还有更优的解题方法。</p>
+<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p><img src="https://ae01.alicdn.com/kf/He552d8aafe76408caade9f6a8e17dbd1e.png" alt="方法一提交"></p>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度：O(nlogn)，分割次数 O(logn) x (快慢指针搜索次数 O(n) + merge 过程 O(n) )。</p>
+<p>空间复杂度：O(1)，只需要几个指针进行交换。（严格来讲应该为<strong>O(logn)</strong>，因为每次递归都会新建几个指针）</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>虽然看到了有采用非递归的形式解决问题的，但是无奈看不太懂，所以也就没有也出来。本题的关键难度在于同时要满足时间复杂度和空间复杂度的要求，思路难想明白，总体来说比较复杂。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/He993d2dfe8f64e5cb178c2ceab8f4351L.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H4b4a4c4c9444472f96be9604605dc8d2M.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -445,12 +442,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/08/10/排序链表/" title="排序链表" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/08/08/合并K个排序链表/" title="合并K个排序链表" rel="next">
+			<a href="/2019/08/09/买卖股票的最佳时机-II/" title="买卖股票的最佳时机 II" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -471,23 +464,22 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/08/10/排序链表/" title="排序链表">
-								排序链表			
+							<a class="relate-post-title" href="/2019/08/09/买卖股票的最佳时机-II/" title="买卖股票的最佳时机 II">
+								买卖股票的最佳时机 II			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								八月 10日, 2019				
+								八月 9日, 2019				
 							</p>
 							<p class="relate-post-content">
-								排序链表属于leetcode里腾讯精选练习（50）里面关于排序的一道题，难度为中等，原链接https://leetcode-cn.com/problems/sort-list/ 。（使用python3解决）
-题目在 O(n log n...
+								买卖股票的最佳时机 II属于leetcode里腾讯精选练习（50）里面关于贪心算法的一道题，难度为简单，原链接https://leetcode-cn.com/problems/best-time-to-buy-and-sell-sto...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2019/08/10/排序链表/" title="排序链表">				
+							<a href="/2019/08/09/买卖股票的最佳时机-II/" title="买卖股票的最佳时机 II">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H4b4a4c4c9444472f96be9604605dc8d2M.jpg" alt="排序链表">
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/He993d2dfe8f64e5cb178c2ceab8f4351L.jpg" alt="买卖股票的最佳时机 II">
 							</a>
 						</div>
 					</li>											
