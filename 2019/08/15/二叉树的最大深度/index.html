@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">996字</span>
+        <span class="post-count">990字</span>
       </span>
     </span>
 
@@ -394,13 +394,10 @@
 <p>二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。</p>
 <p><strong>说明:</strong> 叶子节点是指没有子节点的节点。</p>
 <p><strong>示例 :</strong></p>
-<blockquote>
 <p>给定二叉树 <code>[3,9,20,null,null,15,7]</code>，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;    3</span><br><span class="line">&gt;   / \</span><br><span class="line">&gt;  9  20</span><br><span class="line">&gt;    /  \</span><br><span class="line">&gt;   15   7</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  3</span><br><span class="line"> / \</span><br><span class="line">9  20</span><br><span class="line">  /  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure>
+
 <p>返回它的最大深度 3 。</p>
-</blockquote>
 <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>对于此问题,一个很直接的解决方法就是采用递归，不断递归树节点，直到叶子节点，递归一层便高度增加1。</p>
 <ul>
 <li>通过观察发现，对于每一个节点包括根节点的高度，等于左右节点高度中的最大值加1。</li>
