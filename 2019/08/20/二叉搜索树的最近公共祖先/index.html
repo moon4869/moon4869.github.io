@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      二叉搜索树中第K小的元素 | moon&#39;blog
+      二叉搜索树的最近公共祖先 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《二叉搜索树中第K小的元素》
+			当前文章&nbsp;:&nbsp;《二叉搜索树的最近公共祖先》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/08/18/二叉搜索树中第K小的元素/" itemprop="url">
-		二叉搜索树中第K小的元素
+	<a href="/2019/08/20/二叉搜索树的最近公共祖先/" itemprop="url">
+		二叉搜索树的最近公共祖先
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1k字</span>
+        <span class="post-count">1.3k字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">5分</span>
       </span>
     </span>
 </div>
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/08/18/二叉搜索树中第K小的元素/" itemprop="url">
-		<time datetime="2019-08-18T14:23:00.000Z" itemprop="datePublished">
-	  		2019-08-18
+	<a href="/2019/08/20/二叉搜索树的最近公共祖先/" itemprop="url">
+		<time datetime="2019-08-20T13:23:00.000Z" itemprop="datePublished">
+	  		2019-08-20
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/08/18/二叉搜索树中第K小的元素/" itemprop="url">
-		<time datetime="2019-08-18T14:23:00.000Z" itemprop="dateUpdated">
-	  		2019-08-18
+	<a href="/2019/08/20/二叉搜索树的最近公共祖先/" itemprop="url">
+		<time datetime="2019-08-20T13:23:00.000Z" itemprop="dateUpdated">
+	  		2019-08-20
 	  </time>
 	</a> 
 
@@ -370,7 +370,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/08/18/二叉搜索树中第K小的元素/_visitors" data-url="/2019/08/18/二叉搜索树中第K小的元素/" data-title="二叉搜索树中第K小的元素">
+    <span class="leancloud_visitors" id="/2019/08/20/二叉搜索树的最近公共祖先/_visitors" data-url="/2019/08/20/二叉搜索树的最近公共祖先/" data-title="二叉搜索树的最近公共祖先">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -380,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/08/18/二叉搜索树中第K小的元素/_likes" data-url="/2019/08/18/二叉搜索树中第K小的元素/" data-title="二叉搜索树中第K小的元素" rel="unlike">
+    <span class="leancloud_likes" id="/2019/08/20/二叉搜索树的最近公共祖先/_likes" data-url="/2019/08/20/二叉搜索树的最近公共祖先/" data-title="二叉搜索树的最近公共祖先" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -389,33 +389,54 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="二叉搜索树中第K小的元素"><a href="#二叉搜索树中第K小的元素" class="headerlink" title="二叉搜索树中第K小的元素"></a>二叉搜索树中第K小的元素</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>树</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/</a> 。（使用<strong>python3</strong>解决）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个二叉搜索树，编写一个函数 kthSmallest 来查找其中<strong>第 k 个最小</strong>的元素。</p>
-<p>说明：<br>你可以假设 k 总是有效的，1 ≤ k ≤ 二叉搜索树元素个数。</p>
+		<h1 id="二叉搜索树的最近公共祖先"><a href="#二叉搜索树的最近公共祖先" class="headerlink" title="二叉搜索树的最近公共祖先"></a>二叉搜索树的最近公共祖先</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>树</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。</p>
+<p><a href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin" target="_blank" rel="noopener">百度百科</a>中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大<strong>（一个节点也可以是它自己的祖先）</strong>。”</p>
+<p>例如，给定如下二叉搜索树:  root = [6,2,8,0,4,7,9,null,null,3,5]</p>
+<p><img src="https://ae01.alicdn.com/kf/H9e36055b770243d38f139203d3807debE.png" alt="二叉搜索树例子"></p>
 <p><strong>示例1 :</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [3,1,4,null,2], k = 1</span><br><span class="line">   3</span><br><span class="line">  / \</span><br><span class="line"> 1   4</span><br><span class="line">  \</span><br><span class="line">   2</span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure>
-
+<blockquote>
+<p>输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8<br>输出: 6<br>解释: 节点 2 和节点 8 的最近公共祖先是 6。</p>
+</blockquote>
 <p><strong>示例2 :</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [5,3,6,2,4,null,null,1], k = 3</span><br><span class="line">       5</span><br><span class="line">      / \</span><br><span class="line">     3   6</span><br><span class="line">    / \</span><br><span class="line">   2   4</span><br><span class="line">  /</span><br><span class="line"> 1</span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4<br>输出: 2<br>解释: 节点 2 和节点 4 的最近公共祖先是 2, 因为根据定义最近公共祖先节点可以为节点本身。</p>
+</blockquote>
+<p><strong>说明：</strong></p>
+<ul>
+<li>所有节点的值都是唯一的。</li>
+<li>p、q 为不同节点且均存在于给定的二叉搜索树中。</li>
+</ul>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>对于这道题的要求，我们可以分解为先分别找两个节点的祖先、再找它们的最近公共祖先。</p>
+<p>求二叉搜索树中某一节点的所有祖先：</p>
+<ul>
+<li>由于我们已知该节点的值，所以我们可以根据该值在二叉搜索树进行查找</li>
+<li>由于二叉搜索树的特性，我们在查找过程中比较的每一个节点都是其祖先节点，所以我们每比较一个节点便将该节点值加入祖先节点列表中</li>
+<li>注意每个节点也是它自己的祖先，所以在二叉树中查找完后还需在祖先节点列表中加入该节点本身</li>
+</ul>
+<p>求最近公共祖先：</p>
+<ul>
+<li>我们获得两个节点的祖先列表后，经过观察发现它们的最近公共祖先有如下特点：<strong>同时存在于两个祖先列表中并且位置尽可能的靠后</strong></li>
+<li>由于两个祖先列表长度可能不同，我们从更长的一个祖先列表开始，倒序依次取出其中的值，再判断是否存在于另外一个较短的祖先列表中，是则表明该节点值为最近公共祖先</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lowestCommonAncestor</span><span class="params">(self, root: <span class="string">'TreeNode'</span>, p: <span class="string">'TreeNode'</span>, q: <span class="string">'TreeNode'</span>)</span> -&gt; 'TreeNode':</span></span><br><span class="line">        result = TreeNode(<span class="number">0</span>)</span><br><span class="line">        p_ancestor = []</span><br><span class="line">        q_ancestor = []</span><br><span class="line">        p_ancestor = self.search(root, p)</span><br><span class="line">        q_ancestor = self.search(root, q)</span><br><span class="line">        <span class="comment"># 从祖先节点多的那个节点开始，倒序依次获取其祖先值</span></span><br><span class="line">        <span class="comment"># 再判断是否存在于另一个节点的祖先列表中，如果在即表明该节点为最近公共祖先节点</span></span><br><span class="line">        <span class="keyword">if</span> len(p_ancestor) &gt; len(q_ancestor):</span><br><span class="line">            p_ancestor.reverse()</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> p_ancestor:</span><br><span class="line">                <span class="keyword">if</span> i <span class="keyword">in</span> q_ancestor:</span><br><span class="line">                    result.val = i</span><br><span class="line">                    <span class="keyword">return</span> result</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            q_ancestor.reverse()</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> q_ancestor:</span><br><span class="line">                <span class="keyword">if</span> i <span class="keyword">in</span> p_ancestor:</span><br><span class="line">                    result.val = i</span><br><span class="line">                    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 辅助函数，用于求某节点的所有祖先节点值</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(self, root, key)</span>:</span></span><br><span class="line">        ancestor = []</span><br><span class="line">        <span class="keyword">while</span> key.val != root.val:</span><br><span class="line">            <span class="keyword">if</span> key.val &lt; root.val:</span><br><span class="line">                ancestor.append(root.val)</span><br><span class="line">                root = root.left</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ancestor.append(root.val)</span><br><span class="line">                root = root.right</span><br><span class="line">        ancestor.append(key.val)</span><br><span class="line">        <span class="keyword">return</span> ancestor</span><br></pre></td></tr></table></figure>
 
-<p><strong>进阶：</strong><br>如果二叉搜索树经常被修改（插入/删除操作）并且你需要频繁地查找第 k 小的值，你将如何优化 kthSmallest 函数？</p>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>首先明白二叉搜索树的概念，参考<a href="https://baike.baidu.com/item/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91" target="_blank" rel="noopener">百度百科</a>，二叉搜索树（Binary Search Tree），（又：<a href="https://baike.baidu.com/item/二叉搜索树/7077855" target="_blank" rel="noopener">二叉搜索树</a>，二叉排序树）它或者是一棵空树，或者是具有下列性质的<a href="https://baike.baidu.com/item/二叉树/1602879" target="_blank" rel="noopener">二叉树</a>： 若它的左子树不空，则左子树上<strong>所有结点</strong>的值均<strong>小于</strong>它的根结点的值； 若它的右子树不空，则右子树上<strong>所有结点</strong>的值均<strong>大于</strong>它的根结点的值； 它的左、右子树也分别为<a href="https://baike.baidu.com/item/二叉排序树/10905079" target="_blank" rel="noopener">二叉排序树</a>。</p>
-<p>除了二叉搜索树的概念，还需要知道有关它的一些操作，比如它的遍历就包含三种：先序遍历、中序遍历、后序遍历。其中，先序遍历中输出根的关键字在其左右子树的关键字之前；中序遍历中输出根的关键词位于其左子树的关键字和右子树的关键字之间；后序遍历中输出根的关键字在左右子树的关键字之后。</p>
-<p>其中需要注意的是如果采用中序遍历，节点值将由小到大的一次输出出来。而本题求二叉搜索树中的第K小元素，只需要对该二叉搜索树进行中序遍历，记录下第K个输出结果，返回即可。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">kthSmallest</span><span class="params">(self, root: TreeNode, k: int)</span> -&gt; int:</span></span><br><span class="line">        self.i = <span class="number">0</span></span><br><span class="line">        self.kth = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 辅助函数，递归进行中序遍历</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">helper</span><span class="params">(root)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> root:</span><br><span class="line">                helper(root.left)</span><br><span class="line">                self.i += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> self.i == k:</span><br><span class="line">                    self.kth = root.val</span><br><span class="line">                helper(root.right)</span><br><span class="line"></span><br><span class="line">        helper(root)</span><br><span class="line">        <span class="keyword">return</span> self.kth</span><br></pre></td></tr></table></figure>
+<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p><img src="https://ae01.alicdn.com/kf/H358e59b6276f412ab093097e74cdb4e57.png" alt="方法一提交"></p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>经过仔细观察，我们还可以发现最近公共祖先的另外的特点：</p>
+<ul>
+<li>p、q两个节点分别位于最近公共祖先节点的左右子树中，即最近公共祖先节点值在p、q节点值之间</li>
+<li>如果p就是最近公共祖先，则q节点在p节点的左右任一子树中</li>
+<li>如果q就是最近公共祖先，则p节点在q节点的左右任一子树中</li>
+</ul>
+<p>如上，再根据二叉搜索树节点间的大小关系，我们便可以知道<strong>最近公共祖先节点的值位于q、p两节点的值之间，且可以取等</strong>。所以我们从根节点开始依次比较当前节点值于q、p节点值的关系，如果当前节点值大于q、p节点值，则令当前节点更新为其左节点，再进行比较；反之小于的话就为右节点，直到满足当前节点值大小位于q、p两节点的值之间或者与其中一个相等，该节点即为最近公共祖先节点。</p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lowestCommonAncestor</span><span class="params">(self, root: <span class="string">'TreeNode'</span>, p: <span class="string">'TreeNode'</span>, q: <span class="string">'TreeNode'</span>)</span> -&gt; 'TreeNode':</span></span><br><span class="line">        <span class="keyword">while</span> root:</span><br><span class="line">            <span class="keyword">if</span> root.val &gt; p.val <span class="keyword">and</span> root.val &gt; q.val:</span><br><span class="line">                root = root.left</span><br><span class="line">            <span class="keyword">elif</span> root.val &lt; p.val <span class="keyword">and</span> root.val &lt; q.val:</span><br><span class="line">                root = root.right</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> root</span><br></pre></td></tr></table></figure>
 
-<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>提交虽然通过，但是明显还有提升的空间。因为该解法无论需要的是第几小的元素，都会完整的遍历完整个二叉搜索树，明显在得到第K小的元素后，后面的遍历操作都是多余的。并且这是采用递归方式去中序遍历，如果采用非递归的方式可能也会有所提升。</p>
-<p><img src="https://ae01.alicdn.com/kf/He0707eb2b5ba443c8191d84ad79818f9o.png" alt="方法一提交"></p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>整体思路跟方法一相同，采用中序遍历，不过借助于python中的生成器，在求得第K小的元素后，我们便停止对后续节点的遍历。</p>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># 采用生成器从而中断每次的递归</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mid_order</span><span class="params">(self, root)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">yield</span> <span class="keyword">from</span> self.mid_order(root.left)</span><br><span class="line">        <span class="keyword">yield</span> root.val</span><br><span class="line">        <span class="keyword">yield</span> <span class="keyword">from</span> self.mid_order(root.right)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">kthSmallest</span><span class="params">(self, root: TreeNode, k: int)</span> -&gt; int:</span></span><br><span class="line">        gen = self.mid_order(root)</span><br><span class="line">        <span class="comment"># 跳过前K-1个最小元素</span></span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(k - <span class="number">1</span>):</span><br><span class="line">            next(gen)</span><br><span class="line">        <span class="keyword">return</span> next(gen)</span><br></pre></td></tr></table></figure>
-
-<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>虽然提升较方法一不明显，但是这应该是数据量比较小的原因，从理论上来说方法二效率会高一些。</p>
-<p><img src="https://ae01.alicdn.com/kf/Hc8a3757bcd444b8f9a974403f4c586e2V.png" alt="方法二提交"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题从总体上来说不特别难，关键在于对二叉搜索树的知识点的掌握，以及有关中序遍历的操作。另外方法二参考了别人的解法，主要是因为我对python生成器的掌握还不够，这次也算是加深理解了，尤其是生成器与递归之间的结合，可以说是解决你想在半途强行中断递归的可谓巧妙操作。</p>
+<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p><img src="https://ae01.alicdn.com/kf/H9a7cee30b974497f8f10a1437850f4615.png" alt="方法二提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题从总体上来说不难，综合二叉搜索树的结构以及最近公共祖先的特点即可得到解题的方法。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/Hc7bff3fdb12049a28e6773a868a9515d9.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H62db1d776cf547fd82d95be1072ae676u.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -430,12 +451,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/08/20/二叉搜索树的最近公共祖先/" title="二叉搜索树的最近公共祖先" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/08/17/二叉树中的最大路径和/" title="二叉树中的最大路径和" rel="next">
+			<a href="/2019/08/18/二叉搜索树中第K小的元素/" title="二叉搜索树中第K小的元素" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -456,22 +473,22 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/08/20/二叉搜索树的最近公共祖先/" title="二叉搜索树的最近公共祖先">
-								二叉搜索树的最近公共祖先			
+							<a class="relate-post-title" href="/2019/08/18/二叉搜索树中第K小的元素/" title="二叉搜索树中第K小的元素">
+								二叉搜索树中第K小的元素			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								八月 20日, 2019				
+								八月 18日, 2019				
 							</p>
 							<p class="relate-post-content">
-								二叉搜索树的最近公共祖先属于leetcode里腾讯精选练习（50）里面关于树的一道题，难度为简单，原链接https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-bina...
+								二叉搜索树中第K小的元素属于leetcode里腾讯精选练习（50）里面关于树的一道题，难度为中等，原链接https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/ 。...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2019/08/20/二叉搜索树的最近公共祖先/" title="二叉搜索树的最近公共祖先">				
+							<a href="/2019/08/18/二叉搜索树中第K小的元素/" title="二叉搜索树中第K小的元素">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H62db1d776cf547fd82d95be1072ae676u.jpg" alt="二叉搜索树的最近公共祖先">
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hc7bff3fdb12049a28e6773a868a9515d9.jpg" alt="二叉搜索树中第K小的元素">
 							</a>
 						</div>
 					</li>											
