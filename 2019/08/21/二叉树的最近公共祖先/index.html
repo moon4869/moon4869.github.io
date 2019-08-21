@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      博客搭建注意事项 | moon&#39;blog
+      二叉树的最近公共祖先 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《博客搭建注意事项》
+			当前文章&nbsp;:&nbsp;《二叉树的最近公共祖先》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/06/08/博客搭建注意事项/" itemprop="url">
-		博客搭建注意事项
+	<a href="/2019/08/21/二叉树的最近公共祖先/" itemprop="url">
+		二叉树的最近公共祖先
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">876字</span>
+        <span class="post-count">1.3k字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/06/08/博客搭建注意事项/" itemprop="url">
-		<time datetime="2019-06-08T09:05:00.000Z" itemprop="datePublished">
-	  		2019-06-08
+	<a href="/2019/08/21/二叉树的最近公共祖先/" itemprop="url">
+		<time datetime="2019-08-21T14:21:00.000Z" itemprop="datePublished">
+	  		2019-08-21
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/06/08/博客搭建注意事项/" itemprop="url">
-		<time datetime="2019-06-08T09:05:00.000Z" itemprop="dateUpdated">
-	  		2019-08-03
+	<a href="/2019/08/21/二叉树的最近公共祖先/" itemprop="url">
+		<time datetime="2019-08-21T14:21:00.000Z" itemprop="dateUpdated">
+	  		2019-08-21
 	  </time>
 	</a> 
 
@@ -352,12 +352,16 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/博客/" class=" ">
-			博客
+		<a href="/tags/刷题/" class=" ">
+			刷题
 		</a>
 	
-		<a href="/tags/HEXO/" class=" ">
-			HEXO
+		<a href="/tags/leetcode/" class=" ">
+			leetcode
+		</a>
+	
+		<a href="/tags/树/" class=" ">
+			树
 		</a>
 	
 		
@@ -366,7 +370,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/06/08/博客搭建注意事项/_visitors" data-url="/2019/06/08/博客搭建注意事项/" data-title="博客搭建注意事项">
+    <span class="leancloud_visitors" id="/2019/08/21/二叉树的最近公共祖先/_visitors" data-url="/2019/08/21/二叉树的最近公共祖先/" data-title="二叉树的最近公共祖先">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -376,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/06/08/博客搭建注意事项/_likes" data-url="/2019/06/08/博客搭建注意事项/" data-title="博客搭建注意事项" rel="unlike">
+    <span class="leancloud_likes" id="/2019/08/21/二叉树的最近公共祖先/_likes" data-url="/2019/08/21/二叉树的最近公共祖先/" data-title="二叉树的最近公共祖先" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -385,30 +389,50 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="博客搭建注意事项"><a href="#博客搭建注意事项" class="headerlink" title="博客搭建注意事项"></a>博客搭建注意事项</h1><p>最近突然想搭一个真正属于自己的博客，也想慢慢开始写一点东西，所以在跟着<a href="https://blog.csdn.net/qq_36759224/article/details/82121420" target="_blank" rel="noopener">大佬的教程</a>基本搭好了自己的博客后，想将自己在这个过程中遇到的一些问题与找到的解决办法写下来。由于我前面有过搭建博客的经历，所以有些步骤我可能跳过了，从而也产生了一些我个人会遇到的问题，仅供大家参考。（本文需要和大佬的<a href="https://blog.csdn.net/qq_36759224/article/details/82121420" target="_blank" rel="noopener">原教程</a>一起搭配食用）</p>
-<h2 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h2><p>进去<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">官网</a>图点击对应版本下载就行了，我下载的Windows 64位版本，速度相当慢，可能是因为该网站服务器在国外的原因，在此放个<a href="https://www.lanzous.com/i4i1s1c" target="_blank" rel="noopener">链接</a>（Windows 64版本）。</p>
-<p><img src="https://pic.superbed.cn/item/5d45a18c451253d1783b5085.png" alt="node.js"></p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>分别敲入如下命令后回车，可能会无反应，但实际上已经在后台安装了，需要等一会儿便会直接显示结果，可能是因为需要安装的组件太多，时间花费较长，大概在一分钟内会有结果显示。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g  </span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+		<h1 id="二叉树的最近公共祖先"><a href="#二叉树的最近公共祖先" class="headerlink" title="二叉树的最近公共祖先"></a>二叉树的最近公共祖先</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>树</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。</p>
+<p><a href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin" target="_blank" rel="noopener">百度百科</a>中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大<strong>（一个节点也可以是它自己的祖先）</strong>。”</p>
+<p>例如，给定如下二叉树:  root = [3,5,1,6,2,0,8,null,null,7,4]</p>
+<p><img src="https://ae01.alicdn.com/kf/Hc01401b1288f42fc832bd1cedf19c696D.png" alt="二叉搜索树例子"></p>
+<p><strong>示例1 :</strong></p>
+<blockquote>
+<p>输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1<br>输出: 3<br>解释: 节点 5 和节点 1 的最近公共祖先是节点 3。</p>
+</blockquote>
+<p><strong>示例2 :</strong></p>
+<blockquote>
+<p>输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4<br>输出: 5<br>解释: 节点 5 和节点 4 的最近公共祖先是节点 5。因为根据定义最近公共祖先节点可以为节点本身。</p>
+</blockquote>
+<p><strong>说明：</strong></p>
+<ul>
+<li>所有节点的值都是唯一的。</li>
+<li>p、q 为不同节点且均存在于给定的二叉树中。</li>
+</ul>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>本题与另一道题：求<a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank" rel="noopener">二叉搜索树的最近公共祖先</a>差别只在本题是普通的二叉树。先讲讲与二叉搜索树相比求最近公共祖先的相同之处，与二叉搜索树求最近公共祖先的<a href="http://imooner.com/2019/08/20/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" target="_blank" rel="noopener">方法一</a>解法类似，我们可以先分别找两个节点的祖先、再找它们的最近公共祖先；而不同之处就在于怎么找某个节点的祖先，二叉搜索树在查找的过程中便可以记录下祖先节点，而普通的二叉树不行，所以我们得换个思路，先求整棵树中的节点与其父节点的对应关系，再根据对应关系求某个节点的所有祖先节点。</p>
+<p>求二叉树所有节点与其父节点的对应关系：</p>
+<ul>
+<li>新建一个字典以存储节点间的关系，值是键的直接父节点，默认根节点父节点为空</li>
+<li>以深度优先算法递归求得所有节点间的父子关系</li>
+</ul>
+<p>求二叉树中某一节点的所有祖先：</p>
+<ul>
+<li>从该节点开始，只要当前节点不为空，则加入祖先节点列表中，即倒序添加</li>
+<li>然后根据上述父子关系字典得到当前节点的父节点，循环添加直到当前节点为空</li>
+<li>需注意返回的祖先节点列表中顺序是以该节点本身为首、根节点为尾</li>
+</ul>
+<p>求最近公共祖先：</p>
+<ul>
+<li>我们获得两个节点的祖先列表后，经过观察发现它们的最近公共祖先有如下特点：<strong>同时存在于两个祖先列表中并且位置尽可能的靠后</strong></li>
+<li>由于两个祖先列表长度可能不同，我们从更长的一个祖先列表开始，依次取出其中的值，再判断是否存在于另外一个较短的祖先列表中，是则表明该节点值为最近公共祖先，返回即可。</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lowestCommonAncestor</span><span class="params">(self, root: <span class="string">'TreeNode'</span>, p: <span class="string">'TreeNode'</span>, q: <span class="string">'TreeNode'</span>)</span> -&gt; 'TreeNode':</span></span><br><span class="line">        <span class="comment"># 默认根节点的父节点为空</span></span><br><span class="line">        ancestor = &#123;root: <span class="literal">None</span>&#125;</span><br><span class="line">        p_ancestor = []</span><br><span class="line">        q_ancestor = []</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 获取以该节点为根的二叉树所有节点与其父节点的对应关系</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">allAncestor</span><span class="params">(node)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> node:</span><br><span class="line">                <span class="keyword">if</span> node.left:</span><br><span class="line">                    ancestor[node.left] = node</span><br><span class="line">                <span class="keyword">if</span> node.right:</span><br><span class="line">                    ancestor[node.right] = node</span><br><span class="line">                allAncestor(node.left)</span><br><span class="line">                allAncestor(node.right)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 返回某一节点的所有祖先节点，注意是倒序添加的</span></span><br><span class="line">        <span class="comment"># 第一个为节点本身，最后一个为根节点</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">nodeAncestor</span><span class="params">(node)</span>:</span></span><br><span class="line">            temp = []</span><br><span class="line">            <span class="keyword">while</span> node:</span><br><span class="line">                temp.append(node)</span><br><span class="line">                node = ancestor.get(node)</span><br><span class="line">            <span class="keyword">return</span> temp</span><br><span class="line"></span><br><span class="line">        allAncestor(root)</span><br><span class="line">        p_ancestor = nodeAncestor(p)</span><br><span class="line">        q_ancestor = nodeAncestor(q)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> len(p_ancestor) &gt; len(q_ancestor):</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> p_ancestor:</span><br><span class="line">                <span class="keyword">if</span> i <span class="keyword">in</span> q_ancestor:</span><br><span class="line">                    <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> q_ancestor:</span><br><span class="line">                <span class="keyword">if</span> i <span class="keyword">in</span> p_ancestor:</span><br><span class="line">                    <span class="keyword">return</span> i</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置-SSH-密钥"><a href="#配置-SSH-密钥" class="headerlink" title="配置 SSH 密钥"></a>配置 SSH 密钥</h2><p>如果你以前就有将自己本地的Git和远程GitHub相连接，即已经配置过SSH密钥，那么直接跳过配置步骤进入测试步骤即可。</p>
-<h2 id="将本地的-Hexo-文件更新到-Github-的库中"><a href="#将本地的-Hexo-文件更新到-Github-的库中" class="headerlink" title="将本地的 Hexo 文件更新到 Github 的库中"></a>将本地的 Hexo 文件更新到 Github 的库中</h2><p>在下图步骤中，我确实遇到了图示错误，此时需要再次执行 <em>npm install hexo-deployer-git –save</em> 命令，但是执行位置需改为blog下的hexo文件夹（基本上大多数命令执行的位置都在此）。</p>
-<p><img src="https://pic.superbed.cn/item/5d45a196451253d1783b50ec.png" alt="hexo位置"></p>
-<h2 id="在博客上发表文章"><a href="#在博客上发表文章" class="headerlink" title="在博客上发表文章"></a>在博客上发表文章</h2><p>我们都知道需要写的文章是以.md文件保存的，也就是markdown格式，所以我们需要一个markdown文本编辑器，在此推荐一个：<strong>Typora</strong>，大家可以去其 <a href="https://typora.io/" target="_blank" rel="noopener">官网</a>进行下载。</p>
-<h2 id="为博客更换自己喜欢的主题"><a href="#为博客更换自己喜欢的主题" class="headerlink" title="为博客更换自己喜欢的主题"></a>为博客更换自己喜欢的主题</h2><p>由原教程的方法，进入 Hexo 官网的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题专栏</a>找到你喜欢的主题项目后，根据原教程更换自己博客主题，完成以后可以根据该主题项目使用文件进行细节方面的修改。如我随机选中的一个博客<a href="https://github.com/kinggozhang/hexo-theme-ace" target="_blank" rel="noopener">主题项目</a>，会有下图所示使用方法。</p>
-<p><img src="https://pic.superbed.cn/item/5d45a19b451253d1783b5126.png" alt="hexo主题"></p>
-<h2 id="博客美化和实用功能的添加"><a href="#博客美化和实用功能的添加" class="headerlink" title="博客美化和实用功能的添加"></a>博客美化和实用功能的添加</h2><p>我在我的博客里面加了一些我个人比较喜欢的小功能，有些功能是我采用的主题自带的功能。</p>
-<h3 id="浏览器网页标题恶搞"><a href="#浏览器网页标题恶搞" class="headerlink" title="浏览器网页标题恶搞"></a>浏览器网页标题恶搞</h3><p>添加教程<a href="https://blog.csdn.net/qq_36759224/article/details/85420403#font_colorFF0000___font_211" target="_blank" rel="noopener">在此</a>，需要注意的是你需要将下图位置代码改成你的网站标题logo图片名称。</p>
-<p><img src="https://pic.superbed.cn/item/5d45a1a0451253d1783b516d.png" alt="浏览器标题"></p>
-<h3 id="添加字数统计和阅读时长"><a href="#添加字数统计和阅读时长" class="headerlink" title="添加字数统计和阅读时长"></a>添加字数统计和阅读时长</h3><p><a href="https://blog.csdn.net/qq_36759224/article/details/85010191#font_colorFF0000___font_57" target="_blank" rel="noopener">教程链接</a>，在如下步骤时，可能会遇到你的主题下没有该文件，此时只需将框选代码加到你的<strong>文章摸板里的标题位置下面</strong>即可。</p>
-<p><img src="https://pic1.superbed.cn/item/5d45a1a3451253d1783b51a2.png" alt="字数统计"></p>
-<h3 id="添加网站运行时间"><a href="#添加网站运行时间" class="headerlink" title="添加网站运行时间"></a>添加网站运行时间</h3><p>这个跟着<a href="https://blog.csdn.net/qq_36759224/article/details/85010191#font_colorFF0000___font_106" target="_blank" rel="noopener">教程</a>走基本没问题，只是添加位置按照你自己的需要来即可。</p>
-<hr>
-<p>根据原教程搭建博客需要注意的地方大概写的差不多了，如果后续还有发现的会持续修改。本文可以说是我的第一篇博客文章，以后我也会慢慢写更多的，希望以文字来沉淀自己的所学，共勉。</p>
+<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>提交虽然通过，但似乎无论从时间上还是空间上来说效率都不是很高，时间上主要是因为每个步骤都需要一次循环，三个步骤即三个循环，有一点繁琐了；空间上则是因为需要存储节点间的父子关系，p、q节点的祖先节点以及中间的各种临时变量。整体来说还有很多需要改进的地方，需要另外想一个算法去解决这个问题。</p>
+<p><img src="https://ae01.alicdn.com/kf/Hb2e86e1ad1c5420eae4018bd81b38564R.png" alt="方法一提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>方法一主要是根据二叉搜索树求最近公共祖先的方法一演变而来，思路大致相同，但是没有利用好二叉树本身的结构特点，这个算法也不是特别巧妙，只能说能够解题。目前正在想另外的解题方法，会持续更新。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/Hf2571d1886e44e96b57583ef757fa1b44.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/Hd5bfe1b5ba50408aad4ccec6793dd2d61.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -423,12 +447,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" title="安装CTeX后环境变量（Path）被覆盖" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/06/07/hello-world/" title="Hello World" rel="next">
+			<a href="/2019/08/20/二叉搜索树的最近公共祖先/" title="二叉搜索树的最近公共祖先" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -446,52 +466,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/06/07/hello-world/" title="Hello World">
-								Hello World			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								六月 7日, 2019				
-							</p>
-							<p class="relate-post-content">
-								Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using ...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/06/07/hello-world/" title="Hello World">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/Hello World/cover.png" alt="Hello World">
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/08/21/二叉树的最近公共祖先/" title="二叉树的最近公共祖先">
-								二叉树的最近公共祖先			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								八月 21日, 2019				
-							</p>
-							<p class="relate-post-content">
-								二叉树的最近公共祖先属于leetcode里腾讯精选练习（50）里面关于树的一道题，难度为中等，原链接https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/08/21/二叉树的最近公共祖先/" title="二叉树的最近公共祖先">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hd5bfe1b5ba50408aad4ccec6793dd2d61.jpg" alt="二叉树的最近公共祖先">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -557,6 +531,53 @@
 							<a href="/2019/08/17/二叉树中的最大路径和/" title="二叉树中的最大路径和">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H4023dc6465044ce2bd1c10a53be91b5eM.jpg" alt="二叉树中的最大路径和">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/08/15/二叉树的最大深度/" title="二叉树的最大深度">
+								二叉树的最大深度			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								八月 15日, 2019				
+							</p>
+							<p class="relate-post-content">
+								二叉树的最大深度属于leetcode里腾讯精选练习（50）里面关于树的一道题，难度为简单，原链接https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/ 。（使用py...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/08/15/二叉树的最大深度/" title="二叉树的最大深度">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hffc504f060374a6d9251b1a4651f2e54y.jpg" alt="二叉树的最大深度">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/08/14/2的幂/" title="2的幂">
+								2的幂			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								八月 14日, 2019				
+							</p>
+							<p class="relate-post-content">
+								2的幂属于leetcode里腾讯精选练习（50）里面关于位运算的一道题，难度为简单，原链接https://leetcode-cn.com/problems/power-of-two/ 。（使用python3解决）
+题目给定一个整数，编...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/08/14/2的幂/" title="2的幂">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H7fea1999c8b74707a00d908e2444e10fM.jpg" alt="2的幂">
 							</a>
 						</div>
 					</li>											
