@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.3k字</span>
+        <span class="post-count">1.9k字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">7分</span>
       </span>
     </span>
 </div>
@@ -341,7 +341,7 @@
 
 	<a href="/2019/08/21/二叉树的最近公共祖先/" itemprop="url">
 		<time datetime="2019-08-21T14:21:00.000Z" itemprop="dateUpdated">
-	  		2019-08-21
+	  		2019-08-23
 	  </time>
 	</a> 
 
@@ -428,7 +428,21 @@
 
 <h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>提交虽然通过，但似乎无论从时间上还是空间上来说效率都不是很高，时间上主要是因为每个步骤都需要一次循环，三个步骤即三个循环，有一点繁琐了；空间上则是因为需要存储节点间的父子关系，p、q节点的祖先节点以及中间的各种临时变量。整体来说还有很多需要改进的地方，需要另外想一个算法去解决这个问题。</p>
 <p><img src="https://ae01.alicdn.com/kf/Hb2e86e1ad1c5420eae4018bd81b38564R.png" alt="方法一提交"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>方法一主要是根据二叉搜索树求最近公共祖先的方法一演变而来，思路大致相同，但是没有利用好二叉树本身的结构特点，这个算法也不是特别巧妙，只能说能够解题。目前正在想另外的解题方法，会持续更新。</p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>采用递归方式遍历二叉树，同时不断用真假标记当前节点的子树中有无p、q节点，当某个节点的左右子树都为真时即表示该节点为最近公共祖先。当然有可能该节点即为p或q节点，此时只需要该节点为真，加上任一子树为真即可。具体分析参见<a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/er-cha-shu-de-zui-jin-gong-gong-zu-xian-by-leetcod/" target="_blank" rel="noopener">官方题解方法一</a>，详细过程如下：</p>
+<ul>
+<li>从根节点开始递归遍历，每个节点有left, right, mid三个标识，分别表示左右子树是否含p或q节点以及当前节点是否为p、q节点</li>
+<li>如果当前节点为p或q节点，令mid标识为真，且继续遍历当前节点的左右子节点</li>
+<li>如果当前节点左右子节点中任一标识为真，即表示p或q节点在当前节点的子树中</li>
+<li>只要left、right、mid标识中任一标识为真即向父节点返回真，表示找到了p或q节点；如果直到叶子节点还未找到p、q节点，返回假</li>
+<li>在遍历的任一节点上，如果left、right、mid中任意两个标识为真，即表示该节点为最近公共祖先</li>
+</ul>
+<p>参见下图寻找9和11的最近公共祖先：</p>
+<p><img src="https://ae01.alicdn.com/kf/Haef6a112202941a987260e13f9d2eab5i.png" alt="方法二例子"></p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lowestCommonAncestor</span><span class="params">(self, root: <span class="string">'TreeNode'</span>, p: <span class="string">'TreeNode'</span>, q: <span class="string">'TreeNode'</span>)</span> -&gt; 'TreeNode':</span></span><br><span class="line">        self.res = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">recurse_tree</span><span class="params">(current_node)</span>:</span></span><br><span class="line">            <span class="comment"># 叶子节点返回假</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> current_node:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="comment"># 左中右三个标识的真假判定</span></span><br><span class="line">            left = recurse_tree(current_node.left)</span><br><span class="line">            right = recurse_tree(current_node.right)</span><br><span class="line">            mid = current_node == p <span class="keyword">or</span> current_node == q</span><br><span class="line">            <span class="comment"># 最近公共祖先是否为当前节点</span></span><br><span class="line">            <span class="keyword">if</span> left + mid + right &gt;= <span class="number">2</span>:</span><br><span class="line">                self.res = current_node</span><br><span class="line">            <span class="keyword">return</span> left <span class="keyword">or</span> mid <span class="keyword">or</span> right</span><br><span class="line"></span><br><span class="line">        recurse_tree(root)</span><br><span class="line">        <span class="keyword">return</span> self.res</span><br></pre></td></tr></table></figure>
+
+<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>时间消耗上来说还行，但是明显还是有所不足的，因为在递归的过程中即可能找到了最近公共祖先，但是总会把所有节点访问一遍，并设置三个标识的值，实际上在找到了最近公共祖先节点后的递归遍历都是没必要的，不但浪费了时间还浪费了空间。可以参见<a href="http://imooner.com/2019/08/18/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/" target="_blank" rel="noopener">二叉搜索树中第K小的元素</a>的方法二，在递归中采用了生成器强行中断了不必要的递归操作。但是由于题目不同，这道题似乎不好采用相同方式中断递归的执行，目前还未想到好的方式去解决这个问题。</p>
+<p><img src="https://ae01.alicdn.com/kf/H31369ba006df42b9bfb81a1b4fff6d68V.png" alt="方法二提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>方法一主要是根据二叉搜索树求最近公共祖先的方法一演变而来，思路大致相同，但是没有利用好二叉树本身的结构特点，这个算法也不是特别巧妙，只能说能够解题。方法二则采用了常用的递归方式，巧妙之处在于怎么运用标识的手段，在递归的过程中找到题解并记录下来，虽然也有不足，但是较方法一而言思路和代码都更简洁一些。</p>
 	
 	</div>
 	
@@ -955,7 +969,7 @@
 			setInterval("createtime()",250);
 			</script>
 			<i class="fas fa-chart-area"></i>
-			<span class="post-count">文章总字数：15.1k.</span>
+			<span class="post-count">文章总字数：15.8k.</span>
 			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
 			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
 		</p>
