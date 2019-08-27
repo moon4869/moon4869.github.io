@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-26T13:36:12.288Z</updated>
+  <updated>2019-08-27T14:15:42.542Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>寻找两个有序数组的中位数</title>
+    <link href="http://yoursite.com/2019/08/27/%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/"/>
+    <id>http://yoursite.com/2019/08/27/寻找两个有序数组的中位数/</id>
+    <published>2019-08-27T14:13:00.000Z</published>
+    <updated>2019-08-27T14:15:42.542Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="寻找两个有序数组的中位数"><a href="#寻找两个有序数组的中位数" class="headerlink" title="寻找两个有序数组的中位数"></a>寻找两个有序数组的中位数</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>困难</strong>，原链接<a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/median-of-two-sorted-arrays/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定两个大小为 m 和 n 的有序数组 <code>nums1</code> 和 <code>nums2</code>。</p><p>请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 <code>O(log(m + n))</code>。</p><p>你可以假设 <code>nums1</code> 和 <code>nums2</code> 不会同时为空。</p><p><strong>示例1 :</strong></p><blockquote><p>nums1 = [1, 3]<br>nums2 = [2]</p><p>则中位数是 2.0</p></blockquote><p><strong>示例2 :</strong></p><blockquote><p>nums1 = [1, 2]<br>nums2 = [3, 4]</p><p>则中位数是 (2 + 3)/2 = 2.5</p></blockquote><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>其实找中位数很简单，只需要将这些数字排序，找到中间位置的一个数（总个数为奇数）或者两个数的平均值（总个数为偶数）。我们也就这个思路来写代码，首先将两个数组合并为一个，再排序，然后根据新数组长度的奇偶给出中位数。</p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMedianSortedArrays</span><span class="params">(self, nums1: List[int], nums2: List[int])</span> -&gt; float:</span></span><br><span class="line">        nums = sorted(nums1 + nums2)</span><br><span class="line">        n = len(nums)</span><br><span class="line">        <span class="keyword">if</span> n % <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> nums[(n<span class="number">-1</span>)//<span class="number">2</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> (nums[(n//<span class="number">2</span>)<span class="number">-1</span>] + nums[n//<span class="number">2</span>])/<span class="number">2</span></span><br></pre></td></tr></table></figure><h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>提交通过，我们来分析一下时间复杂度，整个代码时间注意消耗在排序新数组上，我们采用的是内置的排序函数，所以时间复杂度为 <code>O((n+m)log(n+m)</code>，没有达到题目给的<code>O(log(m + n))</code>要求，这从提交结果中也可以看出来，所以还需要想想其他的办法。（例如题给条件中有序数组我们还没有用到）</p><p><img src="https://ae01.alicdn.com/kf/Hf5de2f5a29ce44a6a7f5df78dbbb7148y.png" alt="方法一提交"></p><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>由于两个数组有序，所以排序过程我们可以采用<a href="https://baike.baidu.com/item/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F" target="_blank" rel="noopener">归并排序</a>，挨个比较两个数组中的值，将较小的加入新数组中，直到两个数组中所有元素都加进新数组中，此时在新数组中根据其长度奇偶性找到中位数即可。</p><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMedianSortedArrays</span><span class="params">(self, nums1: List[int], nums2: List[int])</span> -&gt; float:</span></span><br><span class="line">        <span class="comment"># 初始化数组长度、索引、新数组等变量</span></span><br><span class="line">        m = len(nums1)</span><br><span class="line">        n = len(nums2)</span><br><span class="line">        length = m + n</span><br><span class="line">        i, j = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        nums = []</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 归并过程，在索引未到边界情况下谁的值小谁添加进新数组中</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; m <span class="keyword">and</span> j &lt; n:</span><br><span class="line">            <span class="keyword">if</span> nums1[i] &lt;= nums2[j]:</span><br><span class="line">                nums.append(nums1[i])</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nums.append(nums2[j])</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">        <span class="comment"># 当某个数组全部添加完后而另一个数组还有未添加的元素</span></span><br><span class="line">        <span class="comment"># 表示剩余元素全部大于新数组内所有值，全部加入新数组尾部</span></span><br><span class="line">        <span class="keyword">if</span> i == m:</span><br><span class="line">            nums += nums2[j:]</span><br><span class="line">        <span class="keyword">elif</span> j == n:</span><br><span class="line">            nums += nums1[i:]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 根据奇偶性找中位数</span></span><br><span class="line">        <span class="keyword">if</span> length % <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> nums[(length<span class="number">-1</span>)//<span class="number">2</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> (nums[(length//<span class="number">2</span>)<span class="number">-1</span>] + nums[length//<span class="number">2</span>])/<span class="number">2</span></span><br></pre></td></tr></table></figure><h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>时间消耗稍微好一些，但是还是不够。就归并排序的时间复杂度而言，平均也是<code>O(nlogn)</code>（n为总输入个数）。但是由于我们已知了两个有序数组，只需要完成比较添加的过程，这样一来时间消耗会少一些，最好情况是前一个数组内元素全部小于或大于后一个数组，此时时间复杂度为<code>O(m)</code>；最坏情况下所有元素都要进行比较，此时时间复杂度为<code>O(m+n)</code>，但是还是没有达到题目<code>O(log(m + n))</code>的要求。</p><p>或许应该采用二分法的思想，才可以将线性级时间复杂度提升到对数级，就像顺序查找与二分查找一样，但是怎么运用又是一个问题。</p><p><img src="https://ae01.alicdn.com/kf/H56c6d3e7e35047da89b4721803b58fe1N.png" alt="方法二提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题的关键在于时间复杂度<code>O(log(m + n))</code>的要求，怎样的算法才可以满足该复杂度，确实比较难想。暂时还未想到好的方法，不过正在参考别人的想法，稍后会更新其他解法。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;寻找两个有序数组的中位数&quot;&gt;&lt;a href=&quot;#寻找两个有序数组的中位数&quot; class=&quot;headerlink&quot; title=&quot;寻找两个有序数组的中位数&quot;&gt;&lt;/a&gt;寻找两个有序数组的中位数&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;stro
+      
+    
+    </summary>
+    
+      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
+    
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>Nim 游戏</title>
@@ -560,33 +589,6 @@
       <category term="path" scheme="http://yoursite.com/tags/path/"/>
     
       <category term="环境变量" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客搭建注意事项</title>
-    <link href="http://yoursite.com/2019/06/08/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    <id>http://yoursite.com/2019/06/08/博客搭建注意事项/</id>
-    <published>2019-06-08T09:05:00.000Z</published>
-    <updated>2019-08-03T15:07:28.678Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="博客搭建注意事项"><a href="#博客搭建注意事项" class="headerlink" title="博客搭建注意事项"></a>博客搭建注意事项</h1><p>最近突然想搭一个真正属于自己的博客，也想慢慢开始写一点东西，所以在跟着<a href="https://blog.csdn.net/qq_36759224/article/details/82121420" target="_blank" rel="noopener">大佬的教程</a>基本搭好了自己的博客后，想将自己在这个过程中遇到的一些问题与找到的解决办法写下来。由于我前面有过搭建博客的经历，所以有些步骤我可能跳过了，从而也产生了一些我个人会遇到的问题，仅供大家参考。（本文需要和大佬的<a href="https://blog.csdn.net/qq_36759224/article/details/82121420" target="_blank" rel="noopener">原教程</a>一起搭配食用）</p><h2 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h2><p>进去<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">官网</a>图点击对应版本下载就行了，我下载的Windows 64位版本，速度相当慢，可能是因为该网站服务器在国外的原因，在此放个<a href="https://www.lanzous.com/i4i1s1c" target="_blank" rel="noopener">链接</a>（Windows 64版本）。</p><p><img src="https://pic.superbed.cn/item/5d45a18c451253d1783b5085.png" alt="node.js"></p><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>分别敲入如下命令后回车，可能会无反应，但实际上已经在后台安装了，需要等一会儿便会直接显示结果，可能是因为需要安装的组件太多，时间花费较长，大概在一分钟内会有结果显示。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g  </span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><h2 id="配置-SSH-密钥"><a href="#配置-SSH-密钥" class="headerlink" title="配置 SSH 密钥"></a>配置 SSH 密钥</h2><p>如果你以前就有将自己本地的Git和远程GitHub相连接，即已经配置过SSH密钥，那么直接跳过配置步骤进入测试步骤即可。</p><h2 id="将本地的-Hexo-文件更新到-Github-的库中"><a href="#将本地的-Hexo-文件更新到-Github-的库中" class="headerlink" title="将本地的 Hexo 文件更新到 Github 的库中"></a>将本地的 Hexo 文件更新到 Github 的库中</h2><p>在下图步骤中，我确实遇到了图示错误，此时需要再次执行 <em>npm install hexo-deployer-git –save</em> 命令，但是执行位置需改为blog下的hexo文件夹（基本上大多数命令执行的位置都在此）。</p><p><img src="https://pic.superbed.cn/item/5d45a196451253d1783b50ec.png" alt="hexo位置"></p><h2 id="在博客上发表文章"><a href="#在博客上发表文章" class="headerlink" title="在博客上发表文章"></a>在博客上发表文章</h2><p>我们都知道需要写的文章是以.md文件保存的，也就是markdown格式，所以我们需要一个markdown文本编辑器，在此推荐一个：<strong>Typora</strong>，大家可以去其 <a href="https://typora.io/" target="_blank" rel="noopener">官网</a>进行下载。</p><h2 id="为博客更换自己喜欢的主题"><a href="#为博客更换自己喜欢的主题" class="headerlink" title="为博客更换自己喜欢的主题"></a>为博客更换自己喜欢的主题</h2><p>由原教程的方法，进入 Hexo 官网的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题专栏</a>找到你喜欢的主题项目后，根据原教程更换自己博客主题，完成以后可以根据该主题项目使用文件进行细节方面的修改。如我随机选中的一个博客<a href="https://github.com/kinggozhang/hexo-theme-ace" target="_blank" rel="noopener">主题项目</a>，会有下图所示使用方法。</p><p><img src="https://pic.superbed.cn/item/5d45a19b451253d1783b5126.png" alt="hexo主题"></p><h2 id="博客美化和实用功能的添加"><a href="#博客美化和实用功能的添加" class="headerlink" title="博客美化和实用功能的添加"></a>博客美化和实用功能的添加</h2><p>我在我的博客里面加了一些我个人比较喜欢的小功能，有些功能是我采用的主题自带的功能。</p><h3 id="浏览器网页标题恶搞"><a href="#浏览器网页标题恶搞" class="headerlink" title="浏览器网页标题恶搞"></a>浏览器网页标题恶搞</h3><p>添加教程<a href="https://blog.csdn.net/qq_36759224/article/details/85420403#font_colorFF0000___font_211" target="_blank" rel="noopener">在此</a>，需要注意的是你需要将下图位置代码改成你的网站标题logo图片名称。</p><p><img src="https://pic.superbed.cn/item/5d45a1a0451253d1783b516d.png" alt="浏览器标题"></p><h3 id="添加字数统计和阅读时长"><a href="#添加字数统计和阅读时长" class="headerlink" title="添加字数统计和阅读时长"></a>添加字数统计和阅读时长</h3><p><a href="https://blog.csdn.net/qq_36759224/article/details/85010191#font_colorFF0000___font_57" target="_blank" rel="noopener">教程链接</a>，在如下步骤时，可能会遇到你的主题下没有该文件，此时只需将框选代码加到你的<strong>文章摸板里的标题位置下面</strong>即可。</p><p><img src="https://pic1.superbed.cn/item/5d45a1a3451253d1783b51a2.png" alt="字数统计"></p><h3 id="添加网站运行时间"><a href="#添加网站运行时间" class="headerlink" title="添加网站运行时间"></a>添加网站运行时间</h3><p>这个跟着<a href="https://blog.csdn.net/qq_36759224/article/details/85010191#font_colorFF0000___font_106" target="_blank" rel="noopener">教程</a>走基本没问题，只是添加位置按照你自己的需要来即可。</p><hr><p>根据原教程搭建博客需要注意的地方大概写的差不多了，如果后续还有发现的会持续修改。本文可以说是我的第一篇博客文章，以后我也会慢慢写更多的，希望以文字来沉淀自己的所学，共勉。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;博客搭建注意事项&quot;&gt;&lt;a href=&quot;#博客搭建注意事项&quot; class=&quot;headerlink&quot; title=&quot;博客搭建注意事项&quot;&gt;&lt;/a&gt;博客搭建注意事项&lt;/h1&gt;&lt;p&gt;最近突然想搭一个真正属于自己的博客，也想慢慢开始写一点东西，所以在跟着&lt;a href=&quot;ht
-      
-    
-    </summary>
-    
-      <category term="HEXO博客" scheme="http://yoursite.com/categories/HEXO%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
     
   </entry>
   
