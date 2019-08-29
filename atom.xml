@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-29T07:31:00.243Z</updated>
+  <updated>2019-08-29T14:32:25.786Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>删除排序数组中的重复项</title>
+    <link href="http://yoursite.com/2019/08/29/%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
+    <id>http://yoursite.com/2019/08/29/删除排序数组中的重复项/</id>
+    <published>2019-08-29T14:30:00.000Z</published>
+    <updated>2019-08-29T14:32:25.786Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="删除排序数组中的重复项"><a href="#删除排序数组中的重复项" class="headerlink" title="删除排序数组中的重复项"></a>删除排序数组中的重复项</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/。（使用**python3**解决）" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/。（使用**python3**解决）</a></p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个<strong>排序数组</strong>，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p><p>不要使用额外的数组空间，你必须在<strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank" rel="noopener">原地</a>修改输入数组</strong>并在使用 O(1) 额外空间的条件下完成。</p><p><strong>示例1 :</strong></p><blockquote><p>给定数组 nums = <strong>[1,1,2]</strong>, </p><p>函数应该返回新的长度 <strong>2</strong>, 并且原数组 nums 的前两个元素被修改为 <strong>1, 2</strong>。 </p><p>你不需要考虑数组中超出新长度后面的元素。</p></blockquote><p><strong>示例2 :</strong></p><blockquote><p>给定 nums = [0,0,1,1,1,2,2,3,3,4],</p><p>函数应该返回新的长度 <strong>5</strong>, 并且原数组 nums 的前五个元素被修改为 <strong>0, 1, 2, 3, 4</strong>。</p><p>你不需要考虑数组中超出新长度后面的元素。</p></blockquote><p><strong>说明:</strong></p><p>为什么返回数值是整数，但输出的答案是数组呢?</p><p>请注意，输入数组是以“<strong>引用</strong>”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p><p>你可以想象内部操作如下:</p><blockquote><p>// <strong>nums</strong> 是以“引用”方式传递的。也就是说，不对实参做任何拷贝<br>int len = removeDuplicates(nums);</p><p>// 在函数里修改输入数组对于调用者是可见的。<br>// 根据你的函数返回的长度, 它会打印出数组中<strong>该长度范围内</strong>的所有元素。<br>for (int i = 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p></blockquote><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>首先用一个变量<code>i</code>记录下当前唯一的元素的最后位置，由于该数组是有序的，我们可以遍历该数组所有值，每一个值与当前唯一的元素中最后一个进行比较，直到找到不同值，将该值覆盖到唯一的元素的后一个位置上，遍历完成后<code>i+1</code>即为唯一元素的个数，返回即可。</p><h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicates</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> num == nums[i]:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                nums[i] = num</span><br><span class="line">        <span class="keyword">return</span> i + <span class="number">1</span></span><br></pre></td></tr></table></figure><h3 id="提交1"><a href="#提交1" class="headerlink" title="提交1"></a>提交1</h3><p>提交通过，时间复杂度<code>O(n)</code>，空间复杂度<code>O(1)</code>。</p><p><img src="https://ae01.alicdn.com/kf/Ha347bdd41fc846b6b49797c4c44bd23aU.png" alt="方法1.1提交"></p><h3 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h3><p>与前面一个的差别在于前面是遍历值且需要赋值，此方法是遍历索引，再取值。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicates</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[j] == nums[i]:</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                nums[i] = nums[j]</span><br><span class="line">        <span class="keyword">return</span> i + <span class="number">1</span></span><br></pre></td></tr></table></figure><h3 id="提交2"><a href="#提交2" class="headerlink" title="提交2"></a>提交2</h3><p>虽然两个方法差别很小，但是时间消耗差别较大。</p><p><img src="https://ae01.alicdn.com/kf/H5d7f6d5a0eee47f8b76e48e3fbd68e73S.png" alt="方法1.2"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题较为简单，思路上需要理解的主要就是快慢双指针的运用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;删除排序数组中的重复项&quot;&gt;&lt;a href=&quot;#删除排序数组中的重复项&quot; class=&quot;headerlink&quot; title=&quot;删除排序数组中的重复项&quot;&gt;&lt;/a&gt;删除排序数组中的重复项&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数
+      
+    
+    </summary>
+    
+      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
+    
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>寻找两个有序数组的中位数</title>
@@ -562,33 +591,6 @@
       <category term="pip" scheme="http://yoursite.com/tags/pip/"/>
     
       <category term="selenium" scheme="http://yoursite.com/tags/selenium/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装CTeX后环境变量（Path）被覆盖</title>
-    <link href="http://yoursite.com/2019/06/09/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/"/>
-    <id>http://yoursite.com/2019/06/09/安装CTeX后环境变量（Path）被覆盖/</id>
-    <published>2019-06-09T13:21:00.000Z</published>
-    <updated>2019-06-09T13:42:27.802Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安装CTeX后环境变量（Path）被覆盖"><a href="#安装CTeX后环境变量（Path）被覆盖" class="headerlink" title="安装CTeX后环境变量（Path）被覆盖"></a>安装CTeX后环境变量（Path）被覆盖</h1><p>最近因为一些原因需要在电脑上安装CTex（一个常用的论文排版工具），主要根据<a href="https://blog.csdn.net/muzhicihe/article/details/80326090" target="_blank" rel="noopener">教程一</a>和<a href="http://www.mamicode.com/info-detail-2143279.html" target="_blank" rel="noopener">教程二</a>来安装。前期一切都好，也没遇到什么问题，但是就在安装完成后，突然发现自己电脑上环境变量中Path的值被覆盖了，也就是只剩下了跟CTex相关的环境变量数据，原本的值全部不见了。如下图框选部分：</p><p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/1560076141824.png" alt="1560076141824"></p><p>在网上查了很久，把找到的方法挨个尝试了一遍，没有一个起作用（真的是欲哭无泪）。只好接受这个事实，希望在以后遇到由此引发的问题时能合理解决。在此记下找到的一些方法，说不定对大家有用。</p><h2 id="提前备份"><a href="#提前备份" class="headerlink" title="提前备份"></a>提前备份</h2><p>当然，最好的方式便是提前将自己的环境变量值给备份下来，以防万一。大概步骤如下：</p><ol><li>在”计算机“上右键，找到”属性“，然后点击高级系统设置。</li><li>点击“环境变量”，找到“系统变量”中的path，将里面的值拷贝出来，放到任意一个文本文件中保存。</li><li>关闭刚刚打开的窗口。双击Ctex安装包，然后按照提示，一直安装完。</li><li>完成后，按照1、2步骤找到环境变量，会发现里面的path值被Ctex覆盖了。把刚刚保存的文本放到path的最前面，然后在添加的文本后添加一个（英文的）分号，然后点击保存，确定，再关闭。</li></ol><p><strong>在此也给自己提个醒，不定时备份一下自己的重要数据，很有必要。</strong></p><h2 id="未重启通过注册表恢复"><a href="#未重启通过注册表恢复" class="headerlink" title="未重启通过注册表恢复"></a>未重启通过注册表恢复</h2><p>有些电脑本地机器的数据不会即时更新，所以你原本的环境变量<strong>可能</strong>还在你的电脑里，可以通过注册表查看，当然前提是你没有将你的电脑重启过，<strong>关机无效</strong>。（这只是可能，就像我的电脑，没有关机同样不行）操作步骤如下：</p><ol><li>按 win +R，输入 regedit以打开注册表。</li><li>找到如下项：“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Control\Session Manager\Environment”，如果没有，可以找“HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment”，把里面的path复制过来，然后添加在系统变量的path之前。</li><li>添加时记得每一个值之间用英文的分号分隔。</li></ol><p><img src="/img/%E5%AE%89%E8%A3%85CTeX%E5%90%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Path%EF%BC%89%E8%A2%AB%E8%A6%86%E7%9B%96/1560086286565.png" alt="1560086286565"></p><h2 id="手动重建"><a href="#手动重建" class="headerlink" title="手动重建"></a>手动重建</h2><p>当然你可能也像我一样，上面的方法都不行，这个时候，只能手动重建你的path变量值了。在此给Windows10默认的path变量值，以及常用的环境变量值，如下：</p><p><strong>默认的：</strong></p><ul><li>%SystemRoot%\system32</li><li>%SystemRoot%</li><li>%SystemRoot%\System32\Wbem</li><li>%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\</li></ul><p><strong>常用的：</strong></p><ul><li>%SYSTEMROOT%\System32\OpenSSH\</li><li>%JAVA_HOME%\bin</li><li>%JAVA_HOME%\jre\bin</li></ul><hr><p>以上就是我在这个过程中找到的一些解决办法，希望能对大家有帮助。我的电脑环境变量现在也只有重新慢慢在建立了，可能以后会遇到一些问题，但既来之，则安之，问题总是能解决的。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;安装CTeX后环境变量（Path）被覆盖&quot;&gt;&lt;a href=&quot;#安装CTeX后环境变量（Path）被覆盖&quot; class=&quot;headerlink&quot; title=&quot;安装CTeX后环境变量（Path）被覆盖&quot;&gt;&lt;/a&gt;安装CTeX后环境变量（Path）被覆盖&lt;/h1&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="本地电脑" scheme="http://yoursite.com/categories/%E6%9C%AC%E5%9C%B0%E7%94%B5%E8%84%91/"/>
-    
-    
-      <category term="path" scheme="http://yoursite.com/tags/path/"/>
-    
-      <category term="环境变量" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     
   </entry>
   

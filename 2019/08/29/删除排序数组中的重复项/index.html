@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      求众数 | moon&#39;blog
+      删除排序数组中的重复项 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《求众数》
+			当前文章&nbsp;:&nbsp;《删除排序数组中的重复项》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/08/13/求众数/" itemprop="url">
-		求众数
+	<a href="/2019/08/29/删除排序数组中的重复项/" itemprop="url">
+		删除排序数组中的重复项
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">660字</span>
+        <span class="post-count">717字</span>
       </span>
     </span>
 
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/08/13/求众数/" itemprop="url">
-		<time datetime="2019-08-13T11:52:00.000Z" itemprop="datePublished">
-	  		2019-08-13
+	<a href="/2019/08/29/删除排序数组中的重复项/" itemprop="url">
+		<time datetime="2019-08-29T14:30:00.000Z" itemprop="datePublished">
+	  		2019-08-29
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/08/13/求众数/" itemprop="url">
-		<time datetime="2019-08-13T11:52:00.000Z" itemprop="dateUpdated">
-	  		2019-08-13
+	<a href="/2019/08/29/删除排序数组中的重复项/" itemprop="url">
+		<time datetime="2019-08-29T14:30:00.000Z" itemprop="dateUpdated">
+	  		2019-08-29
 	  </time>
 	</a> 
 
@@ -360,8 +360,8 @@
 			leetcode
 		</a>
 	
-		<a href="/tags/位运算/" class=" ">
-			位运算
+		<a href="/tags/数组/" class=" ">
+			数组
 		</a>
 	
 		
@@ -370,7 +370,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/08/13/求众数/_visitors" data-url="/2019/08/13/求众数/" data-title="求众数">
+    <span class="leancloud_visitors" id="/2019/08/29/删除排序数组中的重复项/_visitors" data-url="/2019/08/29/删除排序数组中的重复项/" data-title="删除排序数组中的重复项">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -380,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/08/13/求众数/_likes" data-url="/2019/08/13/求众数/" data-title="求众数" rel="unlike">
+    <span class="leancloud_likes" id="/2019/08/29/删除排序数组中的重复项/_likes" data-url="/2019/08/29/删除排序数组中的重复项/" data-title="删除排序数组中的重复项" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -389,42 +389,44 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="求众数"><a href="#求众数" class="headerlink" title="求众数"></a>求众数</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>位运算</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/majority-element/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/majority-element/</a> 。（使用<strong>python3</strong>解决）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个大小为 <em>n</em> 的数组，找到其中的众数。众数是指在数组中出现次数<strong>大于</strong> <code>⌊ n/2 ⌋</code> 的元素。</p>
-<p>你可以假设数组是非空的，并且给定的数组总是存在众数。</p>
+		<h1 id="删除排序数组中的重复项"><a href="#删除排序数组中的重复项" class="headerlink" title="删除排序数组中的重复项"></a>删除排序数组中的重复项</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/。（使用**python3**解决）" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/。（使用**python3**解决）</a></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个<strong>排序数组</strong>，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须在<strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank" rel="noopener">原地</a>修改输入数组</strong>并在使用 O(1) 额外空间的条件下完成。</p>
 <p><strong>示例1 :</strong></p>
 <blockquote>
-<p>输入: [3，2，3]<br>输出: 3</p>
+<p>给定数组 nums = <strong>[1,1,2]</strong>, </p>
+<p>函数应该返回新的长度 <strong>2</strong>, 并且原数组 nums 的前两个元素被修改为 <strong>1, 2</strong>。 </p>
+<p>你不需要考虑数组中超出新长度后面的元素。</p>
 </blockquote>
 <p><strong>示例2 :</strong></p>
 <blockquote>
-<p>输入: [2，2，1，1，1，2，2]<br>输出: 2</p>
+<p>给定 nums = [0,0,1,1,1,2,2,3,3,4],</p>
+<p>函数应该返回新的长度 <strong>5</strong>, 并且原数组 nums 的前五个元素被修改为 <strong>0, 1, 2, 3, 4</strong>。</p>
+<p>你不需要考虑数组中超出新长度后面的元素。</p>
 </blockquote>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>暴力解决，数出每个值的出现次数，返回出现次数最多的那个数。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>遍历数组中的每个数，对每个数进行循环删除，同时记录删除次数</li>
-<li>直到数组中不存在该数，与当前记录的最大出现次数比较并更新最大次数与众数值</li>
-<li>返回众数值</li>
-</ul>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">majorityElement</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        <span class="comment"># 记录当前值在列表中的次数</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 记录列表中出现次数最多的值</span></span><br><span class="line">        max_value = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 记录列表中出现次数最多的值的出现次数</span></span><br><span class="line">        max_count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">                <span class="comment"># 循环去掉列表中的元素，直到没有该元素为止，判断并记录下出现次数最多的值与出现次数</span></span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    <span class="comment"># 如果num不存在会引发ValueError错误</span></span><br><span class="line">                    nums.remove(num)</span><br><span class="line">                    i += <span class="number">1</span></span><br><span class="line">                <span class="keyword">except</span> ValueError:</span><br><span class="line">                    <span class="keyword">if</span> i &gt; max_count:</span><br><span class="line">                        max_count = i</span><br><span class="line">                        max_value = num</span><br><span class="line">                    i = <span class="number">0</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> max_value</span><br></pre></td></tr></table></figure>
+<p><strong>说明:</strong></p>
+<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
+<p>请注意，输入数组是以“<strong>引用</strong>”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
+<p>你可以想象内部操作如下:</p>
+<blockquote>
+<p>// <strong>nums</strong> 是以“引用”方式传递的。也就是说，不对实参做任何拷贝<br>int len = removeDuplicates(nums);</p>
+<p>// 在函数里修改输入数组对于调用者是可见的。<br>// 根据你的函数返回的长度, 它会打印出数组中<strong>该长度范围内</strong>的所有元素。<br>for (int i = 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p>
+</blockquote>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>首先用一个变量<code>i</code>记录下当前唯一的元素的最后位置，由于该数组是有序的，我们可以遍历该数组所有值，每一个值与当前唯一的元素中最后一个进行比较，直到找到不同值，将该值覆盖到唯一的元素的后一个位置上，遍历完成后<code>i+1</code>即为唯一元素的个数，返回即可。</p>
+<h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicates</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> num == nums[i]:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                nums[i] = num</span><br><span class="line">        <span class="keyword">return</span> i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>从结果来看，果然时间消耗非常大，算是个笨办法。<img src="https://ae01.alicdn.com/kf/Ha235ebe612fb4fc3b9873a8af05d9c64M.png" alt="方法一提交"></p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>如果所有数字被单调递增或者单调递减的顺序排了序，那么众数的下标为 ⌊n/2⌋，（当n为偶数时，下标为⌊n/2⌋+1）详细分析请见<a href="https://leetcode-cn.com/problems/majority-element/solution/qiu-zhong-shu-by-leetcode-2/" target="_blank" rel="noopener">该教程</a>方法三。</p>
-<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>先将数组排序</li>
-<li>当n为奇数时，无论众数是最小值、最大值还是中间的值，排序后下标为⌊n/2⌋的值都为众数。</li>
-<li>当n为偶数时，无论众数是最小值、最大值还是中间的值，排序后下标为⌊n/2⌋或者⌊n/2⌋+1的值都为众数。</li>
-<li>综上，返回下标为⌊n/2⌋即可。</li>
-</ul>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">majorityElement</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        nums.sort()</span><br><span class="line">        <span class="keyword">return</span> nums[len(nums)//<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="提交1"><a href="#提交1" class="headerlink" title="提交1"></a>提交1</h3><p>提交通过，时间复杂度<code>O(n)</code>，空间复杂度<code>O(1)</code>。</p>
+<p><img src="https://ae01.alicdn.com/kf/Ha347bdd41fc846b6b49797c4c44bd23aU.png" alt="方法1.1提交"></p>
+<h3 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h3><p>与前面一个的差别在于前面是遍历值且需要赋值，此方法是遍历索引，再取值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicates</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[j] == nums[i]:</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                nums[i] = nums[j]</span><br><span class="line">        <span class="keyword">return</span> i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>明显时间上改善了很多，但是还有改进的地方。</p>
-<p><img src="https://ae01.alicdn.com/kf/Hb14d383c2f0340aaa4514fc29f609a44E.png" alt="方法二提交"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>除了上述两种方法外，还有很多其他的非常巧妙的方法，详情可以参见题解。果然自己去想的话，首先会想出的方法总是效率比较低的，还需要很多的练习与提高。</p>
+<h3 id="提交2"><a href="#提交2" class="headerlink" title="提交2"></a>提交2</h3><p>虽然两个方法差别很小，但是时间消耗差别较大。</p>
+<p><img src="https://ae01.alicdn.com/kf/H5d7f6d5a0eee47f8b76e48e3fbd68e73S.png" alt="方法1.2"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题较为简单，思路上需要理解的主要就是快慢双指针的运用。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H17206870ec0d4c25b70a6c1c6cb7da6eW.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/Hff917a86dd8b45b4951a759ba2f5c146u.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -439,12 +441,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/08/14/2的幂/" title="2的幂" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/08/12/只出现一次的数字/" title="只出现一次的数字" rel="next">
+			<a href="/2019/08/27/寻找两个有序数组的中位数/" title="寻找两个有序数组的中位数" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -462,29 +460,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/08/29/删除排序数组中的重复项/" title="删除排序数组中的重复项">
-								删除排序数组中的重复项			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								八月 29日, 2019				
-							</p>
-							<p class="relate-post-content">
-								删除排序数组中的重复项属于leetcode里腾讯精选练习（50）里面关于数组的一道题，难度为简单，原链接https://leetcode-cn.com/problems/remove-duplicates-from-sorted-ar...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/08/29/删除排序数组中的重复项/" title="删除排序数组中的重复项">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hff917a86dd8b45b4951a759ba2f5c146u.jpg" alt="删除排序数组中的重复项">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -575,6 +550,29 @@
 							<a href="/2019/08/21/二叉树的最近公共祖先/" title="二叉树的最近公共祖先">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hd5bfe1b5ba50408aad4ccec6793dd2d61.jpg" alt="二叉树的最近公共祖先">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/08/20/二叉搜索树的最近公共祖先/" title="二叉搜索树的最近公共祖先">
+								二叉搜索树的最近公共祖先			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								八月 20日, 2019				
+							</p>
+							<p class="relate-post-content">
+								二叉搜索树的最近公共祖先属于leetcode里腾讯精选练习（50）里面关于树的一道题，难度为简单，原链接https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-bina...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/08/20/二叉搜索树的最近公共祖先/" title="二叉搜索树的最近公共祖先">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H62db1d776cf547fd82d95be1072ae676u.jpg" alt="二叉搜索树的最近公共祖先">
 							</a>
 						</div>
 					</li>											
