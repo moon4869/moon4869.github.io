@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      2的幂 | moon&#39;blog
+      最接近的三数之和 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《2的幂》
+			当前文章&nbsp;:&nbsp;《最接近的三数之和》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/08/14/2的幂/" itemprop="url">
-		2的幂
+	<a href="/2019/09/04/最接近的三数之和/" itemprop="url">
+		最接近的三数之和
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">454字</span>
+        <span class="post-count">831字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/08/14/2的幂/" itemprop="url">
-		<time datetime="2019-08-14T09:56:00.000Z" itemprop="datePublished">
-	  		2019-08-14
+	<a href="/2019/09/04/最接近的三数之和/" itemprop="url">
+		<time datetime="2019-09-04T13:40:00.000Z" itemprop="datePublished">
+	  		2019-09-04
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/08/14/2的幂/" itemprop="url">
-		<time datetime="2019-08-14T09:56:00.000Z" itemprop="dateUpdated">
-	  		2019-08-14
+	<a href="/2019/09/04/最接近的三数之和/" itemprop="url">
+		<time datetime="2019-09-04T13:40:00.000Z" itemprop="dateUpdated">
+	  		2019-09-04
 	  </time>
 	</a> 
 
@@ -360,8 +360,8 @@
 			leetcode
 		</a>
 	
-		<a href="/tags/位运算/" class=" ">
-			位运算
+		<a href="/tags/数组/" class=" ">
+			数组
 		</a>
 	
 		
@@ -370,7 +370,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/08/14/2的幂/_visitors" data-url="/2019/08/14/2的幂/" data-title="2的幂">
+    <span class="leancloud_visitors" id="/2019/09/04/最接近的三数之和/_visitors" data-url="/2019/09/04/最接近的三数之和/" data-title="最接近的三数之和">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -380,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/08/14/2的幂/_likes" data-url="/2019/08/14/2的幂/" data-title="2的幂" rel="unlike">
+    <span class="leancloud_likes" id="/2019/09/04/最接近的三数之和/_likes" data-url="/2019/09/04/最接近的三数之和/" data-title="最接近的三数之和" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -389,43 +389,29 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="2的幂"><a href="#2的幂" class="headerlink" title="2的幂"></a>2的幂</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>位运算</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/power-of-two/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/power-of-two/</a> 。（使用<strong>python3</strong>解决）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个整数，编写一个函数来判断它是否是 2 的幂次方。</p>
-<p><strong>示例1 :</strong></p>
+		<h1 id="最接近的三数之和"><a href="#最接近的三数之和" class="headerlink" title="最接近的三数之和"></a>最接近的三数之和</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/3sum-closest/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/3sum-closest/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。</p>
 <blockquote>
-<p>输入: 1<br>输出: true<br>解释: 2的零次方等于1</p>
+<p>例如，给定数组 nums = [-1，2，1，-4], 和 target = 1.</p>
+<p>与 target 最接近的三个数的和为 2. (-1 + 2 + 1 = 2).</p>
 </blockquote>
-<p><strong>示例2 :</strong></p>
-<blockquote>
-<p>输入: 16<br>输出: true<br>解释: 2的四次方等于16</p>
-</blockquote>
-<p><strong>示例3 :</strong></p>
-<blockquote>
-<p>输入: 218<br>输出: false</p>
-</blockquote>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>循环除以2直到结果等于1即表明该整数是2的幂</li>
-<li>如果结果小于2却不等于1即表明该整数不是2的幂</li>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这道题思路跟<a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">三数之和</a>大致相同，不同之处在于只需要找到最接近的即可。我们依旧采用先排序，再遍历三个不同元素的方法。我们用三个指针 i、left、right，i 依次从第一个指向倒数第三个，left、right设置在数组索引(i, len(nums))两端，在k指向某个值时，left、right双指针根据一定规则不断向中间移动，与此同时记录下三个值之和<code>s</code>与目标值之间的差值，再进行比较更新最小的差值和三个数之和。left、right指针移动的具体规则如下：</p>
+<ul>
+<li>当<code>i&gt;0</code>时，此时i指向的值与前一个相同，则跳过当前元素，因为在前一个时已经将所有可能的值全部计算完毕，后续相同的值只会得到重复的结果。</li>
+<li>当<code>left &lt; right</code>时，计算此时<code>s = nums[i] + nums[left] + nums[right]</code>的值判断left、right指针如何移动</li>
+<li>如果<code>s &lt; target</code>，则表示当前和太小，此时将 left 后移一位</li>
+<li>如果<code>s &gt; target</code>，则表示当前和太大，此时将 right 前移一位</li>
+<li>如果<code>s = target</code>，则表示当前和与目标值最接近，直接返回target</li>
 </ul>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPowerOfTwo</span><span class="params">(self, n: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">if</span> n &lt; <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            n = n/<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSumClosest</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; int:</span></span><br><span class="line">        size = len(nums)</span><br><span class="line">        <span class="comment"># 初始化，因为找最小值，因此把初始值设置成实数的最大值</span></span><br><span class="line">        diff = float(<span class="string">'inf'</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 排序是前提</span></span><br><span class="line">        nums.sort()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(size - <span class="number">2</span>):</span><br><span class="line">            <span class="comment"># 常见的剪枝操作</span></span><br><span class="line">            <span class="keyword">if</span> i &gt; <span class="number">0</span> <span class="keyword">and</span> nums[i] == nums[i - <span class="number">1</span>]:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="comment"># 双指针：指针对撞</span></span><br><span class="line">            left = i + <span class="number">1</span></span><br><span class="line">            right = size - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> left &lt; right:</span><br><span class="line">                s = nums[i] + nums[left] + nums[right]</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> abs(s - target) &lt; diff:</span><br><span class="line">                    diff = abs(s - target)</span><br><span class="line">                    res = s</span><br><span class="line"></span><br><span class="line">                <span class="comment"># 不管是变小还是变大，尝试的作用是让 s 与 target 更接近</span></span><br><span class="line">                <span class="comment"># 即 s 与 target 的绝对值之差越来越小</span></span><br><span class="line">                <span class="keyword">if</span> s &gt; target:</span><br><span class="line">                    <span class="comment"># 如果大了，尝试右边界收缩一格，让 target 变小</span></span><br><span class="line">                    right -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">elif</span> s &lt; target:</span><br><span class="line">                    <span class="comment"># 如果小了，尝试左边界收缩一格，让 target 变大</span></span><br><span class="line">                    left += <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="comment"># 如果已经等于 target 的话, 肯定是最接近的，根据题目要求，返回这三个数的和</span></span><br><span class="line">                    <span class="keyword">return</span> target</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 
-<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>从结果来看，还行，简单易懂同时又能够解决问题。<br><img src="https://ae01.alicdn.com/kf/H1009ee97234f46e388a212a0d913fa646.png" alt="方法一提交"></p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>如果n是2的幂，那么n用二进制表示时一定是最高为为1，其余为为0的形式；此时n-1用二进制表示则为最高为为0，其余位为1。（与n保持相同位数，不足高为补0）</li>
-<li>例如：8为2的三次方，二进制为1000，8-1=7二进制位0111。</li>
-<li>则n与n-1执行与操作的结果一定为0，如果不为0则表示n不是2的幂。</li>
-<li>另外如果n&lt;=0也表示n不是2的幂。</li>
-</ul>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><p>代码可以整合为一行，极为简单。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPowerOfTwo</span><span class="params">(self, n: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> n &gt; <span class="number">0</span> <span class="keyword">and</span> <span class="keyword">not</span> n &amp; (n<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>结果上来看，时间消耗居然比循环还要多，有点奇怪，不过可能是误差的原因，位运算还是比较快的。</p>
-<p><img src="https://ae01.alicdn.com/kf/H15fe0f008f2c45f9bc64febfdc3f4d16b.png" alt="方法二提交"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>整体来说这道题比较简单，只要充分理解2的幂有何特点即可找出对应的解法。</p>
+<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p>提交通过，时间复杂度<code>O(n^2)</code>：排序为<code>O(nlogn)</code>，后面双重循环为<code>O(n^2)</code>；空间复杂度<code>O(1)</code>，指针需要常数的空间。</p>
+<p><img src="https://ae01.alicdn.com/kf/H1452d356a3c54895a23c119dbc9f266bq.png" alt="方法一提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>有过前面三数之和的经验后，这道题思路就好想一些，相当于三数之和相当于这道题的特例。同样是先排序后用双指针依次寻找并不断记录最优解，主要是排序后值的大小关系明确，便于移动指针向最优解靠拢。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H7fea1999c8b74707a00d908e2444e10fM.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H8d335255e36f45f99e1c4d76e97ab88dP.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -440,12 +426,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/08/15/二叉树的最大深度/" title="二叉树的最大深度" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/08/13/求众数/" title="求众数" rel="next">
+			<a href="/2019/09/03/三数之和/" title="三数之和" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -463,30 +445,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/04/最接近的三数之和/" title="最接近的三数之和">
-								最接近的三数之和			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 4日, 2019				
-							</p>
-							<p class="relate-post-content">
-								最接近的三数之和属于leetcode里腾讯精选练习（50）里面关于数组的一道题，难度为中等，原链接https://leetcode-cn.com/problems/3sum-closest/ 。（使用python3解决）
-题目给定一个...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/04/最接近的三数之和/" title="最接近的三数之和">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H8d335255e36f45f99e1c4d76e97ab88dP.jpg" alt="最接近的三数之和">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -577,6 +535,29 @@
 							<a href="/2019/08/29/删除排序数组中的重复项/" title="删除排序数组中的重复项">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hff917a86dd8b45b4951a759ba2f5c146u.jpg" alt="删除排序数组中的重复项">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/08/27/寻找两个有序数组的中位数/" title="寻找两个有序数组的中位数">
+								寻找两个有序数组的中位数			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								八月 27日, 2019				
+							</p>
+							<p class="relate-post-content">
+								寻找两个有序数组的中位数属于leetcode里腾讯精选练习（50）里面关于数组的一道题，难度为困难，原链接https://leetcode-cn.com/problems/median-of-two-sorted-arrays/ 。（...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/08/27/寻找两个有序数组的中位数/" title="寻找两个有序数组的中位数">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H7d94c57b9e5f47ba937787aadb2813487.jpg" alt="寻找两个有序数组的中位数">
 							</a>
 						</div>
 					</li>											
