@@ -395,7 +395,7 @@
 <p>例如，给定数组 nums = [-1，2，1，-4], 和 target = 1.</p>
 <p>与 target 最接近的三个数的和为 2. (-1 + 2 + 1 = 2).</p>
 </blockquote>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这道题思路跟<a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">三数之和</a>大致相同，不同之处在于只需要找到最接近的即可。我们依旧采用先排序，再遍历三个不同元素的方法。我们用三个指针 i、left、right，i 依次从第一个指向倒数第三个，left、right设置在数组索引(i, len(nums))两端，在k指向某个值时，left、right双指针根据一定规则不断向中间移动，与此同时记录下三个值之和<code>s</code>与目标值之间的差值，再进行比较更新最小的差值和三个数之和。left、right指针移动的具体规则如下：</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这道题思路跟<a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">三数之和</a>大致相同，不同之处在于只需要找到最接近的即可。我们依旧采用先排序，再遍历三个不同元素的方法。我们用三个指针 i、left、right，i 依次从第一个指向倒数第三个，left、right设置在数组索引(i, len(nums))两端，在i指向某个值时，left、right双指针根据一定规则不断向中间移动，与此同时记录下三个值之和<code>s</code>与目标值之间的差值，再进行比较更新最小的差值和三个数之和。left、right指针移动的具体规则如下：</p>
 <ul>
 <li>当<code>i&gt;0</code>时，此时i指向的值与前一个相同，则跳过当前元素，因为在前一个时已经将所有可能的值全部计算完毕，后续相同的值只会得到重复的结果。</li>
 <li>当<code>left &lt; right</code>时，计算此时<code>s = nums[i] + nums[left] + nums[right]</code>的值判断left、right指针如何移动</li>
