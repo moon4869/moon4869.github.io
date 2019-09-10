@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-09T14:55:20.825Z</updated>
+  <updated>2019-09-10T11:46:55.943Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>合并两个有序数组</title>
+    <link href="http://yoursite.com/2019/09/10/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
+    <id>http://yoursite.com/2019/09/10/合并两个有序数组/</id>
+    <published>2019-09-10T11:45:00.000Z</published>
+    <updated>2019-09-10T11:46:55.943Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="合并两个有序数组"><a href="#合并两个有序数组" class="headerlink" title="合并两个有序数组"></a>合并两个有序数组</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/merge-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-sorted-array/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。</p><p><strong>说明:</strong></p><ul><li>初始化 nums1 和 nums2 的元素数量分别为 m 和 n。</li><li>你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。</li></ul><p><strong>示例：</strong></p><blockquote><p>输入:<br>nums1 = [1,2,3,0,0,0], m = 3<br>nums2 = [2,5,6],           n = 3</p><p>输出: [1,2,2,3,5,6]</p></blockquote><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>其实就合并两个有序数组来说，采用二路归并即可，但是可能需要额外的存储空间来存整个合并后的数组。题目要求在nums1上就地修改，所以如果依旧采用归并方式的话，需要先将nums1里面的元素复制到额外的数组里面，并且将nums1内部清空以方便存储结果。具体归并过程很简单，依次取出待排序的两个数组内的元素，比较大小将小的一个存入nums1中，最后将还没取完的剩余元素全部加入nums1中即可。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(self, nums1: List[int], m: int, nums2: List[int], n: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums1 in-place instead.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        i, j = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        temp = nums1[:m]</span><br><span class="line">        nums1[:] = []</span><br><span class="line">        <span class="keyword">while</span> i &lt; m <span class="keyword">and</span> j &lt; n:</span><br><span class="line">            <span class="keyword">if</span> temp[i] &lt;= nums2[j]:</span><br><span class="line">                nums1.append(temp[i])</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nums1.append(nums2[j])</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> i == m:</span><br><span class="line">            nums1[i+j:] = nums2[j:]</span><br><span class="line">        <span class="keyword">if</span> j == n:</span><br><span class="line">            nums1[i+j:] = temp[i:]</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/H746dd06a45934065a89428bb3172b52a4.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>开始也想过其他的方法，比如先用归并排序好，再将已排序的元素依次填充到nums1中，但是这样就比直接添加到nums1中要慢一些。另外也想过采用插入的方式，但是这样还要删除多余的尾部元素，同时记录索引的指针也复杂一些，所以最后采用了上述方法去解决。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;合并两个有序数组&quot;&gt;&lt;a href=&quot;#合并两个有序数组&quot; class=&quot;headerlink&quot; title=&quot;合并两个有序数组&quot;&gt;&lt;/a&gt;合并两个有序数组&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/strong&gt;的一
+      
+    
+    </summary>
+    
+      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
+    
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>不同路径</title>
@@ -552,35 +581,6 @@
       
       
         &lt;h1 id=&quot;求众数&quot;&gt;&lt;a href=&quot;#求众数&quot; class=&quot;headerlink&quot; title=&quot;求众数&quot;&gt;&lt;/a&gt;求众数&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;位运算&lt;/strong&gt;的一道题，难度为&lt;strong&gt;简单&lt;/s
-      
-    
-    </summary>
-    
-      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
-    
-    
-      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
-    
-      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-      <category term="位运算" scheme="http://yoursite.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>只出现一次的数字</title>
-    <link href="http://yoursite.com/2019/08/12/%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/"/>
-    <id>http://yoursite.com/2019/08/12/只出现一次的数字/</id>
-    <published>2019-08-12T11:52:00.000Z</published>
-    <updated>2019-08-12T11:53:47.459Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="只出现一次的数字"><a href="#只出现一次的数字" class="headerlink" title="只出现一次的数字"></a>只出现一次的数字</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>位运算</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/single-number/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/single-number/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个<strong>非空</strong>整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p><p><strong>说明：</strong></p><p>你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？</p><p><strong>示例1 :</strong></p><blockquote><p>输入: [2,2,1]<br>输出: 1</p></blockquote><p><strong>示例2 :</strong></p><blockquote><p>输入: [4,1,2,1,2]<br>输出: 4</p></blockquote><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul><li>遍历 nums 中的每一个元素</li><li>如果某个nums 中的数字是新出现的，则将它添加到列表中</li><li>如果某个数字已经在列表中，删除它</li></ul><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        no_duplicate_list = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> i <span class="keyword">not</span> <span class="keyword">in</span> no_duplicate_list:</span><br><span class="line">                no_duplicate_list.append(i)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                no_duplicate_list.remove(i)</span><br><span class="line">        <span class="keyword">return</span> no_duplicate_list.pop()</span><br></pre></td></tr></table></figure><h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>从结果来看，时间消耗与空间消耗非常大。</p><p><img src="https://ae01.alicdn.com/kf/H915f2c793ea44169b2bdb88224a4f2d3v.png" alt="方法一提交"></p><h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul><li>时间复杂度：O(n^2)。我们遍历 nums 花费 O(n) 的时间。我们还要在列表中遍历判断是否存在这个数字，花费 O(n) 的时间，所以总循环时间为 O(n^2)。</li><li>空间复杂度：O(n) 。我们需要一个大小为 n 的列表保存所有的 nums 中元素。</li></ul><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><ul><li>如果我们对 0 和二进制位做 XOR 运算，得到的仍然是这个二进制位</li><li>如果我们对相同的二进制位做 XOR 运算，返回的结果是 0</li><li>XOR 满足交换律和结合律</li><li>所以我们只需要将所有的数进行 XOR 操作，得到那个唯一的数字。</li></ul><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        a = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            a ^= i</span><br><span class="line">        <span class="keyword">return</span> a</span><br></pre></td></tr></table></figure><h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p><img src="https://ae01.alicdn.com/kf/H4401e260e08045e28a0a23d5f8cd4297C.png" alt="方法二提交"></p><h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul><li>时间复杂度： O(n)。我们只需要将 nums 中的元素遍历一遍，所以时间复杂度就是 nums 中的元素个数。</li><li>空间复杂度： O(1)。</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>明显第二种方法非常巧妙，充分运用了位运算的知识，但是需要对这方面的知识掌握的很透彻。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;只出现一次的数字&quot;&gt;&lt;a href=&quot;#只出现一次的数字&quot; class=&quot;headerlink&quot; title=&quot;只出现一次的数字&quot;&gt;&lt;/a&gt;只出现一次的数字&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;位运算&lt;/strong&gt;的
       
     
     </summary>
