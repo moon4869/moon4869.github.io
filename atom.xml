@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-15T12:39:30.113Z</updated>
+  <updated>2019-09-16T08:05:01.112Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>合并两个有序链表</title>
+    <link href="http://yoursite.com/2019/09/16/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/"/>
+    <id>http://yoursite.com/2019/09/16/合并两个有序链表/</id>
+    <published>2019-09-16T08:04:00.000Z</published>
+    <updated>2019-09-16T08:05:01.112Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="合并两个有序链表"><a href="#合并两个有序链表" class="headerlink" title="合并两个有序链表"></a>合并两个有序链表</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>链表</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-two-sorted-lists/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 </p><p><strong>示例：</strong></p><blockquote><p>输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4<br>输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</p></blockquote><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>看题很快可以想到归并排序，思路也很简单，挨个取出每个链表中的数，比较大小，将小的一个加入结果链表中，一直比较直到达到某一链表尾部，此时再将另外一个不为空的链表剩余元素全部加入到结果链表中，返回结果链表首节点即可。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeTwoLists</span><span class="params">(self, l1: ListNode, l2: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        head = res = ListNode(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">and</span> l2:</span><br><span class="line">            <span class="keyword">if</span> l1.val &lt;= l2.val:</span><br><span class="line">                res.next = l1</span><br><span class="line">                l1 = l1.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res.next = l2</span><br><span class="line">                l2 = l2.next</span><br><span class="line">            res = res.next</span><br><span class="line">        <span class="keyword">if</span> l1:</span><br><span class="line">            res.next = l1</span><br><span class="line">        <span class="keyword">if</span> l2:</span><br><span class="line">            res.next = l2</span><br><span class="line">        <span class="keyword">return</span> head.next</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/H94dd58785b284384976479de8c3b3ed1v.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>题目难度不高，关键在于归并排序的思想，还有注意链表中的边界问题以及首节点问题即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;合并两个有序链表&quot;&gt;&lt;a href=&quot;#合并两个有序链表&quot; class=&quot;headerlink&quot; title=&quot;合并两个有序链表&quot;&gt;&lt;/a&gt;合并两个有序链表&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;链表&lt;/strong&gt;的一
+      
+    
+    </summary>
+    
+      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
+    
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+      <category term="链表" scheme="http://yoursite.com/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>两数相加</title>
@@ -554,35 +583,6 @@
       
       
         &lt;h1 id=&quot;二叉搜索树的最近公共祖先&quot;&gt;&lt;a href=&quot;#二叉搜索树的最近公共祖先&quot; class=&quot;headerlink&quot; title=&quot;二叉搜索树的最近公共祖先&quot;&gt;&lt;/a&gt;二叉搜索树的最近公共祖先&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;stro
-      
-    
-    </summary>
-    
-      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
-    
-    
-      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
-    
-      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-      <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二叉搜索树中第K小的元素</title>
-    <link href="http://yoursite.com/2019/08/18/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/"/>
-    <id>http://yoursite.com/2019/08/18/二叉搜索树中第K小的元素/</id>
-    <published>2019-08-18T14:23:00.000Z</published>
-    <updated>2019-08-18T14:23:51.458Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="二叉搜索树中第K小的元素"><a href="#二叉搜索树中第K小的元素" class="headerlink" title="二叉搜索树中第K小的元素"></a>二叉搜索树中第K小的元素</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>树</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个二叉搜索树，编写一个函数 kthSmallest 来查找其中<strong>第 k 个最小</strong>的元素。</p><p>说明：<br>你可以假设 k 总是有效的，1 ≤ k ≤ 二叉搜索树元素个数。</p><p><strong>示例1 :</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [3,1,4,null,2], k = 1</span><br><span class="line">   3</span><br><span class="line">  / \</span><br><span class="line"> 1   4</span><br><span class="line">  \</span><br><span class="line">   2</span><br><span class="line">输出: 1</span><br></pre></td></tr></table></figure><p><strong>示例2 :</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入: root = [5,3,6,2,4,null,null,1], k = 3</span><br><span class="line">       5</span><br><span class="line">      / \</span><br><span class="line">     3   6</span><br><span class="line">    / \</span><br><span class="line">   2   4</span><br><span class="line">  /</span><br><span class="line"> 1</span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure><p><strong>进阶：</strong><br>如果二叉搜索树经常被修改（插入/删除操作）并且你需要频繁地查找第 k 小的值，你将如何优化 kthSmallest 函数？</p><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>首先明白二叉搜索树的概念，参考<a href="https://baike.baidu.com/item/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91" target="_blank" rel="noopener">百度百科</a>，二叉搜索树（Binary Search Tree），（又：<a href="https://baike.baidu.com/item/二叉搜索树/7077855" target="_blank" rel="noopener">二叉搜索树</a>，二叉排序树）它或者是一棵空树，或者是具有下列性质的<a href="https://baike.baidu.com/item/二叉树/1602879" target="_blank" rel="noopener">二叉树</a>： 若它的左子树不空，则左子树上<strong>所有结点</strong>的值均<strong>小于</strong>它的根结点的值； 若它的右子树不空，则右子树上<strong>所有结点</strong>的值均<strong>大于</strong>它的根结点的值； 它的左、右子树也分别为<a href="https://baike.baidu.com/item/二叉排序树/10905079" target="_blank" rel="noopener">二叉排序树</a>。</p><p>除了二叉搜索树的概念，还需要知道有关它的一些操作，比如它的遍历就包含三种：先序遍历、中序遍历、后序遍历。其中，先序遍历中输出根的关键字在其左右子树的关键字之前；中序遍历中输出根的关键词位于其左子树的关键字和右子树的关键字之间；后序遍历中输出根的关键字在左右子树的关键字之后。</p><p>其中需要注意的是如果采用中序遍历，节点值将由小到大的一次输出出来。而本题求二叉搜索树中的第K小元素，只需要对该二叉搜索树进行中序遍历，记录下第K个输出结果，返回即可。</p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">kthSmallest</span><span class="params">(self, root: TreeNode, k: int)</span> -&gt; int:</span></span><br><span class="line">        self.i = <span class="number">0</span></span><br><span class="line">        self.kth = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 辅助函数，递归进行中序遍历</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">helper</span><span class="params">(root)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> root:</span><br><span class="line">                helper(root.left)</span><br><span class="line">                self.i += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> self.i == k:</span><br><span class="line">                    self.kth = root.val</span><br><span class="line">                helper(root.right)</span><br><span class="line"></span><br><span class="line">        helper(root)</span><br><span class="line">        <span class="keyword">return</span> self.kth</span><br></pre></td></tr></table></figure><h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>提交虽然通过，但是明显还有提升的空间。因为该解法无论需要的是第几小的元素，都会完整的遍历完整个二叉搜索树，明显在得到第K小的元素后，后面的遍历操作都是多余的。并且这是采用递归方式去中序遍历，如果采用非递归的方式可能也会有所提升。</p><p><img src="https://ae01.alicdn.com/kf/He0707eb2b5ba443c8191d84ad79818f9o.png" alt="方法一提交"></p><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>整体思路跟方法一相同，采用中序遍历，不过借助于python中的生成器，在求得第K小的元素后，我们便停止对后续节点的遍历。</p><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># 采用生成器从而中断每次的递归</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mid_order</span><span class="params">(self, root)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">yield</span> <span class="keyword">from</span> self.mid_order(root.left)</span><br><span class="line">        <span class="keyword">yield</span> root.val</span><br><span class="line">        <span class="keyword">yield</span> <span class="keyword">from</span> self.mid_order(root.right)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">kthSmallest</span><span class="params">(self, root: TreeNode, k: int)</span> -&gt; int:</span></span><br><span class="line">        gen = self.mid_order(root)</span><br><span class="line">        <span class="comment"># 跳过前K-1个最小元素</span></span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(k - <span class="number">1</span>):</span><br><span class="line">            next(gen)</span><br><span class="line">        <span class="keyword">return</span> next(gen)</span><br></pre></td></tr></table></figure><h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>虽然提升较方法一不明显，但是这应该是数据量比较小的原因，从理论上来说方法二效率会高一些。</p><p><img src="https://ae01.alicdn.com/kf/Hc8a3757bcd444b8f9a974403f4c586e2V.png" alt="方法二提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题从总体上来说不特别难，关键在于对二叉搜索树的知识点的掌握，以及有关中序遍历的操作。另外方法二参考了别人的解法，主要是因为我对python生成器的掌握还不够，这次也算是加深理解了，尤其是生成器与递归之间的结合，可以说是解决你想在半途强行中断递归的可谓巧妙操作。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;二叉搜索树中第K小的元素&quot;&gt;&lt;a href=&quot;#二叉搜索树中第K小的元素&quot; class=&quot;headerlink&quot; title=&quot;二叉搜索树中第K小的元素&quot;&gt;&lt;/a&gt;二叉搜索树中第K小的元素&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;stro
       
     
     </summary>
