@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      搜索旋转排序数组 | moon&#39;blog
+      旋转链表 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《搜索旋转排序数组》
+			当前文章&nbsp;:&nbsp;《旋转链表》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/09/06/搜索旋转排序数组/" itemprop="url">
-		搜索旋转排序数组
+	<a href="/2019/09/17/旋转链表/" itemprop="url">
+		旋转链表
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">650字</span>
+        <span class="post-count">652字</span>
       </span>
     </span>
 
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/09/06/搜索旋转排序数组/" itemprop="url">
-		<time datetime="2019-09-06T13:57:00.000Z" itemprop="datePublished">
-	  		2019-09-06
+	<a href="/2019/09/17/旋转链表/" itemprop="url">
+		<time datetime="2019-09-17T13:29:00.000Z" itemprop="datePublished">
+	  		2019-09-17
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/09/06/搜索旋转排序数组/" itemprop="url">
-		<time datetime="2019-09-06T13:57:00.000Z" itemprop="dateUpdated">
-	  		2019-09-06
+	<a href="/2019/09/17/旋转链表/" itemprop="url">
+		<time datetime="2019-09-17T13:29:00.000Z" itemprop="dateUpdated">
+	  		2019-09-17
 	  </time>
 	</a> 
 
@@ -360,8 +360,12 @@
 			leetcode
 		</a>
 	
-		<a href="/tags/数组/" class=" ">
-			数组
+		<a href="/tags/链表/" class=" ">
+			链表
+		</a>
+	
+		<a href="/tags/双指针/" class=" ">
+			双指针
 		</a>
 	
 		
@@ -370,7 +374,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/09/06/搜索旋转排序数组/_visitors" data-url="/2019/09/06/搜索旋转排序数组/" data-title="搜索旋转排序数组">
+    <span class="leancloud_visitors" id="/2019/09/17/旋转链表/_visitors" data-url="/2019/09/17/旋转链表/" data-title="旋转链表">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -380,7 +384,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/09/06/搜索旋转排序数组/_likes" data-url="/2019/09/06/搜索旋转排序数组/" data-title="搜索旋转排序数组" rel="unlike">
+    <span class="leancloud_likes" id="/2019/09/17/旋转链表/_likes" data-url="/2019/09/17/旋转链表/" data-title="旋转链表" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -389,30 +393,26 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="搜索旋转排序数组"><a href="#搜索旋转排序数组" class="headerlink" title="搜索旋转排序数组"></a>搜索旋转排序数组</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/search-in-rotated-sorted-array/</a> 。（使用<strong>python3</strong>解决）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>假设按照升序排序的数组在预先未知的某个点上进行了旋转。</p>
-<p>( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。</p>
-<p>搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。</p>
-<p>你可以假设数组中不存在重复的元素。</p>
-<p>你的算法时间复杂度必须是 <code>O(log n)</code> 级别。</p>
+		<h1 id="旋转链表"><a href="#旋转链表" class="headerlink" title="旋转链表"></a>旋转链表</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>链表</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/rotate-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/rotate-list/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个链表，旋转链表，将链表每个节点向右移动 <em>k</em> 个位置，其中 <em>k</em> 是非负数。</p>
 <p><strong>示例1：</strong></p>
 <blockquote>
-<p>输入: nums = [4,5,6,7,0,1,2], target = 0<br>输出: 4</p>
+<p>输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, k = 2<br>输出: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL<br>解释:<br>向右旋转 1 步: 5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;NULL<br>向右旋转 2 步: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL</p>
 </blockquote>
 <p><strong>示例2：</strong></p>
 <blockquote>
-<p>输入: nums = [4,5,6,7,0,1,2], target = 3<br>输出: -1</p>
+<p>输入: 0-&gt;1-&gt;2-&gt;NULL, k = 4<br>输出: 2-&gt;0-&gt;1-&gt;NULL<br>解释:<br>向右旋转 1 步: 2-&gt;0-&gt;1-&gt;NULL<br>向右旋转 2 步: 1-&gt;2-&gt;0-&gt;NULL<br>向右旋转 3 步: 0-&gt;1-&gt;2-&gt;NULL<br>向右旋转 4 步: 2-&gt;0-&gt;1-&gt;NULL</p>
 </blockquote>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>既然时间复杂度要求为<code>O(logn)</code>，很显然的需要采用二分法。首先，如果这是一个正常的升序数组，那么直接使用二分法求解即可。但是这是一个有点变化的升序数组，关键点在于<strong>数组内有两段升序子数组，并且前一段整体值会大于后一段</strong>。我们同样可以采用普通的二分法，先找到中间元素，将中间元素与末尾元素进行比较，可以判断以中间元素分隔的前后两个子数组哪个是完整有序的。然后再判断目标元素是在完整有序的子数组内，还是另外一个子数组内。然后再对含有目标元素值的子数组进行相同判断操作，直到最后锁定目标值位置，返回索引值即可。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; int:</span></span><br><span class="line">        size = len(nums)</span><br><span class="line">        <span class="keyword">if</span> size == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = size - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            <span class="comment"># 中间位置取中间靠左</span></span><br><span class="line">            mid = (left + right) &gt;&gt; <span class="number">1</span></span><br><span class="line">            <span class="comment"># 右半边有序</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid] &lt; nums[right]:</span><br><span class="line">                <span class="comment"># 在右半边中，注意取等</span></span><br><span class="line">                <span class="keyword">if</span> nums[mid+<span class="number">1</span>] &lt;= target &lt;= nums[right]:</span><br><span class="line">                    left = mid + <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    right = mid</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">if</span> nums[left] &lt;= target &lt;= nums[mid]:</span><br><span class="line">                    right = mid</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> left <span class="keyword">if</span> nums[left] == target <span class="keyword">else</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对于这道题，稍加分析便知道节点的移动可以将其理解为首尾节点的变化，如果将整个链表看成循环链表，即首尾节点相连，移动几位便是将倒数第几个节点作为新的首节点，但是这是在k小于链表长度时的情况。当k大于链表长度时，此时k等价于<code>k%length</code>，即移动了完整的一圈还要多多少。所以找到了新的首节点，此时新的尾节点便是新的首节点的前一个节点，将二者之间断开，返回新的首节点即可。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">rotateRight</span><span class="params">(self, head: ListNode, k: int)</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># 空链表</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># k=0或者链表长度为1</span></span><br><span class="line">        <span class="keyword">if</span> k == <span class="number">0</span> <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 遍历链表得到链表长度，同时将链表连成环</span></span><br><span class="line">        temp = head</span><br><span class="line">        length = <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> temp.next:</span><br><span class="line">            temp = temp.next</span><br><span class="line">            length += <span class="number">1</span></span><br><span class="line">        temp.next = head</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 找到新的链表首尾节点，断开尾节点</span></span><br><span class="line">        q = head</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(length - k % length - <span class="number">1</span>):</span><br><span class="line">            q = q.next</span><br><span class="line">        new_h = q.next</span><br><span class="line">        q.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> new_h</span><br></pre></td></tr></table></figure>
 
-<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p>提交通过，时间复杂度<code>O(logn)</code>：循环一次排除一半元素；空间复杂度<code>O(1)</code>，临时变量需要常数的空间。</p>
-<p><img src="https://ae01.alicdn.com/kf/H6eb15bc1a10048e398a3c88e02867f7bu.png" alt="方法一提交"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个方法是直接二分判断排除，另外也可以先二分找到数组内旋转的那个点，再在以该点分割的两个有序数组内进行二分查找，同样也能在对数的时间内得到解。</p>
+<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p>时间复杂度：<code>O(n)</code>，主要花费在遍历所有节点以找到链表长度上；空间复杂度：<code>O(1)</code>，只需要常数的空间。</p>
+<p><img src="https://ae01.alicdn.com/kf/Hf27dba42313843c2b7b661d8d35be44eD.png" alt="方法一提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>开始思考时并没有将链表连成环，不过也是找到新的首尾节点，但是多一步将原来的尾节点与原来的首节点相连，这样需要多次判断链表是否已经到了尾部，比较繁琐，而先将链表首位相连就会减少很多判断，思路也比较清晰。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H0bcd9ed159414540968e26c457cce250V.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H66b436af13b64dff895bee41f8716b20b.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -427,12 +427,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/09/07/螺旋矩阵/" title="螺旋矩阵" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/09/04/最接近的三数之和/" title="最接近的三数之和" rel="next">
+			<a href="/2019/09/16/合并两个有序链表/" title="合并两个有序链表" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -450,30 +446,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/17/旋转链表/" title="旋转链表">
-								旋转链表			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 17日, 2019				
-							</p>
-							<p class="relate-post-content">
-								旋转链表属于leetcode里腾讯精选练习（50）里面关于链表的一道题，难度为中等，原链接https://leetcode-cn.com/problems/rotate-list/ 。（使用python3解决）
-题目给定一个链表，旋转...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/17/旋转链表/" title="旋转链表">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H66b436af13b64dff895bee41f8716b20b.jpg" alt="旋转链表">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -564,6 +536,29 @@
 							<a href="/2019/09/12/存在重复元素/" title="存在重复元素">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hca13526a759d4f889d0a0efa3e1f1654h.jpg" alt="存在重复元素">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/11/买卖股票的最佳时机/" title="买卖股票的最佳时机">
+								买卖股票的最佳时机			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 11日, 2019				
+							</p>
+							<p class="relate-post-content">
+								买卖股票的最佳时机属于leetcode里腾讯精选练习（50）里面关于数组的一道题，难度为简单，原链接https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/ 。...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/11/买卖股票的最佳时机/" title="买卖股票的最佳时机">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H73d45c9e55b84daeb2400cbfad11d3fc5.jpg" alt="买卖股票的最佳时机">
 							</a>
 						</div>
 					</li>											
