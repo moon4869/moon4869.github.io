@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      2的幂 | moon&#39;blog
+      环形链表 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《2的幂》
+			当前文章&nbsp;:&nbsp;《环形链表》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/08/14/2的幂/" itemprop="url">
-		2的幂
+	<a href="/2019/09/18/环形链表/" itemprop="url">
+		环形链表
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">454字</span>
+        <span class="post-count">765字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/08/14/2的幂/" itemprop="url">
-		<time datetime="2019-08-14T09:56:00.000Z" itemprop="datePublished">
-	  		2019-08-14
+	<a href="/2019/09/18/环形链表/" itemprop="url">
+		<time datetime="2019-09-18T13:56:00.000Z" itemprop="datePublished">
+	  		2019-09-18
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/08/14/2的幂/" itemprop="url">
-		<time datetime="2019-08-14T09:56:00.000Z" itemprop="dateUpdated">
-	  		2019-08-14
+	<a href="/2019/09/18/环形链表/" itemprop="url">
+		<time datetime="2019-09-18T13:56:00.000Z" itemprop="dateUpdated">
+	  		2019-09-18
 	  </time>
 	</a> 
 
@@ -360,8 +360,12 @@
 			leetcode
 		</a>
 	
-		<a href="/tags/位运算/" class=" ">
-			位运算
+		<a href="/tags/链表/" class=" ">
+			链表
+		</a>
+	
+		<a href="/tags/双指针/" class=" ">
+			双指针
 		</a>
 	
 		
@@ -370,7 +374,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/08/14/2的幂/_visitors" data-url="/2019/08/14/2的幂/" data-title="2的幂">
+    <span class="leancloud_visitors" id="/2019/09/18/环形链表/_visitors" data-url="/2019/09/18/环形链表/" data-title="环形链表">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -380,7 +384,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/08/14/2的幂/_likes" data-url="/2019/08/14/2的幂/" data-title="2的幂" rel="unlike">
+    <span class="leancloud_likes" id="/2019/09/18/环形链表/_likes" data-url="/2019/09/18/环形链表/" data-title="环形链表" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -389,43 +393,41 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="2的幂"><a href="#2的幂" class="headerlink" title="2的幂"></a>2的幂</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>位运算</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/power-of-two/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/power-of-two/</a> 。（使用<strong>python3</strong>解决）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个整数，编写一个函数来判断它是否是 2 的幂次方。</p>
-<p><strong>示例1 :</strong></p>
+		<h1 id="环形链表"><a href="#环形链表" class="headerlink" title="环形链表"></a>环形链表</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>链表</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/linked-list-cycle/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/linked-list-cycle/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个链表，判断链表中是否有环。</p>
+<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
+<p><strong>示例1：</strong></p>
 <blockquote>
-<p>输入: 1<br>输出: true<br>解释: 2的零次方等于1</p>
+<p>输入：head = [3,2,0,-4], pos = 1<br>输出：true<br>解释：链表中有一个环，其尾部连接到第二个节点。</p>
 </blockquote>
-<p><strong>示例2 :</strong></p>
+<p><img src="https://ae01.alicdn.com/kf/Ha47156a56b6e40228df2545ca752af4bJ.png" alt="1"></p>
+<p><strong>示例2：</strong></p>
 <blockquote>
-<p>输入: 16<br>输出: true<br>解释: 2的四次方等于16</p>
+<p>输入：head = [1,2], pos = 0<br>输出：true<br>解释：链表中有一个环，其尾部连接到第一个节点。</p>
 </blockquote>
-<p><strong>示例3 :</strong></p>
+<p><img src="https://ae01.alicdn.com/kf/Ha47d92b5a1344845a7873db8852b5c72T.png" alt="2"></p>
+<p><strong>示例3：</strong></p>
 <blockquote>
-<p>输入: 218<br>输出: false</p>
+<p>输入：head = [1], pos = -1<br>输出：false<br>解释：链表中没有环。</p>
 </blockquote>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>循环除以2直到结果等于1即表明该整数是2的幂</li>
-<li>如果结果小于2却不等于1即表明该整数不是2的幂</li>
-</ul>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPowerOfTwo</span><span class="params">(self, n: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">if</span> n &lt; <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            n = n/<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://ae01.alicdn.com/kf/H245fa57027f0419c84ad0b866a47620f7.png" alt="3"></p>
+<p><strong>进阶：</strong></p>
+<p>你能用 <em>O(1)</em>（即，常量）内存解决此问题吗？</p>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题其实可以理解为找某个节点是否已经存在在已知节点中，为了提高查找效率，我们采用字典存储已知节点，将节点作为键，值任意都行。遍历所有节点，每一次在字典中查找是否存在当前节点的键，如果有即表明链表有环，返回<code>true</code>，没有则将该节点作为新的键加入到字典中。遍历完所有节点后还没有找到则表示链表无环，返回<code>false</code>即可。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type head: ListNode</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        temp = &#123;&#125;</span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> temp.get(head):</span><br><span class="line">                temp[head] = <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            head = head.next</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>从结果来看，还行，简单易懂同时又能够解决问题。<br><img src="https://ae01.alicdn.com/kf/H1009ee97234f46e388a212a0d913fa646.png" alt="方法一提交"></p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>如果n是2的幂，那么n用二进制表示时一定是最高为为1，其余为为0的形式；此时n-1用二进制表示则为最高为为0，其余位为1。（与n保持相同位数，不足高为补0）</li>
-<li>例如：8为2的三次方，二进制为1000，8-1=7二进制位0111。</li>
-<li>则n与n-1执行与操作的结果一定为0，如果不为0则表示n不是2的幂。</li>
-<li>另外如果n&lt;=0也表示n不是2的幂。</li>
-</ul>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><p>代码可以整合为一行，极为简单。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPowerOfTwo</span><span class="params">(self, n: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> n &gt; <span class="number">0</span> <span class="keyword">and</span> <span class="keyword">not</span> n &amp; (n<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>时间复杂度：<code>O(n)</code>，最坏循环遍历一次所有节点；空间复杂度：<code>O(n)</code>，需要一个字典存储所有节点。</p>
+<p><img src="https://ae01.alicdn.com/kf/H8d305f48cee84762aaaa5b5b6642d3b9T.png" alt="方法一提交"></p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>因为链表里面可能有环，所有我们可以借助快慢双指针来解题。快指针一次后移两步，慢指针一次后移一步，假设链表有环，那么快指针在进入环后一定会追上慢指针，反之没有环的话快指针会直接走到链表尾部。这样就免去了额外的空间取存储所有的节点。</p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type head: ListNode</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        fast, slow = head, head</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">            <span class="keyword">if</span> fast == slow:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>结果上来看，时间消耗居然比循环还要多，有点奇怪，不过可能是误差的原因，位运算还是比较快的。</p>
-<p><img src="https://ae01.alicdn.com/kf/H15fe0f008f2c45f9bc64febfdc3f4d16b.png" alt="方法二提交"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>整体来说这道题比较简单，只要充分理解2的幂有何特点即可找出对应的解法。</p>
+<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>时间复杂度：<code>O(n)</code>，最坏循环遍历一次所有节点；空间复杂度：<code>O(1)</code>，只需要常数空间。</p>
+<p><img src="https://ae01.alicdn.com/kf/H07d2284d39e24d10902a9154a06f9955d.png" alt="方法二提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>开始只想到了用额外存储节点的方式解题，这样虽然借助内置结构比较容易解题，但是方法可能会不通用，同时空间上会有消耗过高的风险。通过这道题又积累了有关快慢双指针的经验，在链表或者数组中，需要比较前后的值的情况可能都会应用到。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H7fea1999c8b74707a00d908e2444e10fM.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H6ae4cea0d7114e65a06efb6e16f33b59s.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -440,12 +442,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/08/15/二叉树的最大深度/" title="二叉树的最大深度" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/08/13/求众数/" title="求众数" rel="next">
+			<a href="/2019/09/17/旋转链表/" title="旋转链表" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -463,30 +461,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/18/环形链表/" title="环形链表">
-								环形链表			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 18日, 2019				
-							</p>
-							<p class="relate-post-content">
-								环形链表属于leetcode里腾讯精选练习（50）里面关于链表的一道题，难度为简单，原链接https://leetcode-cn.com/problems/linked-list-cycle/ 。（使用python3解决）
-题目给定一...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/18/环形链表/" title="环形链表">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H6ae4cea0d7114e65a06efb6e16f33b59s.jpg" alt="环形链表">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -577,6 +551,30 @@
 							<a href="/2019/09/13/除自身以外数组的乘积/" title="除自身以外数组的乘积">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hf4ad44a943964011999a928f8a0c7489y.jpg" alt="除自身以外数组的乘积">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/12/存在重复元素/" title="存在重复元素">
+								存在重复元素			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 12日, 2019				
+							</p>
+							<p class="relate-post-content">
+								存在重复元素属于leetcode里腾讯精选练习（50）里面关于数组的一道题，难度为简单，原链接https://leetcode-cn.com/problems/contains-duplicate/ 。（使用python3解决）
+题目...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/12/存在重复元素/" title="存在重复元素">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hca13526a759d4f889d0a0efa3e1f1654h.jpg" alt="存在重复元素">
 							</a>
 						</div>
 					</li>											
