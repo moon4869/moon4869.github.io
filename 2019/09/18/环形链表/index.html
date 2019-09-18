@@ -410,7 +410,6 @@
 <blockquote>
 <p>输入：head = [1], pos = -1<br>输出：false<br>解释：链表中没有环。</p>
 </blockquote>
-<p><img src="https://ae01.alicdn.com/kf/H245fa57027f0419c84ad0b866a47620f7.png" alt="3"></p>
 <p><strong>进阶：</strong></p>
 <p>你能用 <em>O(1)</em>（即，常量）内存解决此问题吗？</p>
 <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题其实可以理解为找某个节点是否已经存在在已知节点中，为了提高查找效率，我们采用字典存储已知节点，将节点作为键，值任意都行。遍历所有节点，每一次在字典中查找是否存在当前节点的键，如果有即表明链表有环，返回<code>true</code>，没有则将该节点作为新的键加入到字典中。遍历完所有节点后还没有找到则表示链表无环，返回<code>false</code>即可。</p>
