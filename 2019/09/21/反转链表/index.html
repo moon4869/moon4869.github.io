@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      二叉树的最大深度 | moon&#39;blog
+      反转链表 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《二叉树的最大深度》
+			当前文章&nbsp;:&nbsp;《反转链表》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/08/15/二叉树的最大深度/" itemprop="url">
-		二叉树的最大深度
+	<a href="/2019/09/21/反转链表/" itemprop="url">
+		反转链表
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">990字</span>
+        <span class="post-count">800字</span>
       </span>
     </span>
 
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/08/15/二叉树的最大深度/" itemprop="url">
-		<time datetime="2019-08-15T09:56:00.000Z" itemprop="datePublished">
-	  		2019-08-15
+	<a href="/2019/09/21/反转链表/" itemprop="url">
+		<time datetime="2019-09-21T09:20:00.000Z" itemprop="datePublished">
+	  		2019-09-21
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/08/15/二叉树的最大深度/" itemprop="url">
-		<time datetime="2019-08-15T09:56:00.000Z" itemprop="dateUpdated">
-	  		2019-08-15
+	<a href="/2019/09/21/反转链表/" itemprop="url">
+		<time datetime="2019-09-21T09:20:00.000Z" itemprop="dateUpdated">
+	  		2019-09-21
 	  </time>
 	</a> 
 
@@ -360,8 +360,8 @@
 			leetcode
 		</a>
 	
-		<a href="/tags/树/" class=" ">
-			树
+		<a href="/tags/链表/" class=" ">
+			链表
 		</a>
 	
 		
@@ -370,7 +370,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/08/15/二叉树的最大深度/_visitors" data-url="/2019/08/15/二叉树的最大深度/" data-title="二叉树的最大深度">
+    <span class="leancloud_visitors" id="/2019/09/21/反转链表/_visitors" data-url="/2019/09/21/反转链表/" data-title="反转链表">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -380,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/08/15/二叉树的最大深度/_likes" data-url="/2019/08/15/二叉树的最大深度/" data-title="二叉树的最大深度" rel="unlike">
+    <span class="leancloud_likes" id="/2019/09/21/反转链表/_likes" data-url="/2019/09/21/反转链表/" data-title="反转链表" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -389,62 +389,33 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="二叉树的最大深度"><a href="#二叉树的最大深度" class="headerlink" title="二叉树的最大深度"></a>二叉树的最大深度</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>树</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/</a> 。（使用<strong>python3</strong>解决）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个二叉树，找出其最大深度。</p>
-<p>二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。</p>
-<p><strong>说明:</strong> 叶子节点是指没有子节点的节点。</p>
-<p><strong>示例 :</strong></p>
-<p>给定二叉树 <code>[3,9,20,null,null,15,7]</code>，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  3</span><br><span class="line"> / \</span><br><span class="line">9  20</span><br><span class="line">  /  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure>
+		<h1 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>链表</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/reverse-linked-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-linked-list/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>反转一个单链表。</p>
+<p><strong>示例：</strong></p>
+<blockquote>
+<p>输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL<br>输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p>
+</blockquote>
+<p><strong>进阶:</strong><br>你可以迭代或递归地反转链表。你能否用两种方法解决这道题？</p>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>迭代法，遍历整个链表，记录下每个节点的前驱和后继，改变当前节点的前驱和后继。注意新链表的尾节点后继置为空，每个节点先记录再改变，最后返回的是原链表的首节点。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseList</span><span class="params">(self, head: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        prev = <span class="literal">None</span></span><br><span class="line">        curr = head</span><br><span class="line">        <span class="keyword">while</span> curr:</span><br><span class="line">            temp_next = curr.next</span><br><span class="line">            curr.next = prev</span><br><span class="line">            prev = curr</span><br><span class="line">            curr = temp_next</span><br><span class="line">        <span class="keyword">return</span> prev</span><br></pre></td></tr></table></figure>
 
-<p>返回它的最大深度 3 。</p>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>对于此问题,一个很直接的解决方法就是采用递归，不断递归树节点，直到叶子节点，递归一层便高度增加1。</p>
-<ul>
-<li>通过观察发现，对于每一个节点包括根节点的高度，等于左右节点高度中的最大值加1。</li>
-<li>采用深度优先算法，先递归左节点求得高度，再递归右节点得到高度。</li>
-<li>返回左右节点高度中的最大值再加上1。</li>
-</ul>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxDepth</span><span class="params">(self, root: TreeNode)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            left_height = self.maxDepth(root.left)</span><br><span class="line">            right_height = self.maxDepth(root.right)</span><br><span class="line">            <span class="keyword">return</span> max(left_height, right_height) + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>时间复杂度：<code>O(n)</code>，遍历一次链表的所有节点；空间复杂度：<code>O(1)</code>，只需要常数的空间。</p>
+<p><img src="https://ae01.alicdn.com/kf/H7856212b980a49d9a59d3b0a80176719z.png" alt="方法一提交"></p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>采用递归方式，从原链表尾部开始，反向依次改变每个节点的后继。由于递归的每一层会记录当前的节点，所以只需要关注当前节点与其后继节点在新链表中的前后关系，同时注意及时断掉原链表的前后关系。</p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseList</span><span class="params">(self, head: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># 加上head为空的判断是为了排除空链表</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        <span class="comment"># p记录的是原链表尾节点，即新链表首节点</span></span><br><span class="line">        p = self.reverseList(head.next)</span><br><span class="line">        <span class="comment"># 注意这句代码的关系，可画图理解</span></span><br><span class="line">        head.next.next = head</span><br><span class="line">        <span class="comment"># 及时断掉原链表的节点后继</span></span><br><span class="line">        head.next = <span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> p</span><br></pre></td></tr></table></figure>
 
-<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p><img src="https://ae01.alicdn.com/kf/H10d2788b92b84631a5bff1571c6dd72dv.png" alt="方法一提交"></p>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
-<li>时间复杂度：此方法对树的每个节点只访问一次，所以时间复杂度为O(n)，n为节点个数。</li>
-<li>空间复杂度：由于二叉树有可能是不平衡的，所以空间消耗也不确定。在最坏情况下，二叉树完全不平衡，如每个节点只有左子节点，此时递归将调用n次（n即为树的高度），空间复杂度为O(n)；最好的情况下，二叉树完全平衡，树的高度为log(n)，此时空间复杂度为O(logn)。</li>
-</ul>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>同样采用深度优先算法，不过不使用递归，而是借助栈采用迭代。</p>
-<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>将每一个节点地址和该节点对应的树高度作为一个记录存入栈中</li>
-<li>我们先遍历左节点，所以先将右节点存入栈中，再存入左节点</li>
-<li>每次取出一个节点，如果该节点不为空则更新此时的树高度，再遍历该节点的子节点</li>
-<li>直到栈为空，返回此时的树高度</li>
-</ul>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxDepth</span><span class="params">(self, root)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type root: TreeNode</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span> </span><br><span class="line">        stack = []</span><br><span class="line">        <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            stack.append((<span class="number">1</span>, root))</span><br><span class="line">        </span><br><span class="line">        depth = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> stack != []:</span><br><span class="line">            current_depth, root = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                depth = max(depth, current_depth)</span><br><span class="line">                stack.append((current_depth + <span class="number">1</span>, root.right))</span><br><span class="line">                stack.append((current_depth + <span class="number">1</span>, root.left))</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> depth</span><br></pre></td></tr></table></figure>
+<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>时间复杂度：<code>O(n)</code>，还是会遍历所有节点；空间复杂度：<code>O(n)</code>，递归栈的调用有n层。</p>
+<p><img src="https://ae01.alicdn.com/kf/H5748bd7bc0954a0fb0e9dee520737ebdM.png" alt="方法二提交"></p>
+<h2 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h2><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>因为要倒序的获取每个节点，所以可以借助栈，先将所有节点存入栈中，再依次出栈并连接起来，关键点在于最后一个节点的后继需置空，否则由于其原来有指向的节点，所以会导致链表中有循环。</p>
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseList</span><span class="params">(self, head: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        stack = []</span><br><span class="line">        res = temp = ListNode(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            stack.append(head)</span><br><span class="line">            head = head.next</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(stack)):</span><br><span class="line">            temp.next = stack.pop()</span><br><span class="line">            temp = temp.next</span><br><span class="line">        temp.next = <span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> res.next</span><br></pre></td></tr></table></figure>
 
-<h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>可以看到由于没有使用递归，所以在空间上的消耗减少了很多。</p>
-<p><img src="https://ae01.alicdn.com/kf/H05685bdd9c2743f39559fce0b9925c26S.png" alt="方法二提交"></p>
-<h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
-<li>时间复杂度：O(n)，每个节点遍历一次。</li>
-<li>空间复杂度：O(n)，每个节点存入栈一次。</li>
-</ul>
-<h2 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h2><p>其实也可以使用广度优先算法，不过使用的结构就不是栈而是队列了。</p>
-<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>将每一个节点地址和该节点对应的树高度作为一个记录存入队列中</li>
-<li>我们先遍历左节点，所以先将左节点存入队列中，再存入右节点</li>
-<li>每次取出一个节点，如果该节点不为空则更新此时的树高度，再遍历该节点的子节点</li>
-<li>直到队列为空，返回此时的树高度</li>
-</ul>
-<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxDepth</span><span class="params">(self, root: TreeNode)</span> -&gt; int:</span></span><br><span class="line">        queue = []</span><br><span class="line">        <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            queue.append((<span class="number">1</span>, root))</span><br><span class="line"></span><br><span class="line">        depth = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> queue:</span><br><span class="line">            cur_dep, node = queue.pop(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> node <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                depth = max(depth, cur_dep)</span><br><span class="line">                queue.append((cur_dep+<span class="number">1</span>, node.left))</span><br><span class="line">                queue.append((cur_dep+<span class="number">1</span>, node.right))</span><br><span class="line">        <span class="keyword">return</span> depth</span><br></pre></td></tr></table></figure>
-
-<h3 id="提交-2"><a href="#提交-2" class="headerlink" title="提交"></a>提交</h3><p><img src="https://ae01.alicdn.com/kf/H64cc37458e9b43ddb082dcf921a01484a.png" alt="方法三提交"></p>
-<h3 id="复杂度分析-2"><a href="#复杂度分析-2" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
-<li>时间复杂度：O(n)，每个节点遍历一次。</li>
-<li>空间复杂度：O(n)，每个节点存入队列一次。</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>整体来说考察深度优先算法和广度优先算法，需要注意递归与非递归实现的不同之处。</p>
+<h3 id="提交-2"><a href="#提交-2" class="headerlink" title="提交"></a>提交</h3><p>时间复杂度：<code>O(n)</code>，两次遍历所有链表节点；空间复杂度：<code>O(n)</code>，栈的空间。</p>
+<p><img src="https://ae01.alicdn.com/kf/H856e5704f84a4403b919915dbe4a81bfN.png" alt="方法三提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>题目难度不高却很基础，方法一的迭代方式应该是必须要掌握的，需注意里面的节点需先记录再改变；方法二的递归方式代码虽然比较简洁，但是理解起来有点困难，可以单步在纸上画一下节点的连接情况以及变化；至于方法三，虽然时空间效率都不算高，但是思路很清晰，理解起来不复杂。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/Hffc504f060374a6d9251b1a4651f2e54y.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/Ha0a312c6a01e464eb6fb30102d00f047W.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -459,12 +430,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/08/17/二叉树中的最大路径和/" title="二叉树中的最大路径和" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/08/14/2的幂/" title="2的幂" rel="next">
+			<a href="/2019/09/20/相交链表/" title="相交链表" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -482,30 +449,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/21/反转链表/" title="反转链表">
-								反转链表			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 21日, 2019				
-							</p>
-							<p class="relate-post-content">
-								反转链表属于leetcode里腾讯精选练习（50）里面关于链表的一道题，难度为简单，原链接https://leetcode-cn.com/problems/reverse-linked-list/ 。（使用python3解决）
-题目反...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/21/反转链表/" title="反转链表">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Ha0a312c6a01e464eb6fb30102d00f047W.jpg" alt="反转链表">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -596,6 +539,29 @@
 							<a href="/2019/09/17/旋转链表/" title="旋转链表">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H66b436af13b64dff895bee41f8716b20b.jpg" alt="旋转链表">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/16/合并两个有序链表/" title="合并两个有序链表">
+								合并两个有序链表			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 16日, 2019				
+							</p>
+							<p class="relate-post-content">
+								合并两个有序链表属于leetcode里腾讯精选练习（50）里面关于链表的一道题，难度为简单，原链接https://leetcode-cn.com/problems/merge-two-sorted-lists/ 。（使用python3...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/16/合并两个有序链表/" title="合并两个有序链表">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H3d26101c70354dc79b975f45ef6ac007q.jpg" alt="合并两个有序链表">
 							</a>
 						</div>
 					</li>											
