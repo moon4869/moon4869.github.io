@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      安装selenium问题以及pip换源 | moon&#39;blog
+      整数反转 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《安装selenium问题以及pip换源》
+			当前文章&nbsp;:&nbsp;《整数反转》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/07/30/安装selenium问题以及pip换源/" itemprop="url">
-		安装selenium问题以及pip换源
+	<a href="/2019/09/23/2019-09-23-整数反转/" itemprop="url">
+		整数反转
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">827字</span>
+        <span class="post-count">796字</span>
       </span>
     </span>
 
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/07/30/安装selenium问题以及pip换源/" itemprop="url">
-		<time datetime="2019-07-30T05:30:00.000Z" itemprop="datePublished">
-	  		2019-07-30
+	<a href="/2019/09/23/2019-09-23-整数反转/" itemprop="url">
+		<time datetime="2019-09-23T09:13:00.000Z" itemprop="datePublished">
+	  		2019-09-23
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/07/30/安装selenium问题以及pip换源/" itemprop="url">
-		<time datetime="2019-07-30T05:30:00.000Z" itemprop="dateUpdated">
-	  		2019-08-03
+	<a href="/2019/09/23/2019-09-23-整数反转/" itemprop="url">
+		<time datetime="2019-09-23T09:13:00.000Z" itemprop="dateUpdated">
+	  		2019-09-23
 	  </time>
 	</a> 
 
@@ -352,12 +352,16 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/pip/" class=" ">
-			pip
+		<a href="/tags/刷题/" class=" ">
+			刷题
 		</a>
 	
-		<a href="/tags/selenium/" class=" ">
-			selenium
+		<a href="/tags/leetcode/" class=" ">
+			leetcode
+		</a>
+	
+		<a href="/tags/数学/" class=" ">
+			数学
 		</a>
 	
 		
@@ -366,7 +370,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/07/30/安装selenium问题以及pip换源/_visitors" data-url="/2019/07/30/安装selenium问题以及pip换源/" data-title="安装selenium问题以及pip换源">
+    <span class="leancloud_visitors" id="/2019/09/23/2019-09-23-整数反转/_visitors" data-url="/2019/09/23/2019-09-23-整数反转/" data-title="整数反转">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -376,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/07/30/安装selenium问题以及pip换源/_likes" data-url="/2019/07/30/安装selenium问题以及pip换源/" data-title="安装selenium问题以及pip换源" rel="unlike">
+    <span class="leancloud_likes" id="/2019/09/23/2019-09-23-整数反转/_likes" data-url="/2019/09/23/2019-09-23-整数反转/" data-title="整数反转" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -385,35 +389,39 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="安装selenium问题以及pip换源"><a href="#安装selenium问题以及pip换源" class="headerlink" title="安装selenium问题以及pip换源"></a>安装selenium问题以及pip换源</h1><p>最近决定开始学习一些python爬虫的知识，结果在用pip安装一些常用第三方库的时候遇到了一些问题，在查找解决方法的过程中又看到了pip换源的内容，在此记下来供大家参考。</p>
-<h2 id="安装selenium"><a href="#安装selenium" class="headerlink" title="安装selenium"></a>安装selenium</h2><p>使用pip安装，在命令行输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure>
+		<h1 id="整数反转"><a href="#整数反转" class="headerlink" title="整数反转"></a>整数反转</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数学</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/reverse-integer/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-integer/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</p>
+<p><strong>示例1：</strong></p>
+<blockquote>
+<p>输入: 123<br>输出: 321</p>
+</blockquote>
+<p><strong>示例2：</strong></p>
+<blockquote>
+<p>输入: -123<br>输出: -321</p>
+</blockquote>
+<p><strong>示例3：</strong></p>
+<blockquote>
+<p>输入: 120<br>输出: 21</p>
+</blockquote>
+<p><strong>注意:</strong></p>
+<p>假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 <code>[−2^31,  2^31 − 1]</code>。请根据这个假设，如果反转后整数溢出那么就返回 0。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>先说一下一般的解题思想：通过不断地对10进行取余和取商，得到整数的每一位数字，用数组存下来，反序再拼成整数，最后加上边界判断。</p>
+<p>再说一下特殊的解题思路：直接将一个整数反转是比较困难的，而对于字符串的反转是比较容易的。所以我们先将这个整数转化成字符串，再对字符串进行反转，然后再转为整数，而将一个字符串反转用一句代码即可：<code>str[::-1]</code>。数字反转的部分完成了，接下来是对边界的判定，由于正负边界不同，我们便分开判定，超过边界则返回0。这里要注意一下：<strong>力扣系统对边界的判定不完善，代码不能输出正负的边界值一样会通过，</strong>所以需要自行仔细的去判定。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverse</span><span class="params">(self, x: int)</span> -&gt; int:</span></span><br><span class="line">        x1 = abs(x)</span><br><span class="line">        x2 = <span class="number">2</span> ** <span class="number">31</span></span><br><span class="line">        <span class="comment"># 先转换成字符串，再反序</span></span><br><span class="line">        s = str(x1)[::<span class="number">-1</span>]</span><br><span class="line">        <span class="comment"># 自动去掉前面的0</span></span><br><span class="line">        x3 = int(s)</span><br><span class="line">        <span class="comment"># 根据正负情况判断边界条件</span></span><br><span class="line">        <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> x3 &lt; x2:</span><br><span class="line">                <span class="keyword">return</span> x3</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> x3 &lt;= x2:</span><br><span class="line">                <span class="keyword">return</span> -x3</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 
-<p>结果出错了，报错如下（前面红色部分）：</p>
-<p><img src="/img/%E5%AE%89%E8%A3%85selenium%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8Apip%E6%8D%A2%E6%BA%90/Snipaste_2019-07-29_23-03-31.png" alt="报错信息"></p>
-<p>查了一下发现没什么问题，结果过一会儿再试了一下，就可以装上了，如上图下半部分，就很奇怪。经过一番查找，发现可能是网不太好的原因，特别是你在学校或者公司的内网中，就有可能出现上述问题，解决方法很简单，推出内网，重新再试几次，应该就可以成功了。</p>
-<h2 id="pip换源"><a href="#pip换源" class="headerlink" title="pip换源"></a>pip换源</h2><p>出现前面问题的根本原因是我们使用pip安装第三方库的时候，默认的源是国外的，而我们访问国外的网站比较慢，有时还会出现访问失败的情况，所以才会导致上述问题的出现。所以我们可以将pip的源换为我们国内的源，这样我们在使用pip下载第三方库的时候，就会稳定而且快很多。以下分别给出国内常用源和暂时换源以及永久换源的方法：</p>
-<h3 id="国内常用源"><a href="#国内常用源" class="headerlink" title="国内常用源"></a>国内常用源</h3><p>1.阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="noopener">http://mirrors.aliyun.com/pypi/simple/</a></p>
-<p>2.中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.mirrors.ustc.edu.cn/simple/</a> </p>
-<p>3.豆瓣(douban) <a href="http://pypi.douban.com/simple/" target="_blank" rel="noopener">http://pypi.douban.com/simple/</a> </p>
-<p>4.清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple/</a></p>
-<p>5.中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">http://pypi.mirrors.ustc.edu.cn/simple/</a>  </p>
-<h3 id="暂时换源"><a href="#暂时换源" class="headerlink" title="暂时换源"></a>暂时换源</h3><p>顾名思义，你只是在下载这个库的时候用默认源不行，想换成国内源下载，那么只需要在pip安装命令后面加上 -i参数，同时在后面指定源地址即可，例子如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium -i https://pypi.tuna.tsinghua.edu.cn/simple/</span><br></pre></td></tr></table></figure>
+<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/Hae8a5ebe00fe483497ae8ce77969ad53D.png" alt="方法一提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实写过了好几版的代码了，都能通过，但是在某些方面上还有所不足，已经在代码中注释了，详情如下：</p>
+<p><strong>第一版：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverse</span><span class="params">(self, x: int)</span> -&gt; int:</span></span><br><span class="line">        x1 = abs(x)</span><br><span class="line">        <span class="keyword">if</span> x == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        s1 = str(x1)</span><br><span class="line">        <span class="comment"># 反转过程：整数-&gt;字符串-&gt;数组-&gt;字符串-&gt;整数</span></span><br><span class="line">        temp = list(s1)</span><br><span class="line">        <span class="comment"># 手动去掉反转后前面的0</span></span><br><span class="line">        <span class="keyword">while</span> temp[<span class="number">-1</span>] == <span class="string">'0'</span>:</span><br><span class="line">            temp.pop()</span><br><span class="line">        temp.reverse()</span><br><span class="line">        s2 = str.join(<span class="string">''</span>, temp)</span><br><span class="line">        <span class="comment"># 采用eval函数将字符串-&gt;整数</span></span><br><span class="line">        x3 = eval(s2)</span><br><span class="line">        <span class="comment"># 边界判定不够完善</span></span><br><span class="line">        <span class="keyword">if</span> x3 &gt; ((<span class="number">2</span> ** <span class="number">31</span>) - <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> x3</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> -x3</span><br></pre></td></tr></table></figure>
 
-<h3 id="永久换源"><a href="#永久换源" class="headerlink" title="永久换源"></a>永久换源</h3><p>有的人（比如像我一样）觉得默认源下载起来太慢了，想以后所有的库都换成国内源去下载，那么只需要修改一下pip的配置即可，具体步骤如下：（Windows环境）</p>
-<p>第一步: win+R 输入%HOMEPATH%打开用户目录（以确保是在本机用户目录下），在此目录下创建 pip 文件夹，在 pip 目录下创建 pip.txt文件, 内容如下：（以清华的源为例，其他的源只需要修改相应的地址即可）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host = pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
+<p><strong>第二版：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverse</span><span class="params">(self, x: int)</span> -&gt; int:</span></span><br><span class="line">        x1 = abs(x)</span><br><span class="line">        <span class="keyword">if</span> x == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="comment"># 反转过程不变</span></span><br><span class="line">        s1 = str(x1)</span><br><span class="line">        temp = list(s1)</span><br><span class="line">        temp.reverse()</span><br><span class="line">        s2 = str.join(<span class="string">''</span>, temp)</span><br><span class="line">        <span class="comment"># 采用int函数将字符串-&gt;整数，自动去点前面的0</span></span><br><span class="line">        x3 = int(s2)</span><br><span class="line">        <span class="keyword">if</span> x3 &gt; ((<span class="number">2</span> ** <span class="number">31</span>) - <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> x3</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> -x3</span><br></pre></td></tr></table></figure>
 
-<p>第二步: 保存好后修改后缀名为.ini，即此时文件名为pip.ini，Windows下会将该文件识别为配置文件。</p>
-<p>第三步: 在系统环境变量的path变量里加上一条%HOMEPATH%\pip\pip.ini，确认设置即可。</p>
-<p>  <img src="/img/%E5%AE%89%E8%A3%85selenium%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8Apip%E6%8D%A2%E6%BA%90/Snipaste_2019-07-30_13-21-33.png" alt="环境变量"></p>
-<hr>
-<p>换源以后再安装就会发现速度快很多了，基本上是秒下载安装好。至于为什么用清华的源，是因为据说清华的源是官方源的副本，每五分钟刷新一次，保证了稳和快，当然你用其他的源也是可以的，只需要改相应的地址即可。</p>
+<p>可以看到，代码在不断地精简，而且效率还有提高。而这跟基本功有关，你是否对该语言的基本结构与特性足够熟悉，会大大影响你的解题思路。做题也是一个巩固知识和学习新知识的过程，要看到相通的一些东西。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="/img/安装selenium问题以及pip换源/cover.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H8e62dffabd814270a72f0db9ffbe8868M.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -428,12 +436,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/08/04/最小栈/" title="最小栈" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/06/09/安装CTeX后环境变量（Path）被覆盖/" title="安装CTeX后环境变量（Path）被覆盖" rel="next">
+			<a href="/2019/09/22/json转换为csv/" title="json转换为csv" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -451,53 +455,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/22/json转换为csv/" title="json转换为csv">
-								json转换为csv			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 22日, 2019				
-							</p>
-							<p class="relate-post-content">
-								背景之前在手机上用了一个记账号密码的软件：【记住密码】，在换手机之后打算将原手机（安卓8）上的账号密码备份导入到新手机（安卓9）的软件里，结果发现该软件安卓9闪退，无法使用，并且发现该软件作者已经停止维护。无奈另寻了一个同类软件：【账...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/22/json转换为csv/" title="json转换为csv">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H5c4d9b3781bd4579929d35790ea6bf40Q.jpg" alt="json转换为csv">
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/23/2019-09-23-整数反转/" title="整数反转">
-								整数反转			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 23日, 2019				
-							</p>
-							<p class="relate-post-content">
-								整数反转属于leetcode里腾讯精选练习（50）里面关于数学的一道题，难度为简单，原链接https://leetcode-cn.com/problems/reverse-integer/ 。（使用python3解决）
-题目给出一个 ...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/23/2019-09-23-整数反转/" title="整数反转">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H8e62dffabd814270a72f0db9ffbe8868M.jpg" alt="整数反转">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -564,6 +521,53 @@
 							<a href="/2019/09/20/相交链表/" title="相交链表">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H04158270a2a146aeb2e1e2be015f15f4P.jpg" alt="相交链表">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/19/环形链表-II/" title="环形链表 II">
+								环形链表 II			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 19日, 2019				
+							</p>
+							<p class="relate-post-content">
+								环形链表 II属于leetcode里腾讯精选练习（50）里面关于链表的一道题，难度为中等，原链接https://leetcode-cn.com/problems/linked-list-cycle-ii/ 。（使用python3解决）...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/19/环形链表-II/" title="环形链表 II">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H0dcda86a41874ced8ae2c2b661447e061.jpg" alt="环形链表 II">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/18/环形链表/" title="环形链表">
+								环形链表			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 18日, 2019				
+							</p>
+							<p class="relate-post-content">
+								环形链表属于leetcode里腾讯精选练习（50）里面关于链表的一道题，难度为简单，原链接https://leetcode-cn.com/problems/linked-list-cycle/ 。（使用python3解决）
+题目给定一...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/18/环形链表/" title="环形链表">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H6ae4cea0d7114e65a06efb6e16f33b59s.jpg" alt="环形链表">
 							</a>
 						</div>
 					</li>											
