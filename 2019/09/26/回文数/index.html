@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      最小栈 | moon&#39;blog
+      回文数 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《最小栈》
+			当前文章&nbsp;:&nbsp;《回文数》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/08/04/最小栈/" itemprop="url">
-		最小栈
+	<a href="/2019/09/26/回文数/" itemprop="url">
+		回文数
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.1k字</span>
+        <span class="post-count">708字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/08/04/最小栈/" itemprop="url">
-		<time datetime="2019-08-04T07:00:00.000Z" itemprop="datePublished">
-	  		2019-08-04
+	<a href="/2019/09/26/回文数/" itemprop="url">
+		<time datetime="2019-09-26T14:36:00.000Z" itemprop="datePublished">
+	  		2019-09-26
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/08/04/最小栈/" itemprop="url">
-		<time datetime="2019-08-04T07:00:00.000Z" itemprop="dateUpdated">
-	  		2019-08-08
+	<a href="/2019/09/26/回文数/" itemprop="url">
+		<time datetime="2019-09-26T14:36:00.000Z" itemprop="dateUpdated">
+	  		2019-09-27
 	  </time>
 	</a> 
 
@@ -352,6 +352,10 @@
 			<i class="fa fa-tags"></i>
 			
 	
+		<a href="/tags/数学/" class=" ">
+			数学
+		</a>
+	
 		<a href="/tags/刷题/" class=" ">
 			刷题
 		</a>
@@ -360,17 +364,13 @@
 			leetcode
 		</a>
 	
-		<a href="/tags/栈/" class=" ">
-			栈
-		</a>
-	
 		
 		</span>
 		
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/08/04/最小栈/_visitors" data-url="/2019/08/04/最小栈/" data-title="最小栈">
+    <span class="leancloud_visitors" id="/2019/09/26/回文数/_visitors" data-url="/2019/09/26/回文数/" data-title="回文数">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -380,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/08/04/最小栈/_likes" data-url="/2019/08/04/最小栈/" data-title="最小栈" rel="unlike">
+    <span class="leancloud_likes" id="/2019/09/26/回文数/_likes" data-url="/2019/09/26/回文数/" data-title="回文数" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -389,45 +389,34 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="最小栈"><a href="#最小栈" class="headerlink" title="最小栈"></a>最小栈</h1><p>属于leetcode里腾讯精选练习（50）里面关于栈的一道题，难度为简单，原链接<a href="https://leetcode-cn.com/problems/min-stack/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/min-stack/</a> 。（使用<strong>python3</strong>解决）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>设计一个支持 push，pop，top 操作，并能在<strong>常数时间</strong>内检索到最小元素的栈。</p>
-<ul>
-<li>push(x) – 将元素 x 推入栈中。</li>
-<li>pop() – 删除栈顶的元素。</li>
-<li>top() – 获取栈顶元素。</li>
-<li>getMin() – 检索栈中的最小元素。</li>
-</ul>
-<p>示例:</p>
+		<h1 id="回文数"><a href="#回文数" class="headerlink" title="回文数"></a>回文数</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数学</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/palindrome-number/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/palindrome-number/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
+<p><strong>示例1：</strong></p>
 <blockquote>
-<p>MinStack minStack = new MinStack();<br>minStack.push(-2);<br>minStack.push(0);<br>minStack.push(-3);<br>minStack.getMin();   –&gt; 返回 -3.<br>minStack.pop();<br>minStack.top();      –&gt; 返回 0.<br>minStack.getMin();   –&gt; 返回 -2.</p>
+<p>输入: 121<br>输出: true</p>
 </blockquote>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>根据题目，在python中数组比较适合栈的结构，而且数组拥有append、pop等方法适合实现栈的压入和删除功能，内置的min函数可以检索到栈中最小元素。至于获取栈顶元素，原本想的是直接pop得到，但是发现题目要求获取是得到值，并不删除栈顶元素，第一反应是pop后再append回去，后来发现是自己傻了，直接返回数组最后一个不就好了吗（即list[-1]）。然后再加上一些栈是否为空的判断完成了方法一的解答，代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MinStack</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.stack = []</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, x: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        self.stack.append(x)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.stack:      <span class="comment"># 开始通过len(self.stack)判断是否为空，但是这样会多执行一次len函数</span></span><br><span class="line">            self.stack.pop()    <span class="comment"># 之所以会加上判断栈是否为空，是因为pop方法在list为空时执行时会报错</span></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">top</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> self.stack:</span><br><span class="line">            <span class="comment"># x = self.stack.pop()</span></span><br><span class="line">            <span class="comment"># self.stack.append(x)</span></span><br><span class="line">            <span class="comment"># return x</span></span><br><span class="line">            <span class="keyword">return</span> self.stack[<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getMin</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> self.stack:</span><br><span class="line">            <span class="keyword">return</span> min(self.stack)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+<p><strong>示例2：</strong></p>
+<blockquote>
+<p>输入: -121<br>输出: false<br>解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。</p>
+</blockquote>
+<p><strong>示例3：</strong></p>
+<blockquote>
+<p>输入: 10<br>输出: false<br>解释: 从右向左读, 为 01 。因此它不是一个回文数。</p>
+</blockquote>
+<p><strong>进阶:</strong></p>
+<p>你能不将整数转为字符串来解决这个问题吗？</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>先说一下用字符串的方式，只需要将整数转换成字符串，首尾依次取一个字符进行比较是否相等，如果中间有任一不相等的字符则直接返回<code>False</code>，直到比较到中间位置每一对字符都相等则表示该数是回文数，返回<code>Ture</code>。</p>
+<p>如果不转换成字符串，也依次取第一位和最后一位进行比较，那么则需要不断地取余和取商，但是这样需要直到整数有多少位，才能快速的得到前面的位数，而这可以先将整数不断除以10，直到商为0则可以得到整数的位数，便可以实现上述的算法了。</p>
+<p>另外官方题解给出了一个比较巧妙地方法，将该整数地后一半进行反转，与该数地前一半进行比较看是否相等。这样我们只需要处理一半地数字，便可以得到结果。但是这个方法需要注意整数地长度奇偶性地问题，以及如何判断什么时候转换达到了中间位置。</p>
+<p>无论哪种方法，都需要注意一些特殊情况，比如负数一定不是回文数、尾数为0地数中只有0本身是回文数等等，这些特殊情况需要特殊考虑。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="comment"># x小于0或者x最后一位是0而x不是0则表示x一定不是回文数</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">or</span> (x % <span class="number">10</span> == <span class="number">0</span> <span class="keyword">and</span> x != <span class="number">0</span>):</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        temp = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> x &gt; temp:</span><br><span class="line">            temp = temp * <span class="number">10</span> + x % <span class="number">10</span></span><br><span class="line">            x = x // <span class="number">10</span></span><br><span class="line">        <span class="comment"># 分回文数长度的奇偶情况，偶数则与temp直接比较，奇数则需去掉temp最后一位</span></span><br><span class="line">        <span class="keyword">if</span> x == temp <span class="keyword">or</span> x == temp // <span class="number">10</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
 
-<p>提交结果如下，明显效率不是很高，还有待优化。</p>
-<p><img src="https://ae01.alicdn.com/kf/Hd66a2cc5cb2e4c2aa9164570b1ab71bfe.jpg" alt="第一版提交"></p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>方法一的时间消耗很大，主要是因为在获取栈最小值时采用系统内置的min函数获取，而该函数时间复杂度为O(n)，并没有达到题目要求的常数时间，所以导致整体时间消耗很大。在参考了其他人的解题思路后，最主要的问题便是怎么记录下栈中的最小值，从而不用查找一部得到，经过修改得到方法二。大致思路如下：</p>
-<ul>
-<li>另设置一个辅助栈min_stack，依次存储当前stack中最小的值<ul>
-<li>push：每当有新的值进来时，压入stack，再判断辅助栈是否为空，若为空直接添加进辅助栈，若不为空则判断新值是否<strong>小于或等于</strong>辅助栈栈顶值，是则加入辅助栈，既保证辅助栈内栈顶元素永远为当前栈最小值。</li>
-<li>pop：每当删除一个栈顶元素时，如果栈非空，则删除栈顶元素，同时判断该元素是否为当前栈最小值，即是否等于辅助栈栈顶元素，若相等则连同辅助栈栈顶元素一起删除，同样保证辅助栈内栈顶元素永远为当前栈最小值。</li>
-<li>getMin：由于辅助栈栈顶存储着当前栈的最小值，所以只要当前栈非空，返回辅助栈栈顶元素即可。</li>
-</ul>
-</li>
-<li>min_stack栈作用是按时间顺序依次存储当前stack栈的最小值，并且如果stack栈中将当前最小值删除了，辅助栈内也会同步删除。</li>
-<li>由于辅助栈栈顶元素即为当前栈最小值，该值为min_stack[-1]，时间复杂度为O(1)，满足题要求。</li>
-</ul>
-<p>代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MinStack</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 存放所有数据</span></span><br><span class="line">        self.stack = []</span><br><span class="line">        <span class="comment"># 依次存放当前最小数据</span></span><br><span class="line">        self.min_stack = []</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, x: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        self.stack.append(x)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self.min_stack <span class="keyword">or</span> x &lt;= self.min_stack[<span class="number">-1</span>]:</span><br><span class="line">            self.min_stack.append(x)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.stack:</span><br><span class="line">            <span class="keyword">if</span> self.stack.pop() == self.min_stack[<span class="number">-1</span>]:</span><br><span class="line">                self.min_stack.pop()</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">top</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> self.stack:</span><br><span class="line">            <span class="keyword">return</span> self.stack[<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getMin</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> self.stack:</span><br><span class="line">            <span class="keyword">return</span> self.min_stack[<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
-
-<p>提交结果如下，可以看到时间上比起方法一好了很多，但是明显还是有改进的地方。</p>
-<p><img src="https://pic2.superbed.cn/item/5d467b68451253d1784dce74.jpg" alt="第二版提交"></p>
-<hr>
-<p>暂时想到上述两种方法，后续如果还发现了更好的解题方法将会继续改进下去。</p>
+<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/H2fa6eb3000e140df8185637dd9a50a4bO.png" alt="方法一提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题给我地启示是我们在面对一个问题时，虽然解决的方式有很多，但是往往真正将问题的某些特性运用到解法中的方法，才能够巧妙地既提高效率，又能解决问题。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H3337adf415fe4e54b9a6337240b86f1b9.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/Hd3815038af104b10bd80f34d465af5b9h.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -442,12 +431,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/08/05/有效的括号/" title="有效的括号" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/07/30/安装selenium问题以及pip换源/" title="安装selenium问题以及pip换源" rel="next">
+			<a href="/2019/09/25/2019-09-25-字符串转换整数-(atoi)/" title="字符串转换整数 (atoi)" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -465,30 +450,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/26/回文数/" title="回文数">
-								回文数			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 26日, 2019				
-							</p>
-							<p class="relate-post-content">
-								回文数属于leetcode里腾讯精选练习（50）里面关于数学的一道题，难度为简单，原链接https://leetcode-cn.com/problems/palindrome-number/ 。（使用python3解决）
-题目判断一个...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/26/回文数/" title="回文数">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hd3815038af104b10bd80f34d465af5b9h.jpg" alt="回文数">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -579,6 +540,29 @@
 							<a href="/2019/09/21/反转链表/" title="反转链表">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Ha0a312c6a01e464eb6fb30102d00f047W.jpg" alt="反转链表">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/20/相交链表/" title="相交链表">
+								相交链表			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 20日, 2019				
+							</p>
+							<p class="relate-post-content">
+								相交链表属于leetcode里腾讯精选练习（50）里面关于链表的一道题，难度为简单，原链接https://leetcode-cn.com/problems/intersection-of-two-linked-lists/ 。（使用p...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/20/相交链表/" title="相交链表">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H04158270a2a146aeb2e1e2be015f15f4P.jpg" alt="相交链表">
 							</a>
 						</div>
 					</li>											

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-25T09:24:01.063Z</updated>
+  <updated>2019-09-27T08:26:57.204Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>回文数</title>
+    <link href="http://yoursite.com/2019/09/26/%E5%9B%9E%E6%96%87%E6%95%B0/"/>
+    <id>http://yoursite.com/2019/09/26/回文数/</id>
+    <published>2019-09-26T14:36:00.000Z</published>
+    <updated>2019-09-27T08:26:57.204Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="回文数"><a href="#回文数" class="headerlink" title="回文数"></a>回文数</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数学</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/palindrome-number/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/palindrome-number/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p><p><strong>示例1：</strong></p><blockquote><p>输入: 121<br>输出: true</p></blockquote><p><strong>示例2：</strong></p><blockquote><p>输入: -121<br>输出: false<br>解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。</p></blockquote><p><strong>示例3：</strong></p><blockquote><p>输入: 10<br>输出: false<br>解释: 从右向左读, 为 01 。因此它不是一个回文数。</p></blockquote><p><strong>进阶:</strong></p><p>你能不将整数转为字符串来解决这个问题吗？</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>先说一下用字符串的方式，只需要将整数转换成字符串，首尾依次取一个字符进行比较是否相等，如果中间有任一不相等的字符则直接返回<code>False</code>，直到比较到中间位置每一对字符都相等则表示该数是回文数，返回<code>Ture</code>。</p><p>如果不转换成字符串，也依次取第一位和最后一位进行比较，那么则需要不断地取余和取商，但是这样需要直到整数有多少位，才能快速的得到前面的位数，而这可以先将整数不断除以10，直到商为0则可以得到整数的位数，便可以实现上述的算法了。</p><p>另外官方题解给出了一个比较巧妙地方法，将该整数地后一半进行反转，与该数地前一半进行比较看是否相等。这样我们只需要处理一半地数字，便可以得到结果。但是这个方法需要注意整数地长度奇偶性地问题，以及如何判断什么时候转换达到了中间位置。</p><p>无论哪种方法，都需要注意一些特殊情况，比如负数一定不是回文数、尾数为0地数中只有0本身是回文数等等，这些特殊情况需要特殊考虑。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="comment"># x小于0或者x最后一位是0而x不是0则表示x一定不是回文数</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">or</span> (x % <span class="number">10</span> == <span class="number">0</span> <span class="keyword">and</span> x != <span class="number">0</span>):</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        temp = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> x &gt; temp:</span><br><span class="line">            temp = temp * <span class="number">10</span> + x % <span class="number">10</span></span><br><span class="line">            x = x // <span class="number">10</span></span><br><span class="line">        <span class="comment"># 分回文数长度的奇偶情况，偶数则与temp直接比较，奇数则需去掉temp最后一位</span></span><br><span class="line">        <span class="keyword">if</span> x == temp <span class="keyword">or</span> x == temp // <span class="number">10</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/H2fa6eb3000e140df8185637dd9a50a4bO.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题给我地启示是我们在面对一个问题时，虽然解决的方式有很多，但是往往真正将问题的某些特性运用到解法中的方法，才能够巧妙地既提高效率，又能解决问题。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;回文数&quot;&gt;&lt;a href=&quot;#回文数&quot; class=&quot;headerlink&quot; title=&quot;回文数&quot;&gt;&lt;/a&gt;回文数&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数学&lt;/strong&gt;的一道题，难度为&lt;strong&gt;简单&lt;/st
+      
+    
+    </summary>
+    
+      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
+    
+    
+      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>字符串转换整数 (atoi)</title>
@@ -37,11 +66,11 @@
       <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
     
     
+      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
       <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
     
       <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="字符串" scheme="http://yoursite.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -68,11 +97,11 @@
       <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
     
     
+      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
       <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
     
       <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -335,13 +364,13 @@
       <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
     
     
+      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
       <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
     
       <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
     
       <category term="链表" scheme="http://yoursite.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-      <category term="数学" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -562,35 +591,6 @@
       
       
         &lt;h1 id=&quot;搜索旋转排序数组&quot;&gt;&lt;a href=&quot;#搜索旋转排序数组&quot; class=&quot;headerlink&quot; title=&quot;搜索旋转排序数组&quot;&gt;&lt;/a&gt;搜索旋转排序数组&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/strong&gt;的一
-      
-    
-    </summary>
-    
-      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
-    
-    
-      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
-    
-      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最接近的三数之和</title>
-    <link href="http://yoursite.com/2019/09/04/%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
-    <id>http://yoursite.com/2019/09/04/最接近的三数之和/</id>
-    <published>2019-09-04T13:40:00.000Z</published>
-    <updated>2019-09-04T13:50:05.529Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="最接近的三数之和"><a href="#最接近的三数之和" class="headerlink" title="最接近的三数之和"></a>最接近的三数之和</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/3sum-closest/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/3sum-closest/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。</p><blockquote><p>例如，给定数组 nums = [-1，2，1，-4], 和 target = 1.</p><p>与 target 最接近的三个数的和为 2. (-1 + 2 + 1 = 2).</p></blockquote><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这道题思路跟<a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">三数之和</a>大致相同，不同之处在于只需要找到最接近的即可。我们依旧采用先排序，再遍历三个不同元素的方法。我们用三个指针 i、left、right，i 依次从第一个指向倒数第三个，left、right设置在数组索引(i, len(nums))两端，在i指向某个值时，left、right双指针根据一定规则不断向中间移动，与此同时记录下三个值之和<code>s</code>与目标值之间的差值，再进行比较更新最小的差值和三个数之和。left、right指针移动的具体规则如下：</p><ul><li>当<code>i&gt;0</code>时，此时i指向的值与前一个相同，则跳过当前元素，因为在前一个时已经将所有可能的值全部计算完毕，后续相同的值只会得到重复的结果。</li><li>当<code>left &lt; right</code>时，计算此时<code>s = nums[i] + nums[left] + nums[right]</code>的值判断left、right指针如何移动</li><li>如果<code>s &lt; target</code>，则表示当前和太小，此时将 left 后移一位</li><li>如果<code>s &gt; target</code>，则表示当前和太大，此时将 right 前移一位</li><li>如果<code>s = target</code>，则表示当前和与目标值最接近，直接返回target</li></ul><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSumClosest</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; int:</span></span><br><span class="line">        size = len(nums)</span><br><span class="line">        <span class="comment"># 初始化，因为找最小值，因此把初始值设置成实数的最大值</span></span><br><span class="line">        diff = float(<span class="string">'inf'</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 排序是前提</span></span><br><span class="line">        nums.sort()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(size - <span class="number">2</span>):</span><br><span class="line">            <span class="comment"># 常见的剪枝操作</span></span><br><span class="line">            <span class="keyword">if</span> i &gt; <span class="number">0</span> <span class="keyword">and</span> nums[i] == nums[i - <span class="number">1</span>]:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="comment"># 双指针：指针对撞</span></span><br><span class="line">            left = i + <span class="number">1</span></span><br><span class="line">            right = size - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> left &lt; right:</span><br><span class="line">                s = nums[i] + nums[left] + nums[right]</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> abs(s - target) &lt; diff:</span><br><span class="line">                    diff = abs(s - target)</span><br><span class="line">                    res = s</span><br><span class="line"></span><br><span class="line">                <span class="comment"># 不管是变小还是变大，尝试的作用是让 s 与 target 更接近</span></span><br><span class="line">                <span class="comment"># 即 s 与 target 的绝对值之差越来越小</span></span><br><span class="line">                <span class="keyword">if</span> s &gt; target:</span><br><span class="line">                    <span class="comment"># 如果大了，尝试右边界收缩一格，让 target 变小</span></span><br><span class="line">                    right -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">elif</span> s &lt; target:</span><br><span class="line">                    <span class="comment"># 如果小了，尝试左边界收缩一格，让 target 变大</span></span><br><span class="line">                    left += <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="comment"># 如果已经等于 target 的话, 肯定是最接近的，根据题目要求，返回这三个数的和</span></span><br><span class="line">                    <span class="keyword">return</span> target</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p>提交通过，时间复杂度<code>O(n^2)</code>：排序为<code>O(nlogn)</code>，后面双重循环为<code>O(n^2)</code>；空间复杂度<code>O(1)</code>，指针需要常数的空间。</p><p><img src="https://ae01.alicdn.com/kf/H1452d356a3c54895a23c119dbc9f266bq.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>有过前面三数之和的经验后，这道题思路就好想一些，相当于三数之和相当于这道题的特例。同样是先排序后用双指针依次寻找并不断记录最优解，主要是排序后值的大小关系明确，便于移动指针向最优解靠拢。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;最接近的三数之和&quot;&gt;&lt;a href=&quot;#最接近的三数之和&quot; class=&quot;headerlink&quot; title=&quot;最接近的三数之和&quot;&gt;&lt;/a&gt;最接近的三数之和&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/strong&gt;的一
       
     
     </summary>
