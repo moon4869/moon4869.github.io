@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-29T12:05:59.564Z</updated>
+  <updated>2019-09-29T13:59:03.034Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最长公共前缀</title>
+    <link href="http://yoursite.com/2019/09/29/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/"/>
+    <id>http://yoursite.com/2019/09/29/最长公共前缀/</id>
+    <published>2019-09-29T13:54:00.000Z</published>
+    <updated>2019-09-29T13:59:03.034Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="最长公共前缀"><a href="#最长公共前缀" class="headerlink" title="最长公共前缀"></a>最长公共前缀</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>字符串</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/longest-common-prefix/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-common-prefix/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>编写一个函数来查找字符串数组中的最长公共前缀。</p><p>如果不存在公共前缀，返回空字符串 <code>&quot;&quot;</code>。</p><p><strong>示例1：</strong></p><blockquote><p>输入: [“flower”,”flow”,”flight”]<br>输出: “fl”</p></blockquote><p><strong>示例2：</strong></p><blockquote><p>输入: [“dog”,”racecar”,”car”]<br>输出: “”<br>解释: 输入不存在公共前缀。</p></blockquote><p><strong>说明:</strong></p><p>所有输入只包含小写字母 <code>a-z</code> 。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这道题不是很复杂，可以采用水平扫描的方式，首先找到前两个字符串的最长公共前缀，然后再找到已知前缀与另外的字符串进行查找最长公共前缀，不断更新最长公共前缀，直到查找完所有的字符串，返回最新的最长公共前缀。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestCommonPrefix</span><span class="params">(self, strs: List[str])</span> -&gt; str:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> strs:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">''</span></span><br><span class="line"></span><br><span class="line">        temp = strs[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(strs)):</span><br><span class="line">            <span class="comment"># 如果此时最长公共前缀已经为空的话，直接返回空字符串</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> temp:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">''</span></span><br><span class="line">            temp = self.twoLCP(temp, strs[i])</span><br><span class="line">        <span class="keyword">return</span> temp</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoLCP</span><span class="params">(self, s1: str, s2: str)</span> -&gt; str:</span></span><br><span class="line">        <span class="string">'''返回两个字符串的公共前缀'''</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; len(s1) <span class="keyword">and</span> i &lt; len(s2):</span><br><span class="line">            <span class="keyword">if</span> s1[i] == s2[i]:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> s1[:i]</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p>时间复杂度：<code>O(n)</code>，n为数组长度；空间复杂度：<code>O(1)</code>。</p><p><img src="https://ae01.alicdn.com/kf/H3e2b750ba1954c2eadb4641954ec8fa3Y.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>上述方法也有点冗余了，其实可以采用分治法，不断找到两两字符串的最长公共前缀，再合起来找到这些前缀的最长公共前缀，直到最后只剩一个前缀，返回即可。其实这个最长公共前缀可以用木桶原理来理解，关键在于最短的那个字符串以及最短的那个已知前缀。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;最长公共前缀&quot;&gt;&lt;a href=&quot;#最长公共前缀&quot; class=&quot;headerlink&quot; title=&quot;最长公共前缀&quot;&gt;&lt;/a&gt;最长公共前缀&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;字符串&lt;/strong&gt;的一道题，难度为&lt;
+      
+    
+    </summary>
+    
+      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
+    
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+      <category term="字符串" scheme="http://yoursite.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>最长回文子串</title>
@@ -568,35 +597,6 @@
       
       
         &lt;h1 id=&quot;合并两个有序数组&quot;&gt;&lt;a href=&quot;#合并两个有序数组&quot; class=&quot;headerlink&quot; title=&quot;合并两个有序数组&quot;&gt;&lt;/a&gt;合并两个有序数组&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/strong&gt;的一
-      
-    
-    </summary>
-    
-      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
-    
-    
-      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
-    
-      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不同路径</title>
-    <link href="http://yoursite.com/2019/09/08/%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/"/>
-    <id>http://yoursite.com/2019/09/08/不同路径/</id>
-    <published>2019-09-08T14:29:00.000Z</published>
-    <updated>2019-09-09T14:55:20.825Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="不同路径"><a href="#不同路径" class="headerlink" title="不同路径"></a>不同路径</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/unique-paths/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/unique-paths/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。</p><p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。</p><p>问总共有多少条不同的路径？</p><p><img src="https://ae01.alicdn.com/kf/H84cfda867e6c4664bff14dc68bf1ba1du.png" alt="题图"></p><p>例如，上图是一个7 x 3 的网格。有多少可能的路径？</p><p><strong>说明：</strong>m 和 <em>n</em> 的值均不超过 100。</p><p><strong>示例1：</strong></p><blockquote><p>输入: m = 3, n = 2<br>输出: 3<br>解释:<br>从左上角开始，总共有 3 条路径可以到达右下角。</p><ol><li>向右 -&gt; 向右 -&gt; 向下</li><li>向右 -&gt; 向下 -&gt; 向右</li><li>向下 -&gt; 向右 -&gt; 向右</li></ol></blockquote><p><strong>示例2：</strong></p><blockquote><p>输入: m = 7, n = 3<br>输出: 28</p></blockquote><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这道题我们主要关注动态规划的解法，模拟一个与网格相同规格的二维表格，表格内数字表示走到该格子的路径，大致如下：</p><table><thead><tr><th align="center">1</th><th align="center">1</th><th align="center">1</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">2</td><td align="center">3</td></tr><tr><td align="center">1</td><td align="center">3</td><td align="center">6</td></tr><tr><td align="center">1</td><td align="center">4</td><td align="center">10</td></tr></tbody></table><p>可以发现每一个格子的数字为其上面和左面一个格子内的数字之和，第一列和第一行都是1。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">uniquePaths</span><span class="params">(self, m: int, n: int)</span> -&gt; int:</span></span><br><span class="line">        dp = [[<span class="number">1</span>]*n] + [[<span class="number">1</span>]+[<span class="number">0</span>] * (n<span class="number">-1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(m<span class="number">-1</span>)]</span><br><span class="line">        <span class="comment">#print(dp)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, m):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, n):</span><br><span class="line">                dp[i][j] = dp[i<span class="number">-1</span>][j] + dp[i][j<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">-1</span>][<span class="number">-1</span>]</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/H02d7d178e5d8407082f573a5021e6cb0K.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今天有点忙，暂时这么写，后续再修改。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;不同路径&quot;&gt;&lt;a href=&quot;#不同路径&quot; class=&quot;headerlink&quot; title=&quot;不同路径&quot;&gt;&lt;/a&gt;不同路径&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/strong&gt;的一道题，难度为&lt;strong&gt;中等
       
     
     </summary>
