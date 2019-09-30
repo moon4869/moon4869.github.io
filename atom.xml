@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-30T12:20:37.720Z</updated>
+  <updated>2019-09-30T15:20:10.256Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>格雷编码</title>
+    <link href="http://yoursite.com/2019/09/30/%E6%A0%BC%E9%9B%B7%E7%BC%96%E7%A0%81/"/>
+    <id>http://yoursite.com/2019/09/30/格雷编码/</id>
+    <published>2019-09-30T15:15:00.000Z</published>
+    <updated>2019-09-30T15:20:10.256Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="格雷编码"><a href="#格雷编码" class="headerlink" title="格雷编码"></a>格雷编码</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>回溯算法</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/gray-code/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/gray-code/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://baike.baidu.com/item/%E6%A0%BC%E9%9B%B7%E7%A0%81" target="_blank" rel="noopener">格雷编码</a>是一个二进制数字系统，在该系统中，两个连续的数值仅有一个位数的差异。</p><p>给定一个代表编码总位数的非负整数 n，打印其格雷编码序列。格雷编码序列必须以 0 开头。</p><p><strong>示例1：</strong></p><blockquote><p>输入: 2<br>输出: [0,1,3,2]<br>解释:<br>00 - 0<br>01 - 1<br>11 - 3<br>10 - 2</p><p>对于给定的 n，其格雷编码序列并不唯一。<br>例如，[0,2,3,1] 也是一个有效的格雷编码序列。</p><p>00 - 0<br>10 - 2<br>11 - 3<br>01 - 1</p></blockquote><p><strong>示例2：</strong></p><blockquote><p>输入: 0<br>输出: [0]<br>解释: 我们定义格雷编码序列必须以 0 开头。<br>     给定编码总位数为 n 的格雷编码序列，其长度为 2n。当 n = 0 时，长度为 20 = 1。<br>     因此，当 n = 0 时，其格雷编码序列为 [0]。</p></blockquote><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这道题主要要理解题目信息，什么是格雷码，这个可以参看<a href="https://baike.baidu.com/item/%E6%A0%BC%E9%9B%B7%E7%A0%81" target="_blank" rel="noopener">百度百科</a>的介绍。关键得看看怎么生成格雷码，主要生成规则如下：一位格雷码为<code>[0, 1]</code>，两位格雷码为一位格雷码依次前缀加0，再将一位格雷码反向依次前缀加1，即<code>[00, 01, 10, 11]</code>，后面规则相同，总是前一位的格雷码正序前缀加0，反序前缀加1即可以得到当前为的格雷码。</p><p>由于正序是前缀加0，这体现在十进制中相当于没有变化，所以正序前面加0的过程可以省掉；而反序前缀加1的过程，难点在于此时的前缀1是当前位的二进制位数加1的数，而最终需要转换为十进制，我采用移位的方法来实现此过程，当前多少位，就对1左移多少位，再与倒序的前一位格雷码依次相加即可。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">grayCode</span><span class="params">(self, n: int)</span> -&gt; List[int]:</span></span><br><span class="line">        res = [<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> index <span class="keyword">in</span> range(len(res)<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">                res.append((<span class="number">1</span> &lt;&lt; (i<span class="number">-1</span>)) + res[index])</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/Hfd05edbb56a9427197898933d8147990p.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题难点在于理解格雷码这个新的概念，以及相关实现方法的关键点部分。上述代码是最终版，比较简洁，在此之前还写过一版，也可以通过，但是代码冗余部分较多，这里贴一下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">grayCode</span><span class="params">(self, n: int)</span> -&gt; List[int]:</span></span><br><span class="line">        temp = [<span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">        res = temp.copy()</span><br><span class="line">        c = <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> [<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> res</span><br><span class="line">        <span class="keyword">while</span> c &lt;= n:</span><br><span class="line">            res.clear()</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> temp:</span><br><span class="line">                res.append(i)</span><br><span class="line">            temp.reverse()</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> temp:</span><br><span class="line">                res.append(<span class="number">2</span> ** (c<span class="number">-1</span>) + i)</span><br><span class="line">            temp = res.copy()</span><br><span class="line">            c += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;格雷编码&quot;&gt;&lt;a href=&quot;#格雷编码&quot; class=&quot;headerlink&quot; title=&quot;格雷编码&quot;&gt;&lt;/a&gt;格雷编码&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;回溯算法&lt;/strong&gt;的一道题，难度为&lt;strong&gt;
+      
+    
+    </summary>
+    
+      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
+    
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+      <category term="回溯算法" scheme="http://yoursite.com/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>全排列</title>
@@ -580,35 +609,6 @@
       <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
     
       <category term="链表" scheme="http://yoursite.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>除自身以外数组的乘积</title>
-    <link href="http://yoursite.com/2019/09/13/%E9%99%A4%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%A4%96%E6%95%B0%E7%BB%84%E7%9A%84%E4%B9%98%E7%A7%AF/"/>
-    <id>http://yoursite.com/2019/09/13/除自身以外数组的乘积/</id>
-    <published>2019-09-13T06:44:00.000Z</published>
-    <updated>2019-09-13T06:49:09.513Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="除自身以外数组的乘积"><a href="#除自身以外数组的乘积" class="headerlink" title="除自身以外数组的乘积"></a>除自身以外数组的乘积</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/product-of-array-except-self/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/product-of-array-except-self/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定长度为 n 的整数数组 nums，其中 n &gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。</p><p><strong>示例：</strong></p><blockquote><p>输入: [1,2,3,4]<br>输出: [24,12,8,6]</p></blockquote><p><strong>说明</strong>: 请<strong>不要使用除法</strong>，且在 O(n) 时间复杂度内完成此题。</p><p><strong>进阶：</strong><br>你可以在常数空间复杂度内完成这个题目吗？（ 出于对空间复杂度分析的目的，输出数组<strong>不被视为</strong>额外空间。）</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对于数组内的每个数，除了该数以外的每个数之积可以看作两部分，该数前面的元素之积和后面的元素之积，两部分相乘即可。这样我们就可以分别计算两部分，具体查看代码。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">productExceptSelf</span><span class="params">(self, nums: List[int])</span> -&gt; List[int]:</span></span><br><span class="line">        res = [<span class="number">1</span>]</span><br><span class="line">        p, q = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">        <span class="comment"># 依次添加nums[0],nums[0]*nums[1],...,nums[0]*nums[1]*...*nums[n-2]</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)<span class="number">-1</span>):</span><br><span class="line">            p *= nums[i]</span><br><span class="line">            res.append(p)</span><br><span class="line">        <span class="comment"># 依次将nums[n-1],nums[n-1]*nums[n-2],...,nums[n-1]*...*nums[1]与前述数组内元素相乘</span></span><br><span class="line">        <span class="comment"># 注意序号相差一位</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)<span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            q *= nums[i]</span><br><span class="line">            res[i<span class="number">-1</span>] *= q</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/H6a8089f4ba044eecaad036d5616480848.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>上述方法参考了<a href="https://leetcode-cn.com/problems/product-of-array-except-self/solution/product-of-array-except-self-shang-san-jiao-xia-sa/" target="_blank" rel="noopener">大佬的题解</a>，通过原题解的表格，可以更好的理解该方法。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;除自身以外数组的乘积&quot;&gt;&lt;a href=&quot;#除自身以外数组的乘积&quot; class=&quot;headerlink&quot; title=&quot;除自身以外数组的乘积&quot;&gt;&lt;/a&gt;除自身以外数组的乘积&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/s
-      
-    
-    </summary>
-    
-      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
-    
-    
-      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
-    
-      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
