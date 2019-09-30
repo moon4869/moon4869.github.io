@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      字符串转换整数 (atoi) | moon&#39;blog
+      全排列 | moon&#39;blog
     
   </title>
   <meta name="author" content="moon">
@@ -167,7 +167,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《字符串转换整数 (atoi)》
+			当前文章&nbsp;:&nbsp;《全排列》
 		
 	</p>
 
@@ -288,8 +288,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/09/25/2019-09-25-字符串转换整数-(atoi)/" itemprop="url">
-		字符串转换整数 (atoi)
+	<a href="/2019/09/30/全排列/" itemprop="url">
+		全排列
 	</a>
 
 	</div>
@@ -299,7 +299,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1k字</span>
+        <span class="post-count">436字</span>
       </span>
     </span>
 
@@ -308,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -321,9 +321,9 @@
 
 	发布于
 
-	<a href="/2019/09/25/2019-09-25-字符串转换整数-(atoi)/" itemprop="url">
-		<time datetime="2019-09-25T09:21:00.000Z" itemprop="datePublished">
-	  		2019-09-25
+	<a href="/2019/09/30/全排列/" itemprop="url">
+		<time datetime="2019-09-30T12:18:00.000Z" itemprop="datePublished">
+	  		2019-09-30
 	  </time>
 	</a>
 	&nbsp;
@@ -339,9 +339,9 @@
 
 	更新于
 
-	<a href="/2019/09/25/2019-09-25-字符串转换整数-(atoi)/" itemprop="url">
-		<time datetime="2019-09-25T09:21:00.000Z" itemprop="dateUpdated">
-	  		2019-09-25
+	<a href="/2019/09/30/全排列/" itemprop="url">
+		<time datetime="2019-09-30T12:18:00.000Z" itemprop="dateUpdated">
+	  		2019-09-30
 	  </time>
 	</a> 
 
@@ -352,10 +352,6 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/数学/" class=" ">
-			数学
-		</a>
-	
 		<a href="/tags/刷题/" class=" ">
 			刷题
 		</a>
@@ -364,8 +360,8 @@
 			leetcode
 		</a>
 	
-		<a href="/tags/字符串/" class=" ">
-			字符串
+		<a href="/tags/回溯算法/" class=" ">
+			回溯算法
 		</a>
 	
 		
@@ -374,7 +370,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/09/25/2019-09-25-字符串转换整数-(atoi)/_visitors" data-url="/2019/09/25/2019-09-25-字符串转换整数-(atoi)/" data-title="字符串转换整数 (atoi)">
+    <span class="leancloud_visitors" id="/2019/09/30/全排列/_visitors" data-url="/2019/09/30/全排列/" data-title="全排列">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -384,7 +380,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/09/25/2019-09-25-字符串转换整数-(atoi)/_likes" data-url="/2019/09/25/2019-09-25-字符串转换整数-(atoi)/" data-title="字符串转换整数 (atoi)" rel="unlike">
+    <span class="leancloud_likes" id="/2019/09/30/全排列/_likes" data-url="/2019/09/30/全排列/" data-title="全排列" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -393,50 +389,24 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="字符串转换整数-atoi"><a href="#字符串转换整数-atoi" class="headerlink" title="字符串转换整数 (atoi)"></a>字符串转换整数 (atoi)</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数学</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/string-to-integer-atoi/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/string-to-integer-atoi/</a> 。（使用<strong>python3</strong>解决）</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>请你来实现一个 <code>atoi</code> 函数，使其能将字符串转换成整数。</p>
-<p>首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。</p>
-<p>当我们寻找到的第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字组合起来，作为该整数的正负号；假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成整数。</p>
-<p>该字符串除了有效的整数部分之后也可能会存在多余的字符，这些字符可以被忽略，它们对于函数不应该造成影响。</p>
-<p><strong>注意</strong>：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换。</p>
-<p>在任何情况下，若函数不能进行有效的转换时，请返回 0。</p>
-<p><strong>说明：</strong></p>
-<p>假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 [−2^31,  2^31 − 1]。如果数值超过这个范围，请返回  INT_MAX (2^31 − 1) 或 INT_MIN (−2^31) 。</p>
-<p><strong>示例1：</strong></p>
+		<h1 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>回溯算法</strong>的一道题，难度为<strong>中等</strong>，原链接<a href="https://leetcode-cn.com/problems/permutations/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/permutations/</a> 。（使用<strong>python3</strong>解决）</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个<strong>没有重复</strong>数字的序列，返回其所有可能的全排列。</p>
+<p><strong>示例：</strong></p>
 <blockquote>
-<p>输入: “42”<br>输出: 42</p>
+<p>输入: [1,2,3]<br>输出:<br>[<br>  [1,2,3],<br>  [1,3,2],<br>  [2,1,3],<br>  [2,3,1],<br>  [3,1,2],<br>  [3,2,1]<br>]</p>
 </blockquote>
-<p><strong>示例2：</strong></p>
-<blockquote>
-<p>输入: “   -42”<br>输出: -42<br>解释: 第一个非空白字符为 ‘-‘, 它是一个负号。我们尽可能将负号与后面所有连续出现的数字组合起来，最后得到 -42 。</p>
-</blockquote>
-<p><strong>示例3：</strong></p>
-<blockquote>
-<p>输入: “4193 with words”<br>输出: 4193<br>解释: 转换截止于数字 ‘3’ ，因为它的下一个字符不为数字。</p>
-</blockquote>
-<p><strong>示例4：</strong></p>
-<blockquote>
-<p>输入: “words and 987”<br>输出: 0<br>解释: 第一个非空字符是 ‘w’, 但它不是数字或正、负号。因此无法执行有效的转换。</p>
-</blockquote>
-<p><strong>示例5：</strong></p>
-<blockquote>
-<p>输入: “-91283472332”<br>输出: -2147483648<br>解释: 数字 “-91283472332” 超过 32 位有符号整数范围。因此返回 INT_MIN (−231) 。</p>
-</blockquote>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>由于字符串中可能存在非数字字符，所以我们第一步应该把数字字符提取出来，然后再进行符号和边界的判断。</p>
-<ul>
-<li>先去掉字符串开头的空格字符，如果此时字符串为空则表示字符串只有空格字符，返回0。</li>
-<li>判断是否存在正负号，并且记录下正负号，最后与结果合并返回。</li>
-<li>采用正则表达式从第一个非空字符开始，匹配连续的数字字符，自动忽略后续非数字字符。</li>
-<li>将有效的匹配结果转换成整数，再根据正负号和边界大小进行符号的添加以及正确结果的返回。</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myAtoi</span><span class="params">(self, str: str)</span> -&gt; int:</span></span><br><span class="line">        temp = str.strip()</span><br><span class="line">        <span class="comment"># 空白字符串判断</span></span><br><span class="line">        <span class="keyword">if</span> len(temp) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        sign = <span class="string">''</span></span><br><span class="line">        <span class="comment"># 判断并记录正负号</span></span><br><span class="line">        <span class="keyword">if</span> temp[<span class="number">0</span>] <span class="keyword">in</span> [<span class="string">'-'</span>, <span class="string">'+'</span>]:</span><br><span class="line">            sign = temp[<span class="number">0</span>]</span><br><span class="line">            temp = temp[<span class="number">1</span>:]</span><br><span class="line">        <span class="comment"># 正则匹配第一段连续的数字字符</span></span><br><span class="line">        num1 = re.match(<span class="string">r'\d+'</span>, temp)</span><br><span class="line">        <span class="keyword">if</span> num1:</span><br><span class="line">            num2 = int(num1.group())</span><br><span class="line">            int_max = <span class="number">2</span> ** <span class="number">31</span></span><br><span class="line">            <span class="comment"># 正负判断</span></span><br><span class="line">            <span class="keyword">if</span> sign == <span class="string">'+'</span> <span class="keyword">or</span> <span class="keyword">not</span> sign:</span><br><span class="line">                <span class="comment"># 边界判断</span></span><br><span class="line">                <span class="keyword">if</span> num2 &lt; int_max:</span><br><span class="line">                    <span class="comment"># 是否有符号</span></span><br><span class="line">                    <span class="keyword">if</span> <span class="keyword">not</span> sign:</span><br><span class="line">                        <span class="keyword">return</span> +num2</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        <span class="keyword">return</span> num2</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">return</span> int_max<span class="number">-1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">if</span> num2 &lt;= int_max:</span><br><span class="line">                    <span class="keyword">return</span> -num2</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">return</span> -int_max</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>主要运用回溯法，大致就是模拟人去排列的过程，进行深度优先遍历，然后回溯等等，可以参考下图：</p>
+<p><img src="https://ae01.alicdn.com/kf/H3b684504b8244593af19c3e17529f90eI.png" alt="题图"></p>
+<p><em>图来自下述连接的大佬题解</em></p>
+<p>具体讲解过程可以参考<a href="https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/" target="_blank" rel="noopener">大佬题解</a>，我对递归这块理解的不太好，所以回溯法也只是勉强理解，以后会加强这方面的学习。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> List</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">permute</span><span class="params">(self, nums: List[int])</span> -&gt; List[List[int]]:</span></span><br><span class="line">        <span class="keyword">if</span> len(nums) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        <span class="comment"># 标识某个数是否已经使用了</span></span><br><span class="line">        used = [<span class="literal">False</span>] * len(nums)</span><br><span class="line">        res = []</span><br><span class="line">        self.__dfs(nums, <span class="number">0</span>, [], used, res)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__dfs</span><span class="params">(self, nums, index, pre, used, res)</span>:</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        nums: 全排列数组, index: 当前数组已有几个元素, pre: 当前数组,</span></span><br><span class="line"><span class="string">        used: 标识某个数是否已经使用, res: 结果数组</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        <span class="comment"># 递归终止条件</span></span><br><span class="line">        <span class="keyword">if</span> index == len(nums):</span><br><span class="line">            res.append(pre.copy())</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> used[i]:</span><br><span class="line">                <span class="comment"># 没使用就使用它</span></span><br><span class="line">                used[i] = <span class="literal">True</span></span><br><span class="line">                pre.append(nums[i])</span><br><span class="line">                self.__dfs(nums, index+<span class="number">1</span>, pre, used, res)</span><br><span class="line">                <span class="comment"># 用完归还</span></span><br><span class="line">                used[i] = <span class="literal">False</span></span><br><span class="line">                pre.pop()</span><br></pre></td></tr></table></figure>
 
-<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/Heb7b5745f0dc42f9a4003e4548fef3a2P.png" alt="方法一提交"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>代码中有很多嵌套的判断语句，看起来有点冗余，主要是因为有很多需要判断的地方：正则匹配是否有结果、正数还是负数、是否超出边界、有没有符号。判断都是一层接一层，才导致了嵌套的判断。可能也是方法的问题，思路还有待简化。另外这个是借助了正则表达式，看到另一个同样使用了正则表达式的<a href="https://leetcode-cn.com/problems/string-to-integer-atoi/solution/python-1xing-zheng-ze-biao-da-shi-by-knifezhu/" target="_blank" rel="noopener">题解</a>，代码比较简洁，可以参考一下。此外，也可以不使用正则表达式，一个一个字符的去判断是不是数字字符也可以，只是比较繁琐。</p>
+<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/Had00cbf9322a407780d51666a99e766cV.png" alt="方法一提交"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题比较复杂，至少对于我来说是的，递归的算法比较不容易想清楚具体的过程，往往需要动手画一画递归的过程。理解之后还需要关注某些特殊的地方，如此题中的状态重置、递归终止条件等等。</p>
 	
 	</div>
 	
-	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/H73625e185ab548dc856b237cfd6841a3M.jpg"></div>
+	<div id="current-post-cover" data-scr="https://ae01.alicdn.com/kf/Hee7cd1fa78274f9aa9195d4b400d228c3.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -451,12 +421,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/09/26/回文数/" title="回文数" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/09/23/2019-09-23-整数反转/" title="整数反转" rel="next">
+			<a href="/2019/09/30/爬楼梯/" title="爬楼梯" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -474,30 +440,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/09/30/全排列/" title="全排列">
-								全排列			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								九月 30日, 2019				
-							</p>
-							<p class="relate-post-content">
-								全排列属于leetcode里腾讯精选练习（50）里面关于回溯算法的一道题，难度为中等，原链接https://leetcode-cn.com/problems/permutations/ 。（使用python3解决）
-题目给定一个没有重...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/09/30/全排列/" title="全排列">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/Hee7cd1fa78274f9aa9195d4b400d228c3.jpg" alt="全排列">
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -587,6 +529,30 @@
 							<a href="/2019/09/29/最长回文子串/" title="最长回文子串">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H487787863c2549fe838ab9e8ebc7f630H.jpg" alt="最长回文子串">
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/09/28/反转字符串/" title="反转字符串">
+								反转字符串			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 28日, 2019				
+							</p>
+							<p class="relate-post-content">
+								反转字符串属于leetcode里腾讯精选练习（50）里面关于双指针和字符串的一道题，难度为简单，原链接https://leetcode-cn.com/problems/reverse-string/ 。（使用python3解决）
+题目...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/09/28/反转字符串/" title="反转字符串">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="https://ae01.alicdn.com/kf/H4567b5f5455c4c41b887bf5853ecee3dy.jpg" alt="反转字符串">
 							</a>
 						</div>
 					</li>											
