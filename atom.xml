@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-30T05:40:13.498Z</updated>
+  <updated>2019-09-30T06:28:09.887Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>爬楼梯</title>
+    <link href="http://yoursite.com/2019/09/30/%E7%88%AC%E6%A5%BC%E6%A2%AF/"/>
+    <id>http://yoursite.com/2019/09/30/爬楼梯/</id>
+    <published>2019-09-30T06:28:00.000Z</published>
+    <updated>2019-09-30T06:28:09.887Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="爬楼梯"><a href="#爬楼梯" class="headerlink" title="爬楼梯"></a>爬楼梯</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>动态规划</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/climbing-stairs/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/climbing-stairs/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>假设你正在爬楼梯。需要 <em>n</em> 阶你才能到达楼顶。</p><p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p><p><strong>注意：</strong>给定 <em>n</em> 是一个正整数。</p><p><strong>示例1：</strong></p><blockquote><p>输入： 2<br>输出： 2<br>解释： 有两种方法可以爬到楼顶。</p><ol><li>1 阶 + 1 阶</li><li>2 阶</li></ol></blockquote><p><strong>示例2：</strong></p><blockquote><p>输入： 3<br>输出： 3<br>解释： 有三种方法可以爬到楼顶。</p><ol><li>1 阶 + 1 阶 + 1 阶</li><li>1 阶 + 2 阶</li><li>2 阶 + 1 阶</li></ol></blockquote><h2 id="方法一——动态规划"><a href="#方法一——动态规划" class="headerlink" title="方法一——动态规划"></a>方法一——动态规划</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>我们在走到某一台阶时的方法数与走到前面的台阶的方法数有关系，通过分析可以知道，要到达第<em>i</em>阶，可以从第<em>i-1</em>阶走一步到达，也可以从第<em>i-2</em>阶直接走两步到达，即到达第 <em>i</em> 阶的方法总数就是到第 (<em>i</em>−1) 阶和第 (<em>i</em>−2) 阶的方法数之和。令 dp[i] 表示能到达第 i 阶的方法总数：则有<code>dp[i] = dp[i-1] + dp[i-2]</code>。</p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">climbStairs</span><span class="params">(self, n: int)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        dp = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(n+<span class="number">1</span>)]</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line">        dp[<span class="number">2</span>] = <span class="number">2</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>, n+<span class="number">1</span>):</span><br><span class="line">            dp[i] = dp[i<span class="number">-1</span>] + dp[i<span class="number">-2</span>]</span><br><span class="line">        <span class="keyword">return</span> dp[n]</span><br></pre></td></tr></table></figure><h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><p>时间复杂度：<code>O(n)</code>；空间复杂度：<code>O(n)</code>，dp数组消耗所用。</p><p><img src="https://ae01.alicdn.com/kf/H9e00426ab8604b24b9510148901e07d0U.png" alt="方法一提交"></p><h2 id="方法二——斐波那契数列"><a href="#方法二——斐波那契数列" class="headerlink" title="方法二——斐波那契数列"></a>方法二——斐波那契数列</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>如果手动计算出前面几步的结果的话，会发现不同阶数的方法数符合斐波那契数列，即<code>f(i) = f(i-1) + f(i-2)</code>，所以只要我们定义好初始的数，以上述规则进行计算，那么不用额外数组也可以得到结果。</p><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">climbStairs</span><span class="params">(self, n: int)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        a, b = <span class="number">1</span>, <span class="number">2</span></span><br><span class="line">        i = <span class="number">3</span></span><br><span class="line">        <span class="keyword">while</span> i &lt;= n:</span><br><span class="line">            c = a + b</span><br><span class="line">            a, b = b, c</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> b</span><br></pre></td></tr></table></figure><h3 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h3><p>时间复杂度：<code>O(n)</code>；空间复杂度：<code>O(1)</code>，只需要常数的空间。</p><p><img src="https://ae01.alicdn.com/kf/H302441033c9944bcb5302f1da7e471c0x.png" alt="方法二提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题整体上来说也不难，关键在于发现结果中的规律，有时候需要手动写一下简单的结果，然后再去推导最终的结果形式。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;爬楼梯&quot;&gt;&lt;a href=&quot;#爬楼梯&quot; class=&quot;headerlink&quot; title=&quot;爬楼梯&quot;&gt;&lt;/a&gt;爬楼梯&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;动态规划&lt;/strong&gt;的一道题，难度为&lt;strong&gt;简单&lt;/
+      
+    
+    </summary>
+    
+      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
+    
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+      <category term="动态规划" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>反转字符串中的单词 III</title>
@@ -568,35 +597,6 @@
       
       
         &lt;h1 id=&quot;存在重复元素&quot;&gt;&lt;a href=&quot;#存在重复元素&quot; class=&quot;headerlink&quot; title=&quot;存在重复元素&quot;&gt;&lt;/a&gt;存在重复元素&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/strong&gt;的一道题，难度为&lt;s
-      
-    
-    </summary>
-    
-      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
-    
-    
-      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
-    
-      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>买卖股票的最佳时机</title>
-    <link href="http://yoursite.com/2019/09/11/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/"/>
-    <id>http://yoursite.com/2019/09/11/买卖股票的最佳时机/</id>
-    <published>2019-09-11T12:32:00.000Z</published>
-    <updated>2019-09-11T12:32:54.880Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="买卖股票的最佳时机"><a href="#买卖股票的最佳时机" class="headerlink" title="买卖股票的最佳时机"></a>买卖股票的最佳时机</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</p><p>如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。</p><p>注意你不能在买入股票前卖出股票。</p><p><strong>示例1：</strong></p><blockquote><p>输入: [7,1,5,3,6,4]<br>输出: 5<br>解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。<br>注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。</p></blockquote><p><strong>示例2：</strong></p><blockquote><p>输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p></blockquote><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这道题不是很难，我们要找的就是在一系列数中，前后相差最大的两个数之差（前小于后）。我们可以采用动态规划的思想来解决问题，通过观察计算得到一个通用公式：<strong>最大利润=max（前一天的最大利润，今天的价格 - 到目前为止最低价格）</strong>。通过遍历一次所有值即可得到最大利润。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span><span class="params">(self, prices: List[int])</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> (len(prices) &lt;= <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        min_p = prices[<span class="number">0</span>]</span><br><span class="line">        max_p = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(prices)):</span><br><span class="line">            min_p = min(min_p, prices[i])</span><br><span class="line">            max_p = max(max_p, prices[i] - min_p)</span><br><span class="line">        <span class="keyword">return</span> max_p</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/H319f255438c3489fa09eb03430ffe5b2C.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>当然也可以采用暴力法解决，求得每个值与其后面的每个值之差，再取最大值即可，只是这样时间复杂度为<code>O(n^2)</code>，而且可以明显感觉到效率低下。但是通过上述算法，不断地在遍历的过程中更新最优值，可以将时间复杂度降低为<code>O(n)</code>。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;买卖股票的最佳时机&quot;&gt;&lt;a href=&quot;#买卖股票的最佳时机&quot; class=&quot;headerlink&quot; title=&quot;买卖股票的最佳时机&quot;&gt;&lt;/a&gt;买卖股票的最佳时机&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/stron
       
     
     </summary>
