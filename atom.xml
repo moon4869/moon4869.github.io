@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-29T14:03:41.960Z</updated>
+  <updated>2019-09-30T05:40:13.498Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>反转字符串中的单词 III</title>
+    <link href="http://yoursite.com/2019/09/30/%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D-III/"/>
+    <id>http://yoursite.com/2019/09/30/反转字符串中的单词-III/</id>
+    <published>2019-09-30T05:38:00.000Z</published>
+    <updated>2019-09-30T05:40:13.498Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="反转字符串中的单词-III"><a href="#反转字符串中的单词-III" class="headerlink" title="反转字符串中的单词 III"></a>反转字符串中的单词 III</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>字符串</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。</p><p><strong>示例：</strong></p><blockquote><p>输入: “Let’s take LeetCode contest”<br>输出: “s’teL ekat edoCteeL tsetnoc” </p></blockquote><p><strong>注意：</strong>在字符串中，每个单词由单个空格分隔，并且字符串中不会有任何额外的空格。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>整体解题思路比较简单，将字符串按空格分割成列表，再对每一部分进行反转，然后再以空格连接成字符串返回即可。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseWords</span><span class="params">(self, s: str)</span> -&gt; str:</span></span><br><span class="line">        temp = s.split(<span class="string">' '</span>)</span><br><span class="line">        res = [i[::<span class="number">-1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> temp]</span><br><span class="line">        <span class="keyword">return</span> <span class="string">' '</span>.join(res)</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/H841041ec1b0c4e9abdaf26fd611e3960V.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>用python来解决这道题的话就显得比较简单了，因为关键的两部操作都有内置的函数去实现。另外上述方法的代码可以缩减到一行：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseWords</span><span class="params">(self, s: str)</span> -&gt; str:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">" "</span>.join([i[::<span class="number">-1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> s.split()])</span><br></pre></td></tr></table></figure><p>此外还发现了另外一种思路，代码也是一行，理解起来也很简单：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseWords</span><span class="params">(self, s: str)</span> -&gt; str:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">' '</span>.join(s.split(<span class="string">' '</span>)[::<span class="number">-1</span>])[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;反转字符串中的单词-III&quot;&gt;&lt;a href=&quot;#反转字符串中的单词-III&quot; class=&quot;headerlink&quot; title=&quot;反转字符串中的单词 III&quot;&gt;&lt;/a&gt;反转字符串中的单词 III&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;
+      
+    
+    </summary>
+    
+      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
+    
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+      <category term="字符串" scheme="http://yoursite.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>最长公共前缀</title>
@@ -568,35 +597,6 @@
       
       
         &lt;h1 id=&quot;买卖股票的最佳时机&quot;&gt;&lt;a href=&quot;#买卖股票的最佳时机&quot; class=&quot;headerlink&quot; title=&quot;买卖股票的最佳时机&quot;&gt;&lt;/a&gt;买卖股票的最佳时机&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/stron
-      
-    
-    </summary>
-    
-      <category term="腾讯精选练习" scheme="http://yoursite.com/categories/%E8%85%BE%E8%AE%AF%E7%B2%BE%E9%80%89%E7%BB%83%E4%B9%A0/"/>
-    
-    
-      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
-    
-      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>合并两个有序数组</title>
-    <link href="http://yoursite.com/2019/09/10/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
-    <id>http://yoursite.com/2019/09/10/合并两个有序数组/</id>
-    <published>2019-09-10T11:45:00.000Z</published>
-    <updated>2019-09-10T11:46:55.943Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="合并两个有序数组"><a href="#合并两个有序数组" class="headerlink" title="合并两个有序数组"></a>合并两个有序数组</h1><p>属于leetcode里腾讯精选练习（50）里面关于<strong>数组</strong>的一道题，难度为<strong>简单</strong>，原链接<a href="https://leetcode-cn.com/problems/merge-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-sorted-array/</a> 。（使用<strong>python3</strong>解决）</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。</p><p><strong>说明:</strong></p><ul><li>初始化 nums1 和 nums2 的元素数量分别为 m 和 n。</li><li>你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。</li></ul><p><strong>示例：</strong></p><blockquote><p>输入:<br>nums1 = [1,2,3,0,0,0], m = 3<br>nums2 = [2,5,6],           n = 3</p><p>输出: [1,2,2,3,5,6]</p></blockquote><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>其实就合并两个有序数组来说，采用二路归并即可，但是可能需要额外的存储空间来存整个合并后的数组。题目要求在nums1上就地修改，所以如果依旧采用归并方式的话，需要先将nums1里面的元素复制到额外的数组里面，并且将nums1内部清空以方便存储结果。具体归并过程很简单，依次取出待排序的两个数组内的元素，比较大小将小的一个存入nums1中，最后将还没取完的剩余元素全部加入nums1中即可。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(self, nums1: List[int], m: int, nums2: List[int], n: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums1 in-place instead.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        i, j = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        temp = nums1[:m]</span><br><span class="line">        nums1[:] = []</span><br><span class="line">        <span class="keyword">while</span> i &lt; m <span class="keyword">and</span> j &lt; n:</span><br><span class="line">            <span class="keyword">if</span> temp[i] &lt;= nums2[j]:</span><br><span class="line">                nums1.append(temp[i])</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nums1.append(nums2[j])</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> i == m:</span><br><span class="line">            nums1[i+j:] = nums2[j:]</span><br><span class="line">        <span class="keyword">if</span> j == n:</span><br><span class="line">            nums1[i+j:] = temp[i:]</span><br></pre></td></tr></table></figure><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p><img src="https://ae01.alicdn.com/kf/H746dd06a45934065a89428bb3172b52a4.png" alt="方法一提交"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>开始也想过其他的方法，比如先用归并排序好，再将已排序的元素依次填充到nums1中，但是这样就比直接添加到nums1中要慢一些。另外也想过采用插入的方式，但是这样还要删除多余的尾部元素，同时记录索引的指针也复杂一些，所以最后采用了上述方法去解决。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;合并两个有序数组&quot;&gt;&lt;a href=&quot;#合并两个有序数组&quot; class=&quot;headerlink&quot; title=&quot;合并两个有序数组&quot;&gt;&lt;/a&gt;合并两个有序数组&lt;/h1&gt;&lt;p&gt;属于leetcode里腾讯精选练习（50）里面关于&lt;strong&gt;数组&lt;/strong&gt;的一
       
     
     </summary>
