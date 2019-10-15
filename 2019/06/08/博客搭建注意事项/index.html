@@ -262,7 +262,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.8k字</span>
+        <span class="post-count">2.1k字</span>
       </span>
     </span>
 
@@ -271,7 +271,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6分</span>
+        <span class="post-count">7分</span>
       </span>
     </span>
 </div>
@@ -304,7 +304,7 @@
 
 	<a href="/2019/06/08/博客搭建注意事项/" itemprop="url">
 		<time datetime="2019-06-08T09:05:00.000Z" itemprop="dateUpdated">
-	  		2019-10-14
+	  		2019-10-15
 	  </time>
 	</a> 
 
@@ -368,9 +368,12 @@
 <h3 id="添加网站运行时间"><a href="#添加网站运行时间" class="headerlink" title="添加网站运行时间"></a>添加网站运行时间</h3><p>这个跟着<a href="https://blog.csdn.net/qq_36759224/article/details/85010191#font_colorFF0000___font_106" target="_blank" rel="noopener">教程</a>走基本没问题，只是添加位置按照你自己的需要来即可。</p>
 <h3 id="文章阅读量计数"><a href="#文章阅读量计数" class="headerlink" title="文章阅读量计数"></a>文章阅读量计数</h3><p>一般的主题都会支持多种计数方式，在我采用的主题中支持两种方式，分别是<code>busuanzi_count</code>和<code>leancloud_count</code>，前者只需要在主题的配置文件里开启即可，这里主要说一下后者，后者也使用的多一些。这里给一个教程，<a href="https://cuibin1991.github.io/2017/07/31/Hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">连接在此</a>。需要注意的是，现在<code>leancloud</code>中国地区已经不支持没有域名备案的用户使用其有关的服务了，当然我们文章阅读量计数的功能也马上不行了。所以如果你有一个已经备案的域名的话，可以继续使用<code>leancloud</code>中国区的服务，但是如果你的博客只是使用了<code>github</code>分配的域名的话，就不能这样了。这里有一个备选的方案，是使用<code>leancloud</code>国际区的服务，<a href="https://us.leancloud.cn" target="_blank" rel="noopener">网站在此</a>。其使用方式与中国区的使用方式完全一致，注册建立存储仓库获取<code>id</code>填写到主题的配置文件中即可，具体参照<a href="https://cuibin1991.github.io/2017/07/31/Hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">此链接</a>。如果是新建博客的话直接按上述教程即可，但是如果是已有的博客而且已经使用了原<code>leancloud</code>中国区的话，就需要将数据从中国区迁移至国际区。这里也有两种方式：一是将原中国区的数据备份，<code>leancloud</code>网站内有相关的操作，然后在国际区中还原即可，其官网内有相关的方法，但是需要将国际区的服务花点钱升级一下才可以使用还原功能；二是在国际区的网站上新建一个仓库，将主题配置文件中的<code>id</code>改成国际区的<code>id</code>，重新部署一下博客，依次点击每一篇博客文章，确保在国际区的仓库里能够看到每一篇文章的新数据，然后再照着原中国区的仓库内每篇文章的阅读量以及点赞数的数据依次修改国际区仓库里对应的每一篇文章，最后保存即可。</p>
 <p>这个对于新建博客来说，只需要使用国际区的<code>leancloud</code>即可，主要是我已经使用了一段时间的中国区，然后才被告知中国区的相关服务需要已备案域名，而域名备案又需要拥有一台服务器，而且备案过程也比较麻烦，所以只能手动的在国际区的<code>leancloud</code>中重建计数的仓库。</p>
-<h3 id="站点分析之百度统计"><a href="#站点分析之百度统计" class="headerlink" title="站点分析之百度统计"></a>站点分析之百度统计</h3><p>为了更好的分析我的博客网站的访问情况，借助第三方网站分析平台来检测博客网站的具体被访问数据。一般的主题也集成了站点分析功能，并且支持多种分析平台，这里以百度统计平台为例，看如何在博客中添加给功能。这里给一个教程，<a href="https://blog.csdn.net/qq_36759224/article/details/85010191#font_colorFF0000___font_136" target="_blank" rel="noopener">连接在此</a>。这个教程是假设主题未集成站点分析的相关功能，手动添加百度统计的功能，而实际上一般的主题都有该功能，只需要在配置文件中开启并填写<code>id</code>即可，需要注意的是在注册是选用站长版账号，如下：</p>
+<h3 id="站点分析之百度统计"><a href="#站点分析之百度统计" class="headerlink" title="站点分析之百度统计"></a>站点分析之百度统计</h3><h4 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h4><p>为了更好的分析我的博客网站的访问情况，借助第三方网站分析平台来检测博客网站的具体被访问数据。一般的主题也集成了站点分析功能，并且支持多种分析平台，这里以百度统计平台为例，看如何在博客中添加给功能。这里给一个教程，<a href="https://blog.csdn.net/qq_36759224/article/details/85010191#font_colorFF0000___font_136" target="_blank" rel="noopener">连接在此</a>。这个教程是假设主题未集成站点分析的相关功能，手动添加百度统计的功能，而实际上一般的主题都有该功能，只需要在配置文件中开启并填写<code>id</code>即可，需要注意的是在注册是选用站长版账号，如下：</p>
 <p><img src="https://ae01.alicdn.com/kf/Hff5ce1a19b474206a51b176eb4791591q.jpg" alt="百度统计注册"></p>
 <p>如果主题中没有该功能相关代码，就需要像上述教程一样手动添加代码。这里建议可以多看看自己主题的相关文件的具体代码，去分析理解各代码的功能，这样便可以自己动手调整主题达到自己想要的结果或者添加自己喜欢的功能。</p>
+<h4 id="问题及解决办法"><a href="#问题及解决办法" class="headerlink" title="问题及解决办法"></a>问题及解决办法</h4><p>这里记下一个问题：在我确保站点分析功能安装好后，用我的电脑浏览器浏览我的博客却没有成功的被记录下来，而用手机浏览就可以。在借助浏览器的开发者模式分析了电脑端网站的数据收发情况后，发现百度统计的请求并未被成功的发出去，所以后台才没有监测到数据。就是下图红色的<code>hm.js?......</code>的那个请求。</p>
+<p><img src="https://ae01.alicdn.com/kf/Hcf176b024368463eb49c7341cbb27421K.png" alt="插件屏蔽"></p>
+<p>经过搜索该请求的状态信息后发现，应该是我安装的广告屏蔽插件将该请求屏蔽了的原因，在将插件关闭后，果然就发现该请求可以正常的发送了。可能插件将该请求看成了是不必要的请求，便将之屏蔽了。这样的话，只要是浏览器安装了类似的插件的话，那些人的浏览记录都可能不会被记录到，会导致后台记录数据的不准确。但是这也是没有办法的事，而且现在博客浏览量也不高，这些数据的误差不会造成什么影响。</p>
 <hr>
 <p>根据原教程搭建博客需要注意的地方大概写的差不多了，如果后续还有发现的会持续修改。本文可以说是我的第一篇博客文章，以后我也会慢慢写更多的，希望以文字来沉淀自己的所学，共勉。</p>
 	
@@ -905,7 +908,7 @@
 			setInterval("createtime()",250);
 			</script>
 			<i class="fas fa-chart-area"></i>
-			<span class="post-count">文章总字数：44.8k.</span>
+			<span class="post-count">文章总字数：45.1k.</span>
 			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
 			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
 		</p>
