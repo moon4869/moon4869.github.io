@@ -45,8 +45,11 @@ jQuery(document).ready(function($) {
 		switch(mode) {
 			case 'random':
 				{
-					randomNum = Math.floor(Math.random() * (randomMax - 1) + 1);
-					curImgSrc = $('header').attr('data-random-src') + randomNum + '.jpg';
+					var imgList = new Array("https://pic.superbed.cn/item/5da72d15451253d178d78895.jpg", "https://pic.superbed.cn/item/5da72d15451253d178d78893.jpg", "https://pic.superbed.cn/item/5da72d15451253d178d78891.jpg", "https://pic.superbed.cn/item/5da72d15451253d178d7888f.jpg");
+					randomNum = Math.floor(Math.random() * (3 - 1) + 1);
+					curImgSrc = imgList[randomNum]
+					// randomNum = Math.floor(Math.random() * (randomMax - 1) + 1);
+					// curImgSrc = $('header').attr('data-random-src') + randomNum + '.jpg';
 				}
 				break;
 			case 'normal':
